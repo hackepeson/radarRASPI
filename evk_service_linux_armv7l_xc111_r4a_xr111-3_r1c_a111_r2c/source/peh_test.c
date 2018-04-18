@@ -21,12 +21,12 @@
 #include "acc_os.h"
 #include "acc_version.h"
 
-void reconfigure_sweeps(acc_service_configuration_t envelope_configuration)
+void reconfigure_sweeps(acc_service_configuration_t envelope_configuration);
 static acc_service_status_t execute_envelope_with_blocking_calls(acc_service_configuration_t envelope_configuration);
 
 // UDP
-#define SERVER "192.168.0.107"
-#define BUFLEN 1024  //Max length of buffer
+#define SERVER "192.168.0.108"
+#define BUFLEN 2048  //Max length of buffer
 #define PORT 8888   //The port on which to send data
 struct sockaddr_in si_other;
 int s;
@@ -132,17 +132,13 @@ acc_service_status_t execute_envelope_with_blocking_calls(acc_service_configurat
     while (1) 
     {
       service_status = acc_service_envelope_get_next(handle, envelope_data, envelope_metadata.data_length);
-      usleep(100);
-
+      
       if (service_status == ACC_SERVICE_STATUS_OK) 
       {
-	printf("\nEnvelope data:");
 	for (uint_fast16_t index = 0; index < envelope_metadata.data_length; index++) 
         {
-	  printf("%d %6u\n", index,(unsigned int)(envelope_data[index] + 0.5));
           message[index] = (int16_t)envelope_data[index] + 0.5;
 	}
-	printf("\n");
         if (sendto(s, message, sizeof(message) , 0 , (struct sockaddr *) &si_other, slen)==-1)
         {
           die("sendto()");
@@ -168,20 +164,20 @@ acc_service_status_t execute_envelope_with_blocking_calls(acc_service_configurat
 
 void reconfigure_sweeps(acc_service_configuration_t envelope_configuration)
 {
-	acc_sweep_configuration_t sweep_configuration = acc_sweep_configuration_get(envelope_configuration);
+  acc_sweep_configuration_t sweep_configuration = acc_sweep_configuration_get(envelope_configuration);
+  if (sweep_configuration == NULL) 
+  {
+  printf("\nSweep configuration not available");
+  }
+  else 
+  {
+    float start_m = 0.4;
+    float length_m = 0.5;
+    float sweep_frequency_hz = 100;
 
-	if (sweep_configuration == NULL) {
-		printf("\nSweep configuration not available");
-	}
-	else {
-		float start_m = 0.4;
-		float length_m = 0.5;
-		float sweep_frequency_hz = 100;
-
-		acc_sweep_configuration_requested_start_set(sweep_configuration, start_m);
-		acc_sweep_configuration_requested_length_set(sweep_configuration, length_m);
-
-		acc_sweep_configuration_repetition_mode_streaming_set(sweep_configuration, sweep_frequency_hz);
-	}
+    acc_sweep_configuration_requested_start_set(sweep_configuration, start_m);
+    acc_sweep_configuration_requested_length_set(sweep_configuration, length_m);
+    acc_sweep_configuration_repetition_mode_streaming_set(sweep_configuration, sweep_frequency_hz);
+  }
 }
 
