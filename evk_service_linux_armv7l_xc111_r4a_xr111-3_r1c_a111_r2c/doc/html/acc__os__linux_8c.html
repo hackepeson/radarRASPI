@@ -103,9 +103,7 @@ $(document).ready(function(){initNavTree('acc__os__linux_8c.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -117,7 +115,6 @@ $(document).ready(function(){initNavTree('acc__os__linux_8c.html','');});
 <code>#include &lt;fcntl.h&gt;</code><br />
 <code>#include &lt;netdb.h&gt;</code><br />
 <code>#include &lt;pthread.h&gt;</code><br />
-<code>#include &lt;semaphore.h&gt;</code><br />
 <code>#include &lt;stddef.h&gt;</code><br />
 <code>#include &lt;signal.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
@@ -141,25 +138,14 @@ Include dependency graph for acc_os_linux.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="acc__os__linux_8c__incl.png" border="0" usemap="#source_2acc__os__linux_8c" alt=""/></div>
 <map name="source_2acc__os__linux_8c" id="source_2acc__os__linux_8c">
-<area shape="rect" id="node24" href="acc__log_8h.html" title="acc_log.h" alt="" coords="875,80,954,107"/>
-<area shape="rect" id="node27" href="acc__os_8h.html" title="acc_os.h" alt="" coords="675,80,749,107"/>
-<area shape="rect" id="node25" href="acc__types_8h.html" title="acc_types.h" alt="" coords="881,155,975,181"/>
+<area shape="rect" id="node23" href="acc__log_8h.html" title="acc_log.h" alt="" coords="554,80,633,107"/>
+<area shape="rect" id="node25" href="acc__os_8h.html" title="acc_os.h" alt="" coords="657,80,732,107"/>
+<area shape="rect" id="node24" href="acc__types_8h.html" title="acc_types.h" alt="" coords="596,155,689,181"/>
 </map>
 </div>
 </div>
 <p><a href="acc__os__linux_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structacc__os__mutex.html">acc_os_mutex</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structacc__os__semaphore.html">acc_os_semaphore</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structacc__os__socket.html">acc_os_socket</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structacc__os__thread__handle.html">acc_os_thread_handle</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ac3d144aa01e765a1fae62ab5491c7cc1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#ac3d144aa01e765a1fae62ab5491c7cc1">_POSIX_SOURCE</a></td></tr>
@@ -170,19 +156,6 @@ Macros</h2></td></tr>
 <tr class="separator:a369266c24eacffb87046522897a570d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c63ae95fe7c6106ae1ec9c283afa486"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>&#160;&#160;&#160;&quot;os&quot;</td></tr>
 <tr class="separator:a2c63ae95fe7c6106ae1ec9c283afa486"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff8146ba25dadfda8ce88272113fcac7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#aff8146ba25dadfda8ce88272113fcac7">ACC_OS_INVALID_SOCKET</a>&#160;&#160;&#160;(-1)</td></tr>
-<tr class="separator:aff8146ba25dadfda8ce88272113fcac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a0cd9058648639d78238f10baff304f15"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structacc__os__mutex.html">acc_os_mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a0cd9058648639d78238f10baff304f15">acc_os_mutex_s</a></td></tr>
-<tr class="separator:a0cd9058648639d78238f10baff304f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a659165736338488bda4336c5b31d9130"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structacc__os__semaphore.html">acc_os_semaphore</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a659165736338488bda4336c5b31d9130">acc_os_semaphore_s</a></td></tr>
-<tr class="separator:a659165736338488bda4336c5b31d9130"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac16ac6e496bd873130242bf0718fb6c"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structacc__os__socket.html">acc_os_socket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#aac16ac6e496bd873130242bf0718fb6c">acc_os_socket_s</a></td></tr>
-<tr class="separator:aac16ac6e496bd873130242bf0718fb6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab86af1a823c917c94b3b4763acb58513"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structacc__os__thread__handle.html">acc_os_thread_handle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#ab86af1a823c917c94b3b4763acb58513">acc_os_thread_handle_s</a></td></tr>
-<tr class="separator:ab86af1a823c917c94b3b4763acb58513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -213,27 +186,24 @@ Functions</h2></td></tr>
 <tr class="memitem:a2f6568a2dd800d7560c6669b85806b24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a2f6568a2dd800d7560c6669b85806b24">acc_os_localtime</a> (struct tm *time_tm, uint32_t *time_usec)</td></tr>
 <tr class="memdesc:a2f6568a2dd800d7560c6669b85806b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate current time and return in a struct tm, and optionally with microseconds.  <a href="#a2f6568a2dd800d7560c6669b85806b24">More...</a><br /></td></tr>
 <tr class="separator:a2f6568a2dd800d7560c6669b85806b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23895aa050c3dbe1e07d343b1b8f4be6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acc__os_8h.html#afab256f50823abf8da9fac562fbc6e80">acc_os_mutex_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a23895aa050c3dbe1e07d343b1b8f4be6">acc_os_mutex_create</a> (void)</td></tr>
-<tr class="memdesc:a23895aa050c3dbe1e07d343b1b8f4be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a mutex.  <a href="#a23895aa050c3dbe1e07d343b1b8f4be6">More...</a><br /></td></tr>
-<tr class="separator:a23895aa050c3dbe1e07d343b1b8f4be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7482fa763af527b31119e0a689ff06c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a7482fa763af527b31119e0a689ff06c6">acc_os_mutex_destroy</a> (<a class="el" href="acc__os_8h.html#afab256f50823abf8da9fac562fbc6e80">acc_os_mutex_t</a> mutex)</td></tr>
-<tr class="memdesc:a7482fa763af527b31119e0a689ff06c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the mutex.  <a href="#a7482fa763af527b31119e0a689ff06c6">More...</a><br /></td></tr>
-<tr class="separator:a7482fa763af527b31119e0a689ff06c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84c64d78c357e0856de4b091d9f5ca4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a84c64d78c357e0856de4b091d9f5ca4d">acc_os_mutex_lock</a> (<a class="el" href="acc__os_8h.html#afab256f50823abf8da9fac562fbc6e80">acc_os_mutex_t</a> mutex)</td></tr>
-<tr class="memdesc:a84c64d78c357e0856de4b091d9f5ca4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex lock.  <a href="#a84c64d78c357e0856de4b091d9f5ca4d">More...</a><br /></td></tr>
-<tr class="separator:a84c64d78c357e0856de4b091d9f5ca4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a679abcf0bc8d3cbb2808dc6fe942ed60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a679abcf0bc8d3cbb2808dc6fe942ed60">acc_os_mutex_unlock</a> (<a class="el" href="acc__os_8h.html#afab256f50823abf8da9fac562fbc6e80">acc_os_mutex_t</a> mutex)</td></tr>
-<tr class="memdesc:a679abcf0bc8d3cbb2808dc6fe942ed60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex unlock.  <a href="#a679abcf0bc8d3cbb2808dc6fe942ed60">More...</a><br /></td></tr>
-<tr class="separator:a679abcf0bc8d3cbb2808dc6fe942ed60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f5db92b1269960f112a51a7edf87c52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acc__os_8h.html#aa06acffa83d65a1adccb893cd59af0c7">acc_os_thread_handle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a1f5db92b1269960f112a51a7edf87c52">acc_os_thread_create</a> (void(*func)(void *param), void *param)</td></tr>
-<tr class="memdesc:a1f5db92b1269960f112a51a7edf87c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new thread.  <a href="#a1f5db92b1269960f112a51a7edf87c52">More...</a><br /></td></tr>
-<tr class="separator:a1f5db92b1269960f112a51a7edf87c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa50c94aaee0c1517279e653affa2e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structacc__os__mutex__t.html">acc_os_mutex_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#aefa50c94aaee0c1517279e653affa2e2">acc_os_mutex_init</a> (<a class="el" href="structacc__os__mutex__t.html">acc_os_mutex_t</a> *mutex)</td></tr>
+<tr class="memdesc:aefa50c94aaee0c1517279e653affa2e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a mutex.  <a href="#aefa50c94aaee0c1517279e653affa2e2">More...</a><br /></td></tr>
+<tr class="separator:aefa50c94aaee0c1517279e653affa2e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae64bc00fbfc26258426fcdb6ccc3fc38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#ae64bc00fbfc26258426fcdb6ccc3fc38">acc_os_mutex_lock</a> (<a class="el" href="structacc__os__mutex__t.html">acc_os_mutex_t</a> *mutex)</td></tr>
+<tr class="memdesc:ae64bc00fbfc26258426fcdb6ccc3fc38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex lock.  <a href="#ae64bc00fbfc26258426fcdb6ccc3fc38">More...</a><br /></td></tr>
+<tr class="separator:ae64bc00fbfc26258426fcdb6ccc3fc38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6fc45abaf3f67d1593728187c1b669d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#aa6fc45abaf3f67d1593728187c1b669d">acc_os_mutex_unlock</a> (<a class="el" href="structacc__os__mutex__t.html">acc_os_mutex_t</a> *mutex)</td></tr>
+<tr class="memdesc:aa6fc45abaf3f67d1593728187c1b669d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex unlock.  <a href="#aa6fc45abaf3f67d1593728187c1b669d">More...</a><br /></td></tr>
+<tr class="separator:aa6fc45abaf3f67d1593728187c1b669d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4e2419da0bcef8447c5943f7c8b253d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acc__types_8h.html#a67a273ffcc7c5d78aa80315c00746b01">acc_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#ad4e2419da0bcef8447c5943f7c8b253d">acc_os_thread_create</a> (void(*func)(void *param), void *param, <a class="el" href="acc__os__linux_8h.html#a18986801c8ae3adf044e00bd65001e2a">acc_os_thread_handle_t</a> *handle)</td></tr>
+<tr class="memdesc:ad4e2419da0bcef8447c5943f7c8b253d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new thread.  <a href="#ad4e2419da0bcef8447c5943f7c8b253d">More...</a><br /></td></tr>
+<tr class="separator:ad4e2419da0bcef8447c5943f7c8b253d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39b4408746e2abe4d86d3fda6fa272a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a39b4408746e2abe4d86d3fda6fa272a6">acc_os_thread_delete</a> (void)</td></tr>
 <tr class="memdesc:a39b4408746e2abe4d86d3fda6fa272a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete current thread.  <a href="#a39b4408746e2abe4d86d3fda6fa272a6">More...</a><br /></td></tr>
 <tr class="separator:a39b4408746e2abe4d86d3fda6fa272a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e7fc5fa7c0e29de0009431489d964da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a0e7fc5fa7c0e29de0009431489d964da">acc_os_thread_cleanup</a> (<a class="el" href="acc__os_8h.html#aa06acffa83d65a1adccb893cd59af0c7">acc_os_thread_handle_t</a> thread)</td></tr>
-<tr class="memdesc:a0e7fc5fa7c0e29de0009431489d964da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleanup after thread termination.  <a href="#a0e7fc5fa7c0e29de0009431489d964da">More...</a><br /></td></tr>
-<tr class="separator:a0e7fc5fa7c0e29de0009431489d964da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a4c7205b79df35096347ef23714f29e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a4a4c7205b79df35096347ef23714f29e">acc_os_thread_cleanup</a> (<a class="el" href="acc__os__linux_8h.html#a18986801c8ae3adf044e00bd65001e2a">acc_os_thread_handle_t</a> handle)</td></tr>
+<tr class="memdesc:a4a4c7205b79df35096347ef23714f29e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleanup after thread termination.  <a href="#a4a4c7205b79df35096347ef23714f29e">More...</a><br /></td></tr>
+<tr class="separator:a4a4c7205b79df35096347ef23714f29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dad7830469b0a7cbc86fe20db330944"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a8dad7830469b0a7cbc86fe20db330944">acc_os_dynamic_open</a> (char *filename)</td></tr>
 <tr class="memdesc:a8dad7830469b0a7cbc86fe20db330944"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a dynamic library, returning a handle to the library.  <a href="#a8dad7830469b0a7cbc86fe20db330944">More...</a><br /></td></tr>
 <tr class="separator:a8dad7830469b0a7cbc86fe20db330944"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,36 +223,20 @@ Functions</h2></td></tr>
 <tr class="separator:a2354869709ad3a9375302fff86af3dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afefe83d06be4d1a4c626d56255d9bdb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#afefe83d06be4d1a4c626d56255d9bdb6">acc_os_net_address_to_string</a> (<a class="el" href="acc__os_8h.html#aaf4df41b7f8cb8c0e069a9abd3c6b9f2">acc_os_net_address_t</a> address, char *buffer, size_t max_size)</td></tr>
 <tr class="separator:afefe83d06be4d1a4c626d56255d9bdb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c7da7ef85eb938d2d846ce987f070cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acc__os_8h.html#af9d21c124ba1bcba5e5275b5f2e739ad">acc_os_socket_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a5c7da7ef85eb938d2d846ce987f070cc">acc_os_net_connect</a> (<a class="el" href="acc__os_8h.html#aaf4df41b7f8cb8c0e069a9abd3c6b9f2">acc_os_net_address_t</a> address, <a class="el" href="acc__os_8h.html#ab2abfacc7720e26c1d88b0098d3a802d">acc_os_net_port_t</a> port)</td></tr>
+<tr class="memitem:a5c7da7ef85eb938d2d846ce987f070cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acc__os__linux_8h.html#a8773f96961ed7bba8a3cadd1de4388fc">acc_os_socket_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a5c7da7ef85eb938d2d846ce987f070cc">acc_os_net_connect</a> (<a class="el" href="acc__os_8h.html#aaf4df41b7f8cb8c0e069a9abd3c6b9f2">acc_os_net_address_t</a> address, <a class="el" href="acc__os_8h.html#ab2abfacc7720e26c1d88b0098d3a802d">acc_os_net_port_t</a> port)</td></tr>
 <tr class="separator:a5c7da7ef85eb938d2d846ce987f070cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35d55fc51b116d2a52c03c8f7483a5d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a35d55fc51b116d2a52c03c8f7483a5d8">acc_os_set_socket_invalid</a> (<a class="el" href="acc__os_8h.html#af9d21c124ba1bcba5e5275b5f2e739ad">acc_os_socket_t</a> sock)</td></tr>
-<tr class="separator:a35d55fc51b116d2a52c03c8f7483a5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8af7ef431b63fd7bc17eea65cffff8d9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a8af7ef431b63fd7bc17eea65cffff8d9">acc_os_is_socket_valid</a> (<a class="el" href="acc__os_8h.html#af9d21c124ba1bcba5e5275b5f2e739ad">acc_os_socket_t</a> sock)</td></tr>
-<tr class="separator:a8af7ef431b63fd7bc17eea65cffff8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2d4b7f0f80516c2f710118ab72e9285"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#ae2d4b7f0f80516c2f710118ab72e9285">acc_os_net_disconnect</a> (<a class="el" href="acc__os_8h.html#af9d21c124ba1bcba5e5275b5f2e739ad">acc_os_socket_t</a> sock)</td></tr>
+<tr class="memitem:ae2d4b7f0f80516c2f710118ab72e9285"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#ae2d4b7f0f80516c2f710118ab72e9285">acc_os_net_disconnect</a> (<a class="el" href="acc__os__linux_8h.html#a8773f96961ed7bba8a3cadd1de4388fc">acc_os_socket_t</a> sock)</td></tr>
 <tr class="separator:ae2d4b7f0f80516c2f710118ab72e9285"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cdfe3afe47e785d31873fe2b3900d96"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a4cdfe3afe47e785d31873fe2b3900d96">acc_os_net_send</a> (<a class="el" href="acc__os_8h.html#af9d21c124ba1bcba5e5275b5f2e739ad">acc_os_socket_t</a> sock, void *buffer, size_t size)</td></tr>
+<tr class="memitem:a4cdfe3afe47e785d31873fe2b3900d96"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a4cdfe3afe47e785d31873fe2b3900d96">acc_os_net_send</a> (<a class="el" href="acc__os__linux_8h.html#a8773f96961ed7bba8a3cadd1de4388fc">acc_os_socket_t</a> sock, void *buffer, size_t size)</td></tr>
 <tr class="separator:a4cdfe3afe47e785d31873fe2b3900d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23b5d3bdbb217e3e9869d0224bdbfe9a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a23b5d3bdbb217e3e9869d0224bdbfe9a">acc_os_net_receive</a> (<a class="el" href="acc__os_8h.html#af9d21c124ba1bcba5e5275b5f2e739ad">acc_os_socket_t</a> sock, void *buffer, size_t max_size, uint_fast32_t timeout_us)</td></tr>
+<tr class="memitem:a23b5d3bdbb217e3e9869d0224bdbfe9a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a23b5d3bdbb217e3e9869d0224bdbfe9a">acc_os_net_receive</a> (<a class="el" href="acc__os__linux_8h.html#a8773f96961ed7bba8a3cadd1de4388fc">acc_os_socket_t</a> sock, void *buffer, size_t max_size, uint_fast32_t timeout_us)</td></tr>
 <tr class="separator:a23b5d3bdbb217e3e9869d0224bdbfe9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62c5ef57742850da3f6576c6c82a5762"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acc__os_8h.html#a6c1b62217073964035be93cfb223a804">acc_os_semaphore_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a62c5ef57742850da3f6576c6c82a5762">acc_os_semaphore_create</a> (void)</td></tr>
-<tr class="memdesc:a62c5ef57742850da3f6576c6c82a5762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a semaphore and returns a pointer to the newly created semaphore.  <a href="#a62c5ef57742850da3f6576c6c82a5762">More...</a><br /></td></tr>
-<tr class="separator:a62c5ef57742850da3f6576c6c82a5762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4fb79cc674fd9476ddf2211eee20dbb"><td class="memItemLeft" align="right" valign="top">int_fast8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#ac4fb79cc674fd9476ddf2211eee20dbb">acc_os_semaphore_wait</a> (<a class="el" href="acc__os_8h.html#a6c1b62217073964035be93cfb223a804">acc_os_semaphore_t</a> sem, uint_fast16_t timeout_ms)</td></tr>
-<tr class="memdesc:ac4fb79cc674fd9476ddf2211eee20dbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for the semaphore to be available. The task calling this function will be blocked until the semaphore is signaled from another task.  <a href="#ac4fb79cc674fd9476ddf2211eee20dbb">More...</a><br /></td></tr>
-<tr class="separator:ac4fb79cc674fd9476ddf2211eee20dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafa5157ea1eeab60f880d9e68c3d0e8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#aafa5157ea1eeab60f880d9e68c3d0e8b">acc_os_semaphore_signal</a> (<a class="el" href="acc__os_8h.html#a6c1b62217073964035be93cfb223a804">acc_os_semaphore_t</a> sem)</td></tr>
-<tr class="memdesc:aafa5157ea1eeab60f880d9e68c3d0e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal the semaphore. Not ISR safe. If needed from an ISR use acc_os_semaphore_signal_from_interrupt instead. Releases the semaphore resulting in a release of the task that is blocked waiting for the semaphore.  <a href="#aafa5157ea1eeab60f880d9e68c3d0e8b">More...</a><br /></td></tr>
-<tr class="separator:aafa5157ea1eeab60f880d9e68c3d0e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfaaf0bcc7cd039ac027e79978d4724d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#adfaaf0bcc7cd039ac027e79978d4724d">acc_os_semaphore_signal_from_interrupt</a> (<a class="el" href="acc__os_8h.html#a6c1b62217073964035be93cfb223a804">acc_os_semaphore_t</a> sem)</td></tr>
-<tr class="memdesc:adfaaf0bcc7cd039ac027e79978d4724d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal the semaphore. This routine is safe to call from an ISR routine.  <a href="#adfaaf0bcc7cd039ac027e79978d4724d">More...</a><br /></td></tr>
-<tr class="separator:adfaaf0bcc7cd039ac027e79978d4724d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a971dd67c9f4f1648328a0c3680c96c19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#a971dd67c9f4f1648328a0c3680c96c19">acc_os_semaphore_destroy</a> (<a class="el" href="acc__os_8h.html#a6c1b62217073964035be93cfb223a804">acc_os_semaphore_t</a> sem)</td></tr>
-<tr class="memdesc:a971dd67c9f4f1648328a0c3680c96c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocates the semaphore.  <a href="#a971dd67c9f4f1648328a0c3680c96c19">More...</a><br /></td></tr>
-<tr class="separator:a971dd67c9f4f1648328a0c3680c96c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:ac369bd9cae28d077e33767bbe8ab7a96"><td class="memItemLeft" align="right" valign="top">static pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#ac369bd9cae28d077e33767bbe8ab7a96">acc_os_mutex</a> = PTHREAD_MUTEX_INITIALIZER</td></tr>
+<tr class="memdesc:ac369bd9cae28d077e33767bbe8ab7a96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex to protect concurrent init of mutexes.  <a href="#ac369bd9cae28d077e33767bbe8ab7a96">More...</a><br /></td></tr>
+<tr class="separator:ac369bd9cae28d077e33767bbe8ab7a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae13f60fbf97da2d83e4332a2f41ad469"><td class="memItemLeft" align="right" valign="top">static uint_fast8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__os__linux_8c.html#ae13f60fbf97da2d83e4332a2f41ad469">acc_os_stack_setup_done</a> = 0</td></tr>
 <tr class="memdesc:ae13f60fbf97da2d83e4332a2f41ad469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag set if stack has been prepared for usage measurement.  <a href="#ae13f60fbf97da2d83e4332a2f41ad469">More...</a><br /></td></tr>
 <tr class="separator:ae13f60fbf97da2d83e4332a2f41ad469"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -330,20 +284,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aff8146ba25dadfda8ce88272113fcac7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ACC_OS_INVALID_SOCKET&#160;&#160;&#160;(-1)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00047">47</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a2c63ae95fe7c6106ae1ec9c283afa486"></a>
 <div class="memitem">
 <div class="memproto">
@@ -354,56 +294,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00045">45</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="a0cd9058648639d78238f10baff304f15"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structacc__os__mutex.html">acc_os_mutex</a>  <a class="el" href="acc__os__linux_8c.html#a0cd9058648639d78238f10baff304f15">acc_os_mutex_s</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a659165736338488bda4336c5b31d9130"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structacc__os__semaphore.html">acc_os_semaphore</a>  <a class="el" href="acc__os__linux_8c.html#a659165736338488bda4336c5b31d9130">acc_os_semaphore_s</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aac16ac6e496bd873130242bf0718fb6c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structacc__os__socket.html">acc_os_socket</a>  <a class="el" href="acc__os__linux_8c.html#aac16ac6e496bd873130242bf0718fb6c">acc_os_socket_s</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab86af1a823c917c94b3b4763acb58513"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structacc__os__thread__handle.html">acc_os_thread_handle</a> <a class="el" href="acc__os__linux_8c.html#ab86af1a823c917c94b3b4763acb58513">acc_os_thread_handle_s</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00044">44</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
@@ -430,7 +321,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00369">369</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00357">357</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
@@ -457,7 +348,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the error string </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00399">399</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00387">387</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
@@ -484,7 +375,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A handle to be used for successive calls </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00358">358</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00346">346</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
@@ -522,7 +413,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The value of the symbol, if found </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00382">382</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00370">370</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
@@ -542,7 +433,7 @@ Variables</h2></td></tr>
 
 <p>Return the unique thread ID for the current thread. </p>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00223">223</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00204">204</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
@@ -562,7 +453,7 @@ Variables</h2></td></tr>
 
 <p>Perform any os specific initialization. </p>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00090">90</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00071">71</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -579,31 +470,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="acc__os__linux_8c_a3be6a90e606e906f8f80e6b2a744cc24_icgraph.png" border="0" usemap="#acc__os__linux_8c_a3be6a90e606e906f8f80e6b2a744cc24_icgraph" alt=""/></div>
 <map name="acc__os__linux_8c_a3be6a90e606e906f8f80e6b2a744cc24_icgraph" id="acc__os__linux_8c_a3be6a90e606e906f8f80e6b2a744cc24_icgraph">
-<area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a8588c603a76621af12df4582c75ddeaa" title="Initialize the direction and level of host GPIOs. " alt="" coords="146,5,283,32"/>
-<area shape="rect" id="node3" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="531,85,637,112"/>
-<area shape="rect" id="node4" href="acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="141,107,288,149"/>
-<area shape="rect" id="node5" href="acc__driver__gpio__linux__sysfs_8c.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="336,107,483,149"/>
+<area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="531,5,637,32"/>
+<area shape="rect" id="node3" href="acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="141,27,288,69"/>
+<area shape="rect" id="node4" href="acc__driver__gpio__linux__sysfs_8c.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="336,27,483,69"/>
 </map>
 </div>
 </p>
-
-</div>
-</div>
-<a class="anchor" id="a8af7ef431b63fd7bc17eea65cffff8d9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool acc_os_is_socket_valid </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="acc__os_8h.html#af9d21c124ba1bcba5e5275b5f2e739ad">acc_os_socket_t</a>&#160;</td>
-          <td class="paramname"><em>sock</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00587">587</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
@@ -640,7 +512,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00235">235</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00216">216</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
@@ -669,21 +541,17 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to the allocated memory, or NULL if allocation failed </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00194">194</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00175">175</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="acc__os__linux_8c_a4414f44717ed4932433e77001aa11f7d_icgraph.png" border="0" usemap="#acc__os__linux_8c_a4414f44717ed4932433e77001aa11f7d_icgraph" alt=""/></div>
 <map name="acc__os__linux_8c_a4414f44717ed4932433e77001aa11f7d_icgraph" id="acc__os__linux_8c_a4414f44717ed4932433e77001aa11f7d_icgraph">
-<area shape="rect" id="node2" href="acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="415,5,561,47"/>
-<area shape="rect" id="node5" href="acc__os__linux_8c.html#a23895aa050c3dbe1e07d343b1b8f4be6" title="Create a mutex. " alt="" coords="202,69,353,95"/>
-<area shape="rect" id="node7" href="acc__os__linux_8c.html#a1f5db92b1269960f112a51a7edf87c52" title="Create new thread. " alt="" coords="202,119,353,146"/>
-<area shape="rect" id="node8" href="acc__os__linux_8c.html#a5c7da7ef85eb938d2d846ce987f070cc" title="acc_os_net_connect" alt="" coords="206,170,349,197"/>
-<area shape="rect" id="node9" href="acc__os__linux_8c.html#a62c5ef57742850da3f6576c6c82a5762" title="Creates a semaphore and returns a pointer to the newly created semaphore. " alt="" coords="188,221,367,247"/>
-<area shape="rect" id="node3" href="acc__driver__gpio__linux__sysfs_8c.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="609,5,756,47"/>
-<area shape="rect" id="node4" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="804,42,911,69"/>
-<area shape="rect" id="node6" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a8588c603a76621af12df4582c75ddeaa" title="Initialize the direction and level of host GPIOs. " alt="" coords="419,122,557,149"/>
+<area shape="rect" id="node2" href="acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="367,5,513,47"/>
+<area shape="rect" id="node5" href="acc__os__linux_8c.html#aefa50c94aaee0c1517279e653affa2e2" title="Initialize a mutex. " alt="" coords="188,63,319,90"/>
+<area shape="rect" id="node3" href="acc__driver__gpio__linux__sysfs_8c.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="561,5,708,47"/>
+<area shape="rect" id="node4" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="756,42,863,69"/>
 </map>
 </div>
 </p>
@@ -714,111 +582,69 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00214">214</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="acc__os__linux_8c_a581fa32a2a5e48e35ee40977859e1a87_icgraph.png" border="0" usemap="#acc__os__linux_8c_a581fa32a2a5e48e35ee40977859e1a87_icgraph" alt=""/></div>
-<map name="acc__os__linux_8c_a581fa32a2a5e48e35ee40977859e1a87_icgraph" id="acc__os__linux_8c_a581fa32a2a5e48e35ee40977859e1a87_icgraph">
-<area shape="rect" id="node2" href="acc__os__linux_8c.html#a7482fa763af527b31119e0a689ff06c6" title="Destroys the mutex. " alt="" coords="197,5,354,32"/>
-<area shape="rect" id="node3" href="acc__os__linux_8c.html#a0e7fc5fa7c0e29de0009431489d964da" title="Cleanup after thread termination. " alt="" coords="196,56,355,83"/>
-<area shape="rect" id="node4" href="acc__os__linux_8c.html#a971dd67c9f4f1648328a0c3680c96c19" title="Deallocates the semaphore. " alt="" coords="183,107,368,133"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00195">195</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a23895aa050c3dbe1e07d343b1b8f4be6"></a>
+<a class="anchor" id="aefa50c94aaee0c1517279e653affa2e2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="acc__os_8h.html#afab256f50823abf8da9fac562fbc6e80">acc_os_mutex_t</a> acc_os_mutex_create </td>
+          <td class="memname"><a class="el" href="structacc__os__mutex__t.html">acc_os_mutex_t</a>* acc_os_mutex_init </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create a mutex. </p>
-<p>Initialize a mutex.</p>
-<dl class="section return"><dt>Returns</dt><dd>Newly initialized mutex </dd></dl>
-
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00256">256</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="acc__os__linux_8c_a23895aa050c3dbe1e07d343b1b8f4be6_cgraph.png" border="0" usemap="#acc__os__linux_8c_a23895aa050c3dbe1e07d343b1b8f4be6_cgraph" alt=""/></div>
-<map name="acc__os__linux_8c_a23895aa050c3dbe1e07d343b1b8f4be6_cgraph" id="acc__os__linux_8c_a23895aa050c3dbe1e07d343b1b8f4be6_cgraph">
-<area shape="rect" id="node2" href="acc__os__linux_8c.html#a4414f44717ed4932433e77001aa11f7d" title="Allocate dynamic memory. " alt="" coords="204,5,339,32"/>
-</map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="acc__os__linux_8c_a23895aa050c3dbe1e07d343b1b8f4be6_icgraph.png" border="0" usemap="#acc__os__linux_8c_a23895aa050c3dbe1e07d343b1b8f4be6_icgraph" alt=""/></div>
-<map name="acc__os__linux_8c_a23895aa050c3dbe1e07d343b1b8f4be6_icgraph" id="acc__os__linux_8c_a23895aa050c3dbe1e07d343b1b8f4be6_icgraph">
-<area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a8588c603a76621af12df4582c75ddeaa" title="Initialize the direction and level of host GPIOs. " alt="" coords="209,5,346,32"/>
-<area shape="rect" id="node3" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="593,85,700,112"/>
-<area shape="rect" id="node4" href="acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="204,107,351,149"/>
-<area shape="rect" id="node5" href="acc__driver__gpio__linux__sysfs_8c.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="399,107,545,149"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a7482fa763af527b31119e0a689ff06c6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void acc_os_mutex_destroy </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="acc__os_8h.html#afab256f50823abf8da9fac562fbc6e80">acc_os_mutex_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="structacc__os__mutex__t.html">acc_os_mutex_t</a> *&#160;</td>
           <td class="paramname"><em>mutex</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Destroys the mutex. </p>
+<p>Initialize a mutex. </p>
+<p>If a pointer to a mutex type is given, that mutex is initialized. If NULL is given, a new mutex is dynamically allocated and initialized.</p>
+<p>If the pointer to an already initialized mutex is given, nothing is done and the mutex is left in its current state. Care must therefore be taken that the mutex variable is zeroed before being passed to <a class="el" href="acc__os__linux_8c.html#aefa50c94aaee0c1517279e653affa2e2" title="Initialize a mutex. ">acc_os_mutex_init()</a> so it can be detected to be initialized or not.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mutex</td><td>Mutex to be destroyed </td></tr>
+    <tr><td class="paramname">mutex</td><td>Pointer to mutex or NULL </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Newly initialized mutex </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00269">269</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00245">245</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="acc__os__linux_8c_a7482fa763af527b31119e0a689ff06c6_cgraph.png" border="0" usemap="#acc__os__linux_8c_a7482fa763af527b31119e0a689ff06c6_cgraph" alt=""/></div>
-<map name="acc__os__linux_8c_a7482fa763af527b31119e0a689ff06c6_cgraph" id="acc__os__linux_8c_a7482fa763af527b31119e0a689ff06c6_cgraph">
-<area shape="rect" id="node2" href="acc__os__linux_8c.html#a581fa32a2a5e48e35ee40977859e1a87" title="Free dynamic memory allocated with acc_os_mem_alloc. " alt="" coords="211,5,340,32"/>
+<div class="center"><img src="acc__os__linux_8c_aefa50c94aaee0c1517279e653affa2e2_cgraph.png" border="0" usemap="#acc__os__linux_8c_aefa50c94aaee0c1517279e653affa2e2_cgraph" alt=""/></div>
+<map name="acc__os__linux_8c_aefa50c94aaee0c1517279e653affa2e2_cgraph" id="acc__os__linux_8c_aefa50c94aaee0c1517279e653affa2e2_cgraph">
+<area shape="rect" id="node2" href="acc__os__linux_8c.html#a4414f44717ed4932433e77001aa11f7d" title="Allocate dynamic memory. " alt="" coords="184,5,319,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="acc__os__linux_8c_aefa50c94aaee0c1517279e653affa2e2_icgraph.png" border="0" usemap="#acc__os__linux_8c_aefa50c94aaee0c1517279e653affa2e2_icgraph" alt=""/></div>
+<map name="acc__os__linux_8c_aefa50c94aaee0c1517279e653affa2e2_icgraph" id="acc__os__linux_8c_aefa50c94aaee0c1517279e653affa2e2_icgraph">
+<area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="573,5,680,32"/>
+<area shape="rect" id="node3" href="acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="184,27,331,69"/>
+<area shape="rect" id="node4" href="acc__driver__gpio__linux__sysfs_8c.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="379,27,525,69"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a84c64d78c357e0856de4b091d9f5ca4d"></a>
+<a class="anchor" id="ae64bc00fbfc26258426fcdb6ccc3fc38"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void acc_os_mutex_lock </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="acc__os_8h.html#afab256f50823abf8da9fac562fbc6e80">acc_os_mutex_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="structacc__os__mutex__t.html">acc_os_mutex_t</a> *&#160;</td>
           <td class="paramname"><em>mutex</em></td><td>)</td>
           <td></td>
         </tr>
@@ -833,31 +659,30 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00281">281</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00273">273</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="acc__os__linux_8c_a84c64d78c357e0856de4b091d9f5ca4d_icgraph.png" border="0" usemap="#acc__os__linux_8c_a84c64d78c357e0856de4b091d9f5ca4d_icgraph" alt=""/></div>
-<map name="acc__os__linux_8c_a84c64d78c357e0856de4b091d9f5ca4d_icgraph" id="acc__os__linux_8c_a84c64d78c357e0856de4b091d9f5ca4d_icgraph">
-<area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a8588c603a76621af12df4582c75ddeaa" title="Initialize the direction and level of host GPIOs. " alt="" coords="197,5,334,32"/>
-<area shape="rect" id="node3" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="581,85,688,112"/>
-<area shape="rect" id="node4" href="acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="192,107,339,149"/>
-<area shape="rect" id="node5" href="acc__driver__gpio__linux__sysfs_8c.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="387,107,533,149"/>
+<div class="center"><img src="acc__os__linux_8c_ae64bc00fbfc26258426fcdb6ccc3fc38_icgraph.png" border="0" usemap="#acc__os__linux_8c_ae64bc00fbfc26258426fcdb6ccc3fc38_icgraph" alt=""/></div>
+<map name="acc__os__linux_8c_ae64bc00fbfc26258426fcdb6ccc3fc38_icgraph" id="acc__os__linux_8c_ae64bc00fbfc26258426fcdb6ccc3fc38_icgraph">
+<area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="581,5,688,32"/>
+<area shape="rect" id="node3" href="acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="192,27,339,69"/>
+<area shape="rect" id="node4" href="acc__driver__gpio__linux__sysfs_8c.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="387,27,533,69"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a679abcf0bc8d3cbb2808dc6fe942ed60"></a>
+<a class="anchor" id="aa6fc45abaf3f67d1593728187c1b669d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void acc_os_mutex_unlock </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="acc__os_8h.html#afab256f50823abf8da9fac562fbc6e80">acc_os_mutex_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="structacc__os__mutex__t.html">acc_os_mutex_t</a> *&#160;</td>
           <td class="paramname"><em>mutex</em></td><td>)</td>
           <td></td>
         </tr>
@@ -872,17 +697,16 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00292">292</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00284">284</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="acc__os__linux_8c_a679abcf0bc8d3cbb2808dc6fe942ed60_icgraph.png" border="0" usemap="#acc__os__linux_8c_a679abcf0bc8d3cbb2808dc6fe942ed60_icgraph" alt=""/></div>
-<map name="acc__os__linux_8c_a679abcf0bc8d3cbb2808dc6fe942ed60_icgraph" id="acc__os__linux_8c_a679abcf0bc8d3cbb2808dc6fe942ed60_icgraph">
-<area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a8588c603a76621af12df4582c75ddeaa" title="Initialize the direction and level of host GPIOs. " alt="" coords="210,5,347,32"/>
-<area shape="rect" id="node3" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="595,85,701,112"/>
-<area shape="rect" id="node4" href="acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="205,107,352,149"/>
-<area shape="rect" id="node5" href="acc__driver__gpio__linux__sysfs_8c.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="400,107,547,149"/>
+<div class="center"><img src="acc__os__linux_8c_aa6fc45abaf3f67d1593728187c1b669d_icgraph.png" border="0" usemap="#acc__os__linux_8c_aa6fc45abaf3f67d1593728187c1b669d_icgraph" alt=""/></div>
+<map name="acc__os__linux_8c_aa6fc45abaf3f67d1593728187c1b669d_icgraph" id="acc__os__linux_8c_aa6fc45abaf3f67d1593728187c1b669d_icgraph">
+<area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="595,5,701,32"/>
+<area shape="rect" id="node3" href="acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="205,27,352,69"/>
+<area shape="rect" id="node4" href="acc__driver__gpio__linux__sysfs_8c.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="400,27,547,69"/>
 </map>
 </div>
 </p>
@@ -919,7 +743,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00469">469</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00457">457</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -938,7 +762,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="acc__os_8h.html#af9d21c124ba1bcba5e5275b5f2e739ad">acc_os_socket_t</a> acc_os_net_connect </td>
+          <td class="memname"><a class="el" href="acc__os__linux_8h.html#a8773f96961ed7bba8a3cadd1de4388fc">acc_os_socket_t</a> acc_os_net_connect </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="acc__os_8h.html#aaf4df41b7f8cb8c0e069a9abd3c6b9f2">acc_os_net_address_t</a>&#160;</td>
           <td class="paramname"><em>address</em>, </td>
@@ -957,16 +781,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00489">489</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00477">477</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="acc__os__linux_8c_a5c7da7ef85eb938d2d846ce987f070cc_cgraph.png" border="0" usemap="#acc__os__linux_8c_a5c7da7ef85eb938d2d846ce987f070cc_cgraph" alt=""/></div>
 <map name="acc__os__linux_8c_a5c7da7ef85eb938d2d846ce987f070cc_cgraph" id="acc__os__linux_8c_a5c7da7ef85eb938d2d846ce987f070cc_cgraph">
-<area shape="rect" id="node2" href="acc__os__linux_8c.html#a4414f44717ed4932433e77001aa11f7d" title="Allocate dynamic memory. " alt="" coords="208,5,343,32"/>
-<area shape="rect" id="node3" href="acc__os__linux_8c.html#afefe83d06be4d1a4c626d56255d9bdb6" title="acc_os_net_address\l_to_string" alt="" coords="204,57,347,98"/>
-<area shape="rect" id="node4" href="acc__os__linux_8c.html#ae2d4b7f0f80516c2f710118ab72e9285" title="acc_os_net_disconnect" alt="" coords="196,123,355,149"/>
+<area shape="rect" id="node2" href="acc__os__linux_8c.html#afefe83d06be4d1a4c626d56255d9bdb6" title="acc_os_net_address\l_to_string" alt="" coords="204,5,347,47"/>
+<area shape="rect" id="node3" href="acc__os__linux_8c.html#ae2d4b7f0f80516c2f710118ab72e9285" title="acc_os_net_disconnect" alt="" coords="196,71,355,98"/>
 </map>
 </div>
 </p>
@@ -980,14 +803,14 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void acc_os_net_disconnect </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="acc__os_8h.html#af9d21c124ba1bcba5e5275b5f2e739ad">acc_os_socket_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="acc__os__linux_8h.html#a8773f96961ed7bba8a3cadd1de4388fc">acc_os_socket_t</a>&#160;</td>
           <td class="paramname"><em>sock</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00598">598</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00562">562</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1050,7 +873,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 for success, -1 otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00413">413</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00401">401</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1071,7 +894,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">int acc_os_net_receive </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="acc__os_8h.html#af9d21c124ba1bcba5e5275b5f2e739ad">acc_os_socket_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="acc__os__linux_8h.html#a8773f96961ed7bba8a3cadd1de4388fc">acc_os_socket_t</a>&#160;</td>
           <td class="paramname"><em>sock</em>, </td>
         </tr>
         <tr>
@@ -1100,7 +923,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00635">635</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00593">593</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
@@ -1111,7 +934,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">int acc_os_net_send </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="acc__os_8h.html#af9d21c124ba1bcba5e5275b5f2e739ad">acc_os_socket_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="acc__os__linux_8h.html#a8773f96961ed7bba8a3cadd1de4388fc">acc_os_socket_t</a>&#160;</td>
           <td class="paramname"><em>sock</em>, </td>
         </tr>
         <tr>
@@ -1134,7 +957,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00606">606</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00568">568</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
@@ -1152,7 +975,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00442">442</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00430">430</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1163,201 +986,6 @@ Here is the call graph for this function:</div>
 </map>
 </div>
 </p>
-
-</div>
-</div>
-<a class="anchor" id="a62c5ef57742850da3f6576c6c82a5762"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="acc__os_8h.html#a6c1b62217073964035be93cfb223a804">acc_os_semaphore_t</a> acc_os_semaphore_create </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates a semaphore and returns a pointer to the newly created semaphore. </p>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the semaphore on success otherwise NULL </dd></dl>
-
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00672">672</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="acc__os__linux_8c_a62c5ef57742850da3f6576c6c82a5762_cgraph.png" border="0" usemap="#acc__os__linux_8c_a62c5ef57742850da3f6576c6c82a5762_cgraph" alt=""/></div>
-<map name="acc__os__linux_8c_a62c5ef57742850da3f6576c6c82a5762_cgraph" id="acc__os__linux_8c_a62c5ef57742850da3f6576c6c82a5762_cgraph">
-<area shape="rect" id="node2" href="acc__os__linux_8c.html#a4414f44717ed4932433e77001aa11f7d" title="Allocate dynamic memory. " alt="" coords="232,5,367,32"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a971dd67c9f4f1648328a0c3680c96c19"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void acc_os_semaphore_destroy </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="acc__os_8h.html#a6c1b62217073964035be93cfb223a804">acc_os_semaphore_t</a>&#160;</td>
-          <td class="paramname"><em>sem</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Deallocates the semaphore. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">sem</td><td>A pointer to the semaphore to deallocate </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00744">744</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="acc__os__linux_8c_a971dd67c9f4f1648328a0c3680c96c19_cgraph.png" border="0" usemap="#acc__os__linux_8c_a971dd67c9f4f1648328a0c3680c96c19_cgraph" alt=""/></div>
-<map name="acc__os__linux_8c_a971dd67c9f4f1648328a0c3680c96c19_cgraph" id="acc__os__linux_8c_a971dd67c9f4f1648328a0c3680c96c19_cgraph">
-<area shape="rect" id="node2" href="acc__os__linux_8c.html#a581fa32a2a5e48e35ee40977859e1a87" title="Free dynamic memory allocated with acc_os_mem_alloc. " alt="" coords="239,5,368,32"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="aafa5157ea1eeab60f880d9e68c3d0e8b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void acc_os_semaphore_signal </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="acc__os_8h.html#a6c1b62217073964035be93cfb223a804">acc_os_semaphore_t</a>&#160;</td>
-          <td class="paramname"><em>sem</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Signal the semaphore. Not ISR safe. If needed from an ISR use acc_os_semaphore_signal_from_interrupt instead. Releases the semaphore resulting in a release of the task that is blocked waiting for the semaphore. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">sem</td><td>A pointer to the semaphore to signal </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00730">730</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="acc__os__linux_8c_aafa5157ea1eeab60f880d9e68c3d0e8b_icgraph.png" border="0" usemap="#acc__os__linux_8c_aafa5157ea1eeab60f880d9e68c3d0e8b_icgraph" alt=""/></div>
-<map name="acc__os__linux_8c_aafa5157ea1eeab60f880d9e68c3d0e8b_icgraph" id="acc__os__linux_8c_aafa5157ea1eeab60f880d9e68c3d0e8b_icgraph">
-<area shape="rect" id="node2" href="acc__os__linux_8c.html#adfaaf0bcc7cd039ac027e79978d4724d" title="Signal the semaphore. This routine is safe to call from an ISR routine. " alt="" coords="229,5,405,47"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="adfaaf0bcc7cd039ac027e79978d4724d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void acc_os_semaphore_signal_from_interrupt </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="acc__os_8h.html#a6c1b62217073964035be93cfb223a804">acc_os_semaphore_t</a>&#160;</td>
-          <td class="paramname"><em>sem</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Signal the semaphore. This routine is safe to call from an ISR routine. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">sem</td><td>A pointer to the semaphore to signal </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00738">738</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="acc__os__linux_8c_adfaaf0bcc7cd039ac027e79978d4724d_cgraph.png" border="0" usemap="#acc__os__linux_8c_adfaaf0bcc7cd039ac027e79978d4724d_cgraph" alt=""/></div>
-<map name="acc__os__linux_8c_adfaaf0bcc7cd039ac027e79978d4724d_cgraph" id="acc__os__linux_8c_adfaaf0bcc7cd039ac027e79978d4724d_cgraph">
-<area shape="rect" id="node2" href="acc__os__linux_8c.html#aafa5157ea1eeab60f880d9e68c3d0e8b" title="Signal the semaphore. Not ISR safe. If needed from an ISR use acc_os_semaphore_signal_from_interrupt ..." alt="" coords="229,13,405,39"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="ac4fb79cc674fd9476ddf2211eee20dbb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int_fast8_t acc_os_semaphore_wait </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="acc__os_8h.html#a6c1b62217073964035be93cfb223a804">acc_os_semaphore_t</a>&#160;</td>
-          <td class="paramname"><em>sem</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint_fast16_t&#160;</td>
-          <td class="paramname"><em>timeout_ms</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Waits for the semaphore to be available. The task calling this function will be blocked until the semaphore is signaled from another task. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">sem</td><td>A pointer to the semaphore to use </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>The amount of time to wait before a timeout occurs </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns 0 on success otherwise -1 </dd></dl>
-
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00689">689</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a35d55fc51b116d2a52c03c8f7483a5d8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void acc_os_set_socket_invalid </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="acc__os_8h.html#af9d21c124ba1bcba5e5275b5f2e739ad">acc_os_socket_t</a>&#160;</td>
-          <td class="paramname"><em>sock</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00579">579</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
@@ -1383,7 +1011,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00168">168</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00149">149</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1427,7 +1055,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Number of bytes of used stack space </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00144">144</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00125">125</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
@@ -1453,19 +1081,19 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00123">123</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00104">104</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0e7fc5fa7c0e29de0009431489d964da"></a>
+<a class="anchor" id="a4a4c7205b79df35096347ef23714f29e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void acc_os_thread_cleanup </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="acc__os_8h.html#aa06acffa83d65a1adccb893cd59af0c7">acc_os_thread_handle_t</a>&#160;</td>
-          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="acc__os__linux_8h.html#a18986801c8ae3adf044e00bd65001e2a">acc_os_thread_handle_t</a>&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1475,31 +1103,21 @@ Here is the caller graph for this function:</div>
 <p>For operating systems that require it, perform any post-thread cleanup operation.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">thread</td><td>Handle of thread </td></tr>
+    <tr><td class="paramname">handle</td><td>Handle of thread </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00343">343</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="acc__os__linux_8c_a0e7fc5fa7c0e29de0009431489d964da_cgraph.png" border="0" usemap="#acc__os__linux_8c_a0e7fc5fa7c0e29de0009431489d964da_cgraph" alt=""/></div>
-<map name="acc__os__linux_8c_a0e7fc5fa7c0e29de0009431489d964da_cgraph" id="acc__os__linux_8c_a0e7fc5fa7c0e29de0009431489d964da_cgraph">
-<area shape="rect" id="node2" href="acc__os__linux_8c.html#a581fa32a2a5e48e35ee40977859e1a87" title="Free dynamic memory allocated with acc_os_mem_alloc. " alt="" coords="212,5,341,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00332">332</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1f5db92b1269960f112a51a7edf87c52"></a>
+<a class="anchor" id="ad4e2419da0bcef8447c5943f7c8b253d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="acc__os_8h.html#aa06acffa83d65a1adccb893cd59af0c7">acc_os_thread_handle_t</a> acc_os_thread_create </td>
+          <td class="memname"><a class="el" href="acc__types_8h.html#a67a273ffcc7c5d78aa80315c00746b01">acc_status_t</a> acc_os_thread_create </td>
           <td>(</td>
           <td class="paramtype">void(*)(void *param)&#160;</td>
           <td class="paramname"><em>func</em>, </td>
@@ -1508,7 +1126,13 @@ Here is the call graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>param</em>&#160;</td>
+          <td class="paramname"><em>param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="acc__os__linux_8h.html#a18986801c8ae3adf044e00bd65001e2a">acc_os_thread_handle_t</a> *&#160;</td>
+          <td class="paramname"><em>handle</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1521,24 +1145,15 @@ Here is the call graph for this function:</div>
 <p>Create new thread. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">func</td><td>Function implementing the thread code </td></tr>
-    <tr><td class="paramname">param</td><td>Parameter to be passed to the thread function </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">func</td><td>Function implementing the thread code </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">param</td><td>Parameter to be passed to the thread function </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">handle</td><td>OS specific thread handle </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Newly created thread </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>status </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00305">305</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="acc__os__linux_8c_a1f5db92b1269960f112a51a7edf87c52_cgraph.png" border="0" usemap="#acc__os__linux_8c_a1f5db92b1269960f112a51a7edf87c52_cgraph" alt=""/></div>
-<map name="acc__os__linux_8c_a1f5db92b1269960f112a51a7edf87c52_cgraph" id="acc__os__linux_8c_a1f5db92b1269960f112a51a7edf87c52_cgraph">
-<area shape="rect" id="node2" href="acc__os__linux_8c.html#a4414f44717ed4932433e77001aa11f7d" title="Allocate dynamic memory. " alt="" coords="204,5,339,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00298">298</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
@@ -1559,7 +1174,7 @@ Here is the call graph for this function:</div>
 <p>Delete current thread. </p>
 <p>There is no return status. If the function returns, it failed. </p>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00330">330</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00319">319</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
@@ -1587,18 +1202,17 @@ Here is the call graph for this function:</div>
 
 <p>General signal handler registered by os_init() </p>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00080">80</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00061">61</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="acc__os__linux_8c_a5b2323a65a520e9bf8e82ed8e8b0ad37_icgraph.png" border="0" usemap="#acc__os__linux_8c_a5b2323a65a520e9bf8e82ed8e8b0ad37_icgraph" alt=""/></div>
 <map name="acc__os__linux_8c_a5b2323a65a520e9bf8e82ed8e8b0ad37_icgraph" id="acc__os__linux_8c_a5b2323a65a520e9bf8e82ed8e8b0ad37_icgraph">
-<area shape="rect" id="node2" href="acc__os__linux_8c.html#a3be6a90e606e906f8f80e6b2a744cc24" title="Perform any os specific initialization. " alt="" coords="208,56,296,83"/>
-<area shape="rect" id="node3" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a8588c603a76621af12df4582c75ddeaa" title="Initialize the direction and level of host GPIOs. " alt="" coords="349,5,486,32"/>
-<area shape="rect" id="node4" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="733,85,840,112"/>
-<area shape="rect" id="node5" href="acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="344,107,491,149"/>
-<area shape="rect" id="node6" href="acc__driver__gpio__linux__sysfs_8c.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="539,107,685,149"/>
+<area shape="rect" id="node2" href="acc__os__linux_8c.html#a3be6a90e606e906f8f80e6b2a744cc24" title="Perform any os specific initialization. " alt="" coords="208,5,296,32"/>
+<area shape="rect" id="node3" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="733,5,840,32"/>
+<area shape="rect" id="node4" href="acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="344,27,491,69"/>
+<area shape="rect" id="node5" href="acc__driver__gpio__linux__sysfs_8c.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="539,27,685,69"/>
 </map>
 </div>
 </p>
@@ -1606,6 +1220,30 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="ac369bd9cae28d077e33767bbe8ab7a96"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_mutex_t acc_os_mutex = PTHREAD_MUTEX_INITIALIZER</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mutex to protect concurrent init of mutexes. </p>
+
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00050">50</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ae13f60fbf97da2d83e4332a2f41ad469"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1626,7 +1264,7 @@ Here is the caller graph for this function:</div>
 
 <p>Flag set if stack has been prepared for usage measurement. </p>
 
-<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00074">74</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__os__linux_8c_source.html#l00055">55</a> of file <a class="el" href="acc__os__linux_8c_source.html">acc_os_linux.c</a>.</p>
 
 </div>
 </div>
@@ -1636,7 +1274,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="acc__os__linux_8c.html">acc_os_linux.c</a></li>
-    <li class="footer">Generated on Mon Apr 9 2018 13:59:50 for Acconeer API by
+    <li class="footer">Generated on Tue Feb 27 2018 14:02:58 for Acconeer API by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

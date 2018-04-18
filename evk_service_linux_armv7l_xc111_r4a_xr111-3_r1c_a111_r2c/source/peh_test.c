@@ -25,7 +25,8 @@ void reconfigure_sweeps(acc_service_configuration_t envelope_configuration);
 static acc_service_status_t execute_envelope_with_blocking_calls(acc_service_configuration_t envelope_configuration);
 
 // UDP
-#define SERVER "192.168.0.108"
+//#define SERVER "192.168.0.108"
+#define SERVER "127.0.0.1"
 #define BUFLEN 2048  //Max length of buffer
 #define PORT 8888   //The port on which to send data
 struct sockaddr_in si_other;
@@ -132,7 +133,6 @@ acc_service_status_t execute_envelope_with_blocking_calls(acc_service_configurat
     while (1) 
     {
       service_status = acc_service_envelope_get_next(handle, envelope_data, envelope_metadata.data_length);
-      
       if (service_status == ACC_SERVICE_STATUS_OK) 
       {
 	for (uint_fast16_t index = 0; index < envelope_metadata.data_length; index++) 
@@ -171,9 +171,9 @@ void reconfigure_sweeps(acc_service_configuration_t envelope_configuration)
   }
   else 
   {
-    float start_m = 0.4;
-    float length_m = 0.5;
-    float sweep_frequency_hz = 100;
+    float start_m = 0.2;
+    float length_m = 1.0 - start_m;
+    float sweep_frequency_hz = 20;
 
     acc_sweep_configuration_requested_start_set(sweep_configuration, start_m);
     acc_sweep_configuration_requested_length_set(sweep_configuration, length_m);

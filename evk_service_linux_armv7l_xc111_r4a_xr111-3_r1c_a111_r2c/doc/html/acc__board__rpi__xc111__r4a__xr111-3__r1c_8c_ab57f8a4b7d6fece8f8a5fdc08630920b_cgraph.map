@@ -1,0 +1,4 @@
+<map id="acc_board_gpio_read" name="acc_board_gpio_read">
+<area shape="rect" id="node2" href="$acc__device__gpio_8h.html#a4e7a4434d5b59f4fb40004bb46361597" title="Read from GPIO. " alt="" coords="199,5,349,32"/>
+<area shape="rect" id="node3" href="$acc__log_8h.html#a7caf43616038d0c20c5dcec4e78e0923" title="Return a string describing a status code. " alt="" coords="199,56,349,83"/>
+</map>

@@ -1,10 +1,6 @@
 <map id="acc_os_mem_alloc" name="acc_os_mem_alloc">
-<area shape="rect" id="node2" href="$acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="415,5,561,47"/>
-<area shape="rect" id="node5" href="$acc__os__linux_8c.html#a23895aa050c3dbe1e07d343b1b8f4be6" title="Create a mutex. " alt="" coords="202,69,353,95"/>
-<area shape="rect" id="node7" href="$acc__os__linux_8c.html#a1f5db92b1269960f112a51a7edf87c52" title="Create new thread. " alt="" coords="202,119,353,146"/>
-<area shape="rect" id="node8" href="$acc__os__linux_8c.html#a5c7da7ef85eb938d2d846ce987f070cc" title="acc_os_net_connect" alt="" coords="206,170,349,197"/>
-<area shape="rect" id="node9" href="$acc__os__linux_8c.html#a62c5ef57742850da3f6576c6c82a5762" title="Creates a semaphore and returns a pointer to the newly created semaphore. " alt="" coords="188,221,367,247"/>
-<area shape="rect" id="node3" href="$acc__driver__gpio__linux__sysfs_8c.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="609,5,756,47"/>
-<area shape="rect" id="node4" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="804,42,911,69"/>
-<area shape="rect" id="node6" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a8588c603a76621af12df4582c75ddeaa" title="Initialize the direction and level of host GPIOs. " alt="" coords="419,122,557,149"/>
+<area shape="rect" id="node2" href="$acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="367,5,513,47"/>
+<area shape="rect" id="node5" href="$acc__os__linux_8c.html#aefa50c94aaee0c1517279e653affa2e2" title="Initialize a mutex. " alt="" coords="188,63,319,90"/>
+<area shape="rect" id="node3" href="$acc__driver__gpio__linux__sysfs_8c.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="561,5,708,47"/>
+<area shape="rect" id="node4" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="756,42,863,69"/>
 </map>

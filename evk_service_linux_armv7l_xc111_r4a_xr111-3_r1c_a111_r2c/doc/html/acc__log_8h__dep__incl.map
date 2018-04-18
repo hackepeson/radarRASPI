@@ -1,6 +1,8 @@
 <map id="include/acc_log.h" name="include/acc_log.h">
 <area shape="rect" id="node2" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html" title="source/acc_board_rpi\l_xc111_r4a_xr111&#45;3_r1c.c" alt="" coords="5,80,180,121"/>
 <area shape="rect" id="node3" href="$acc__driver__gpio__linux__sysfs_8c.html" title="source/acc_driver_gpio\l_linux_sysfs.c" alt="" coords="204,80,360,121"/>
-<area shape="rect" id="node4" href="$acc__driver__spi__linux__spidev_8c.html" title="source/acc_driver_spi\l_linux_spidev.c" alt="" coords="385,80,534,121"/>
-<area shape="rect" id="node5" href="$acc__os__linux_8c.html" title="source/acc_os_linux.c" alt="" coords="558,87,710,114"/>
+<area shape="rect" id="node4" href="$acc__driver__i2c__linux_8c.html" title="source/acc_driver_i2c\l_linux.c" alt="" coords="385,80,534,121"/>
+<area shape="rect" id="node5" href="$acc__driver__memory__linux_8c.html" title="source/acc_driver_memory\l_linux.c" alt="" coords="558,80,737,121"/>
+<area shape="rect" id="node6" href="$acc__driver__spi__linux__spidev_8c.html" title="source/acc_driver_spi\l_linux_spidev.c" alt="" coords="761,80,910,121"/>
+<area shape="rect" id="node7" href="$acc__os__linux_8c.html" title="source/acc_os_linux.c" alt="" coords="934,87,1086,114"/>
 </map>

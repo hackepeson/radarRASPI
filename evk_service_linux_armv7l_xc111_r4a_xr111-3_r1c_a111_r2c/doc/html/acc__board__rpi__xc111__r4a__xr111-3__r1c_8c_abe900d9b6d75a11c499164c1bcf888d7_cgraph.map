@@ -1,3 +1,5 @@
 <map id="acc_board_reset_sensor" name="acc_board_reset_sensor">
-<area shape="rect" id="node2" href="$acc__device__gpio_8h.html#a3ce865cd090f6cf3521afa0552d452d1" title="Set GPIO output level. " alt="" coords="217,5,372,32"/>
+<area shape="rect" id="node2" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a02b1f4bfbd94ae227f694f490bda005c" title="Set host GPIO output level. " alt="" coords="217,31,373,57"/>
+<area shape="rect" id="node3" href="$acc__device__gpio_8h.html#a3ce865cd090f6cf3521afa0552d452d1" title="Set GPIO output level. " alt="" coords="421,5,576,32"/>
+<area shape="rect" id="node4" href="$acc__log_8h.html#a7caf43616038d0c20c5dcec4e78e0923" title="Return a string describing a status code. " alt="" coords="424,56,573,83"/>
 </map>

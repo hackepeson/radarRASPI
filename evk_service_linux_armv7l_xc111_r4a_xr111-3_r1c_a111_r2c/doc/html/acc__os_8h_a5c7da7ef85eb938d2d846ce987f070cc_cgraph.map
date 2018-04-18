@@ -1,5 +1,4 @@
 <map id="acc_os_net_connect" name="acc_os_net_connect">
-<area shape="rect" id="node2" href="$acc__os__linux_8c.html#a4414f44717ed4932433e77001aa11f7d" title="Allocate dynamic memory. " alt="" coords="208,5,343,32"/>
-<area shape="rect" id="node3" href="$acc__os__linux_8c.html#afefe83d06be4d1a4c626d56255d9bdb6" title="acc_os_net_address\l_to_string" alt="" coords="204,57,347,98"/>
-<area shape="rect" id="node4" href="$acc__os__linux_8c.html#ae2d4b7f0f80516c2f710118ab72e9285" title="acc_os_net_disconnect" alt="" coords="196,123,355,149"/>
+<area shape="rect" id="node2" href="$acc__os__linux_8c.html#afefe83d06be4d1a4c626d56255d9bdb6" title="acc_os_net_address\l_to_string" alt="" coords="204,5,347,47"/>
+<area shape="rect" id="node3" href="$acc__os__linux_8c.html#ae2d4b7f0f80516c2f710118ab72e9285" title="acc_os_net_disconnect" alt="" coords="196,71,355,98"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="acc_driver_i2c_linux_read_from_address_16" name="acc_driver_i2c_linux_read_from_address_16">
+<area shape="rect" id="node2" href="$acc__driver__i2c__linux_8c.html#ae023c20325429fea295e03fb00bc4fed" title="I2C read from specified address. " alt="" coords="215,5,404,47"/>
+<area shape="rect" id="node3" href="$acc__driver__i2c__linux_8c.html#adc0396f4b832ff43518aa9d9eb17a72d" title="Internal I2C read. " alt="" coords="452,13,548,39"/>
+</map>

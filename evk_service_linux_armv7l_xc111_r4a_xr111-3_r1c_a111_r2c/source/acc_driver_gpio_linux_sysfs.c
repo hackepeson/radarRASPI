@@ -1,4 +1,4 @@
-// Copyright (c) Acconeer AB, 2016-2018
+// Copyright (c) Acconeer AB, 2016-2017
 // All rights reserved
 
 #include <errno.h>
@@ -296,25 +296,25 @@ static void internal_gpio_close_all(void)
  */
 static acc_status_t acc_driver_gpio_linux_sysfs_init(void)
 {
-	static acc_os_mutex_t	init_mutex = NULL;
-	static bool		init_done = false;
+	static acc_os_mutex_t	init_mutex;
+	static bool		init_done;
 
 	if (init_done)
 		return ACC_STATUS_SUCCESS;
 
 	acc_os_init();
-	init_mutex = acc_os_mutex_create();
+	acc_os_mutex_init(&init_mutex);
 
-	acc_os_mutex_lock(init_mutex);
+	acc_os_mutex_lock(&init_mutex);
 	if (init_done) {
-		acc_os_mutex_unlock(init_mutex);
+		acc_os_mutex_unlock(&init_mutex);
 		return ACC_STATUS_SUCCESS;
 	}
 
 	gpios = acc_os_mem_alloc(sizeof(gpio_t) * gpio_count);
 	if (!gpios) {
 		ACC_LOG_ERROR("Out of memory");
-		acc_os_mutex_unlock(init_mutex);
+		acc_os_mutex_unlock(&init_mutex);
 		return ACC_STATUS_OUT_OF_MEMORY;
 	}
 
@@ -328,12 +328,12 @@ static acc_status_t acc_driver_gpio_linux_sysfs_init(void)
 	if (atexit(internal_gpio_close_all)) {
 		ACC_LOG_ERROR("Unable to set exit function 'internal_gpio_close_all()'");
 		internal_gpio_close_all();
-		acc_os_mutex_unlock(init_mutex);
+		acc_os_mutex_unlock(&init_mutex);
 		return ACC_STATUS_FAILURE;
 	}
 
 	init_done = true;
-	acc_os_mutex_unlock(init_mutex);
+	acc_os_mutex_unlock(&init_mutex);
 
 	return ACC_STATUS_SUCCESS;
 }

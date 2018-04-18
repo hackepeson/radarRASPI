@@ -16,30 +16,6 @@ extern "C" {
 
 
 /**
- * @brief Power save mode
- *
- * Each power save mode corresponds to a how much of the sensor hardware is shutdown
- * between sweeps. Mode A means that the whole sensor is shutdown between sweeps while
- * mode D means that the sensor is in its active state all the time.
- * For each power save mode there will be a limit in the achievable update rate. Mode A
- * will have the lowest update rate limit but also consumes the least amount of power for
- * low update rates.
- * The update rate limits also depend on integration and range settings so for each
- * scenario it is up to the user to find the best possible compromise between update rate
- * and power consumption.
-*/
-typedef enum
-{
-	ACC_SWEEP_CONFIGURATION_POWER_SAVE_MODE_A,
-	ACC_SWEEP_CONFIGURATION_POWER_SAVE_MODE_B,
-	ACC_SWEEP_CONFIGURATION_POWER_SAVE_MODE_C,
-	ACC_SWEEP_CONFIGURATION_POWER_SAVE_MODE_D,
-	ACC_SWEEP_CONFIGURATION_POWER_SAVE_MODE_COUNT
-} acc_sweep_configuration_power_save_mode_enum_t;
-typedef uint32_t acc_sweep_configuration_power_save_mode_t;
-
-
-/**
  * @brief Sweep configuration container
 */
 struct acc_sweep_configuration;
@@ -129,24 +105,6 @@ extern void acc_sweep_configuration_requested_range_set(acc_sweep_configuration_
  * @param[in] sensor_sweep_frequency_hz The frequency to sweep with in hertz
  */
 extern void acc_sweep_configuration_repetition_mode_streaming_set(acc_sweep_configuration_t configuration, float sensor_sweep_frequency_hz);
-
-
-/**
- * @brief Get power save mode 
- *
- * @param[in] configuration The sweep configuration to get power save mode for
- * @return Power save mode
- */
-extern acc_sweep_configuration_power_save_mode_t acc_sweep_configuration_power_save_mode_get(acc_sweep_configuration_t configuration);
-
-
-/**
- * @brief Set sweep idle state
- * 
- * @param[in] configuration The sweep configuration to set power save mode in
- * @param[in] power_save_mode The power save mode to use
- */
-extern void acc_sweep_configuration_power_save_mode_set(acc_sweep_configuration_t configuration, acc_sweep_configuration_power_save_mode_t power_save_mode);
 
 
 #ifdef __cplusplus

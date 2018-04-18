@@ -1,3 +1,5 @@
 <map id="acc_device_gpio_input" name="acc_device_gpio_input">
-<area shape="rect" id="node2" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a8588c603a76621af12df4582c75ddeaa" title="Initialize the direction and level of host GPIOs. " alt="" coords="208,5,345,32"/>
+<area shape="rect" id="node2" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a38480b3965f1d5d5dcc895362dbfb178" title="Set host GPIO to input. " alt="" coords="208,5,356,32"/>
+<area shape="rect" id="node3" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a0d60562bc0c5a659a131115fde5c1a48" title="Initialize the direction and level of host GPIOs. " alt="" coords="404,5,541,32"/>
+<area shape="rect" id="node4" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="589,5,696,32"/>
 </map>

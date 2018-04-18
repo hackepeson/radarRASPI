@@ -117,6 +117,7 @@ $(document).ready(function(){initNavTree('acc__board__rpi__xc111__r4a__xr111-3__
 <code>#include &quot;<a class="el" href="acc__board_8h_source.html">acc_board.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="acc__device__gpio_8h_source.html">acc_device_gpio.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="acc__driver__gpio__linux__sysfs_8h_source.html">acc_driver_gpio_linux_sysfs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="acc__driver__i2c__linux_8h_source.html">acc_driver_i2c_linux.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="acc__driver__spi__linux__spidev_8h_source.html">acc_driver_spi_linux_spidev.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="acc__log_8h_source.html">acc_log.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="acc__os_8h_source.html">acc_os.h</a>&quot;</code><br />
@@ -125,13 +126,14 @@ Include dependency graph for acc_board_rpi_xc111_r4a_xr111-3_r1c.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c__incl.png" border="0" usemap="#source_2acc__board__rpi__xc111__r4a__xr111-3__r1c_8c" alt=""/></div>
 <map name="source_2acc__board__rpi__xc111__r4a__xr111-3__r1c_8c" id="source_2acc__board__rpi__xc111__r4a__xr111-3__r1c_8c">
-<area shape="rect" id="node5" href="acc__board_8h.html" title="acc_board.h" alt="" coords="25,102,118,129"/>
-<area shape="rect" id="node8" href="acc__device__gpio_8h.html" title="acc_device_gpio.h" alt="" coords="414,102,545,129"/>
-<area shape="rect" id="node9" href="acc__driver__gpio__linux__sysfs_8h.html" title="acc_driver_gpio_linux\l_sysfs.h" alt="" coords="193,95,339,136"/>
-<area shape="rect" id="node10" href="acc__driver__spi__linux__spidev_8h.html" title="acc_driver_spi_linux\l_spidev.h" alt="" coords="772,95,912,136"/>
-<area shape="rect" id="node11" href="acc__log_8h.html" title="acc_log.h" alt="" coords="569,102,648,129"/>
-<area shape="rect" id="node12" href="acc__os_8h.html" title="acc_os.h" alt="" coords="673,102,747,129"/>
-<area shape="rect" id="node6" href="acc__types_8h.html" title="acc_types.h" alt="" coords="495,184,589,211"/>
+<area shape="rect" id="node5" href="acc__board_8h.html" title="acc_board.h" alt="" coords="432,102,525,129"/>
+<area shape="rect" id="node7" href="acc__device__gpio_8h.html" title="acc_device_gpio.h" alt="" coords="277,102,408,129"/>
+<area shape="rect" id="node8" href="acc__driver__gpio__linux__sysfs_8h.html" title="acc_driver_gpio_linux\l_sysfs.h" alt="" coords="5,184,152,225"/>
+<area shape="rect" id="node9" href="acc__driver__i2c__linux_8h.html" title="acc_driver_i2c_linux.h" alt="" coords="753,102,903,129"/>
+<area shape="rect" id="node10" href="acc__driver__spi__linux__spidev_8h.html" title="acc_driver_spi_linux\l_spidev.h" alt="" coords="927,95,1067,136"/>
+<area shape="rect" id="node11" href="acc__log_8h.html" title="acc_log.h" alt="" coords="550,102,629,129"/>
+<area shape="rect" id="node12" href="acc__os_8h.html" title="acc_os.h" alt="" coords="653,102,728,129"/>
+<area shape="rect" id="node6" href="acc__types_8h.html" title="acc_types.h" alt="" coords="432,191,525,218"/>
 </map>
 </div>
 </div>
@@ -163,12 +165,6 @@ Macros</h2></td></tr>
 <tr class="memitem:a05f2f8a714569f47d97f8a8dc0de9f34"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a05f2f8a714569f47d97f8a8dc0de9f34">ACC_BOARD_SPI_SPEED</a>&#160;&#160;&#160;15000000</td></tr>
 <tr class="memdesc:a05f2f8a714569f47d97f8a8dc0de9f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SPI speed of this board.  <a href="#a05f2f8a714569f47d97f8a8dc0de9f34">More...</a><br /></td></tr>
 <tr class="separator:a05f2f8a714569f47d97f8a8dc0de9f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cf0faa449579b6f4e3586708068c3fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a7cf0faa449579b6f4e3586708068c3fb">ACC_BOARD_BUS</a>&#160;&#160;&#160;0</td></tr>
-<tr class="memdesc:a7cf0faa449579b6f4e3586708068c3fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SPI bus all sensors are using.  <a href="#a7cf0faa449579b6f4e3586708068c3fb">More...</a><br /></td></tr>
-<tr class="separator:a7cf0faa449579b6f4e3586708068c3fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5561cb65c5e45a779e66c61b21777829"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a5561cb65c5e45a779e66c61b21777829">ACC_BOARD_CS</a>&#160;&#160;&#160;0</td></tr>
-<tr class="memdesc:a5561cb65c5e45a779e66c61b21777829"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SPI CS all sensors are using.  <a href="#a5561cb65c5e45a779e66c61b21777829">More...</a><br /></td></tr>
-<tr class="separator:a5561cb65c5e45a779e66c61b21777829"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a3b177480b4a58d8be195dbab7bff7c37"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3b177480b4a58d8be195dbab7bff7c37">RSTn_PIN</a>&#160;&#160;&#160;6</td></tr>
 <tr class="memdesc:a3b177480b4a58d8be195dbab7bff7c37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Host GPIO pin number (BCM)  <a href="#a3b177480b4a58d8be195dbab7bff7c37">More...</a><br /></td></tr>
@@ -191,21 +187,42 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a415be474711d201c349cf6158aacd244"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a415be474711d201c349cf6158aacd244">acc_board_sensor_state_t</a> { <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a415be474711d201c349cf6158aacd244ad6a98b26a1cde0c2f1724073d57defe7">SENSOR_STATE_UNKNOWN</a>, 
-<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a415be474711d201c349cf6158aacd244a5f5f69b690252e4d8b1c5dcd2ddb3be8">SENSOR_STATE_READY</a>, 
-<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a415be474711d201c349cf6158aacd244a3b05a7108790979f80c9b15c5613dda1">SENSOR_STATE_BUSY</a>
- }<tr class="memdesc:a415be474711d201c349cf6158aacd244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sensor states.  <a href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a415be474711d201c349cf6158aacd244">More...</a><br /></td></tr>
+<tr class="memitem:a3ed49208cd1d40833e12e72d756b2021"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021">acc_board_host_gpio_enum_t</a> { <br />
+&#160;&#160;<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021a606265cb42f3f3e7894c0ca4df92dad3">HOST_GPIO_GPIO0</a>, 
+<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021a12dd9d5f22ca0dc2fa2b7e596fa6c823">HOST_GPIO_GPIO1</a>, 
+<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021ad7a5a12bde4618177cdbd8386d59a1e1">HOST_GPIO_GPIO2</a>, 
+<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021adc3bd52c303d4684fa6d548d34dda9ed">HOST_GPIO_GPIO3</a>, 
+<br />
+&#160;&#160;<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021a2619518b5060fa317d0103206b092ee7">HOST_GPIO_RSTn</a>, 
+<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021aa8f72e2ad892f6ffc2e38f7a57a5b9dc">HOST_GPIO_ENABLE</a>, 
+<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021a47d0fad81637ed2ec5c5ed392b0ed55b">HOST_GPIO_PMU_ENABLE</a>, 
+<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021a9994094f4bf00ed333d8c41a855b2050">HOST_GPIO_GLOREF_EN</a>, 
+<br />
+&#160;&#160;<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021a602c8cacd89857dade9980f66edfa3ee">HOST_GPIO_CE_A</a>, 
+<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021a65663d3af148f363dd4f447dfdb9d32c">HOST_GPIO_CE_B</a>, 
+<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021a848b0f18a0b90b743c6fc2e3dcee41aa">HOST_GPIO_MAX</a>
+<br />
+ }<tr class="memdesc:a3ed49208cd1d40833e12e72d756b2021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Host GPIO indices.  <a href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021">More...</a><br /></td></tr>
 </td></tr>
-<tr class="separator:a415be474711d201c349cf6158aacd244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a3ed49208cd1d40833e12e72d756b2021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a085fb31f39314038a5dc035bb740c718"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a085fb31f39314038a5dc035bb740c718">sensor_state_t</a> { <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a085fb31f39314038a5dc035bb740c718ad6a98b26a1cde0c2f1724073d57defe7">SENSOR_STATE_UNKNOWN</a>, 
+<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a085fb31f39314038a5dc035bb740c718a5f5f69b690252e4d8b1c5dcd2ddb3be8">SENSOR_STATE_READY</a>, 
+<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a085fb31f39314038a5dc035bb740c718a3b05a7108790979f80c9b15c5613dda1">SENSOR_STATE_BUSY</a>
+ }<tr class="memdesc:a085fb31f39314038a5dc035bb740c718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sensor states.  <a href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a085fb31f39314038a5dc035bb740c718">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a085fb31f39314038a5dc035bb740c718"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a1ec5cb59deb1dfb46e21b43eb563b178"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a1ec5cb59deb1dfb46e21b43eb563b178">acc_board_set_flag</a> (<a class="el" href="acc__board_8h.html#a546ab990c183e20ebe94572084da89cd">acc_board_flag_t</a> flag)</td></tr>
+<tr class="memdesc:a1ec5cb59deb1dfb46e21b43eb563b178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set special flag, and depending on the flag it must be done before calling any init function.  <a href="#a1ec5cb59deb1dfb46e21b43eb563b178">More...</a><br /></td></tr>
+<tr class="separator:a1ec5cb59deb1dfb46e21b43eb563b178"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade35682f835c1ea0d4f65fe627b74ead"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ade35682f835c1ea0d4f65fe627b74ead">acc_board_all_sensors_inactive</a> (void)</td></tr>
 <tr class="memdesc:ade35682f835c1ea0d4f65fe627b74ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the combined status of all sensors.  <a href="#ade35682f835c1ea0d4f65fe627b74ead">More...</a><br /></td></tr>
 <tr class="separator:ade35682f835c1ea0d4f65fe627b74ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8588c603a76621af12df4582c75ddeaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acc__types_8h.html#a67a273ffcc7c5d78aa80315c00746b01">acc_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a8588c603a76621af12df4582c75ddeaa">acc_board_gpio_init</a> (void)</td></tr>
-<tr class="memdesc:a8588c603a76621af12df4582c75ddeaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the direction and level of host GPIOs.  <a href="#a8588c603a76621af12df4582c75ddeaa">More...</a><br /></td></tr>
-<tr class="separator:a8588c603a76621af12df4582c75ddeaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d60562bc0c5a659a131115fde5c1a48"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="acc__types_8h.html#a67a273ffcc7c5d78aa80315c00746b01">acc_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a0d60562bc0c5a659a131115fde5c1a48">acc_board_gpio_init</a> (void)</td></tr>
+<tr class="memdesc:a0d60562bc0c5a659a131115fde5c1a48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the direction and level of host GPIOs.  <a href="#a0d60562bc0c5a659a131115fde5c1a48">More...</a><br /></td></tr>
+<tr class="separator:a0d60562bc0c5a659a131115fde5c1a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad094f5c3df894d4f5209f0a7edbaf115"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acc__types_8h.html#a67a273ffcc7c5d78aa80315c00746b01">acc_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115">acc_board_init</a> (void)</td></tr>
 <tr class="memdesc:ad094f5c3df894d4f5209f0a7edbaf115"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize board.  <a href="#ad094f5c3df894d4f5209f0a7edbaf115">More...</a><br /></td></tr>
 <tr class="separator:ad094f5c3df894d4f5209f0a7edbaf115"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -224,15 +241,21 @@ Functions</h2></td></tr>
 <tr class="memitem:add8b3148bd44ea1091a11a064ca4a770"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acc__types_8h.html#a67a273ffcc7c5d78aa80315c00746b01">acc_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#add8b3148bd44ea1091a11a064ca4a770">acc_board_chip_select</a> (<a class="el" href="acc__types_8h.html#a995299f1098970043d80d9db50ca087a">acc_sensor_t</a> sensor, uint_fast8_t cs_assert)</td></tr>
 <tr class="memdesc:add8b3148bd44ea1091a11a064ca4a770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom chip select for SPI transfer.  <a href="#add8b3148bd44ea1091a11a064ca4a770">More...</a><br /></td></tr>
 <tr class="separator:add8b3148bd44ea1091a11a064ca4a770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38480b3965f1d5d5dcc895362dbfb178"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acc__types_8h.html#a67a273ffcc7c5d78aa80315c00746b01">acc_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a38480b3965f1d5d5dcc895362dbfb178">acc_board_gpio_input</a> (uint_fast8_t gpio)</td></tr>
+<tr class="memdesc:a38480b3965f1d5d5dcc895362dbfb178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set host GPIO to input.  <a href="#a38480b3965f1d5d5dcc895362dbfb178">More...</a><br /></td></tr>
+<tr class="separator:a38480b3965f1d5d5dcc895362dbfb178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02b1f4bfbd94ae227f694f490bda005c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acc__types_8h.html#a67a273ffcc7c5d78aa80315c00746b01">acc_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a02b1f4bfbd94ae227f694f490bda005c">acc_board_gpio_output</a> (uint_fast8_t gpio, uint_fast8_t level)</td></tr>
+<tr class="memdesc:a02b1f4bfbd94ae227f694f490bda005c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set host GPIO output level.  <a href="#a02b1f4bfbd94ae227f694f490bda005c">More...</a><br /></td></tr>
+<tr class="separator:a02b1f4bfbd94ae227f694f490bda005c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab57f8a4b7d6fece8f8a5fdc08630920b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acc__types_8h.html#a67a273ffcc7c5d78aa80315c00746b01">acc_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ab57f8a4b7d6fece8f8a5fdc08630920b">acc_board_gpio_read</a> (uint_fast8_t gpio, uint_fast8_t *level)</td></tr>
+<tr class="memdesc:ab57f8a4b7d6fece8f8a5fdc08630920b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from host GPIO.  <a href="#ab57f8a4b7d6fece8f8a5fdc08630920b">More...</a><br /></td></tr>
+<tr class="separator:ab57f8a4b7d6fece8f8a5fdc08630920b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a067aedd21f4631ab4cffdfa26344a7df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acc__types_8h.html#a995299f1098970043d80d9db50ca087a">acc_sensor_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a067aedd21f4631ab4cffdfa26344a7df">acc_board_get_sensor_count</a> (void)</td></tr>
 <tr class="memdesc:a067aedd21f4631ab4cffdfa26344a7df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the number of sensors connected to the device.  <a href="#a067aedd21f4631ab4cffdfa26344a7df">More...</a><br /></td></tr>
 <tr class="separator:a067aedd21f4631ab4cffdfa26344a7df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a95fdfdf812e11d48e50fac2e2e714e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a1a95fdfdf812e11d48e50fac2e2e714e">acc_board_is_sensor_interrupt_connected</a> (<a class="el" href="acc__types_8h.html#a995299f1098970043d80d9db50ca087a">acc_sensor_t</a> sensor)</td></tr>
-<tr class="memdesc:a1a95fdfdf812e11d48e50fac2e2e714e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get information if the sensor interrupt pin is connected for the specified sensor.  <a href="#a1a95fdfdf812e11d48e50fac2e2e714e">More...</a><br /></td></tr>
-<tr class="separator:a1a95fdfdf812e11d48e50fac2e2e714e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6897a3396c0380bef915af527fc5f16d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a6897a3396c0380bef915af527fc5f16d">acc_board_is_sensor_interrupt_active</a> (<a class="el" href="acc__types_8h.html#a995299f1098970043d80d9db50ca087a">acc_sensor_t</a> sensor)</td></tr>
-<tr class="memdesc:a6897a3396c0380bef915af527fc5f16d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current status of the sensor interrupt.  <a href="#a6897a3396c0380bef915af527fc5f16d">More...</a><br /></td></tr>
-<tr class="separator:a6897a3396c0380bef915af527fc5f16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a565cd1abbcc38eeccfde2fc9c762d10d"><td class="memItemLeft" align="right" valign="top">uint_fast8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a565cd1abbcc38eeccfde2fc9c762d10d">acc_board_get_host_gpio_count</a> (void)</td></tr>
+<tr class="memdesc:a565cd1abbcc38eeccfde2fc9c762d10d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the number of host GPIOs available on the device.  <a href="#a565cd1abbcc38eeccfde2fc9c762d10d">More...</a><br /></td></tr>
+<tr class="separator:a565cd1abbcc38eeccfde2fc9c762d10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a444e789210d4b637a7c879c05b9c96"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a8a444e789210d4b637a7c879c05b9c96">acc_board_get_ref_freq</a> (void)</td></tr>
 <tr class="memdesc:a8a444e789210d4b637a7c879c05b9c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the reference frequency of the clock supplied from the board.  <a href="#a8a444e789210d4b637a7c879c05b9c96">More...</a><br /></td></tr>
 <tr class="separator:a8a444e789210d4b637a7c879c05b9c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,48 +265,32 @@ Functions</h2></td></tr>
 <tr class="memitem:a28b63389c6c7239e6a2f94ffce8468bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acc__types_8h.html#a67a273ffcc7c5d78aa80315c00746b01">acc_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a28b63389c6c7239e6a2f94ffce8468bf">acc_board_set_ref_freq</a> (float ref_freq)</td></tr>
 <tr class="memdesc:a28b63389c6c7239e6a2f94ffce8468bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform which reference frequency the system is using.  <a href="#a28b63389c6c7239e6a2f94ffce8468bf">More...</a><br /></td></tr>
 <tr class="separator:a28b63389c6c7239e6a2f94ffce8468bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d0948cf86f5f9257e10eeabca939113"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a4d0948cf86f5f9257e10eeabca939113">acc_board_get_supported_hardware</a> (void)</td></tr>
+<tr class="memdesc:a4d0948cf86f5f9257e10eeabca939113"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a list of supported hardware.  <a href="#a4d0948cf86f5f9257e10eeabca939113">More...</a><br /></td></tr>
+<tr class="separator:a4d0948cf86f5f9257e10eeabca939113"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a4bba27dfa987000e8f32bb6096f87c05"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a415be474711d201c349cf6158aacd244">acc_board_sensor_state_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a4bba27dfa987000e8f32bb6096f87c05">sensor_state</a> [4] = {<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a415be474711d201c349cf6158aacd244ad6a98b26a1cde0c2f1724073d57defe7">SENSOR_STATE_UNKNOWN</a>}</td></tr>
-<tr class="memdesc:a4bba27dfa987000e8f32bb6096f87c05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sensor state collection that keeps track of each sensor's current state.  <a href="#a4bba27dfa987000e8f32bb6096f87c05">More...</a><br /></td></tr>
-<tr class="separator:a4bba27dfa987000e8f32bb6096f87c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa7345e74b42f876fc6abfe892c9a8b6"><td class="memItemLeft" align="right" valign="top">static const uint_fast8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#aaa7345e74b42f876fc6abfe892c9a8b6">sensor_interrupt_pins</a> [4]</td></tr>
-<tr class="separator:aaa7345e74b42f876fc6abfe892c9a8b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68a9b556fa7c48551fc7b90f329c9657"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a68a9b556fa7c48551fc7b90f329c9657">supported_hardware</a> [] = {&quot;RPI XC111_R4A XR111-3_R1C A111_R2C&quot;, NULL }</td></tr>
+<tr class="memdesc:a68a9b556fa7c48551fc7b90f329c9657"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of supported hardware.  <a href="#a68a9b556fa7c48551fc7b90f329c9657">More...</a><br /></td></tr>
+<tr class="separator:a68a9b556fa7c48551fc7b90f329c9657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b1657fcbc977442c03b0979216e3ba3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structacc__board__host__gpio__t.html">acc_board_host_gpio_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a0b1657fcbc977442c03b0979216e3ba3">acc_board_host_gpios</a> [<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021a848b0f18a0b90b743c6fc2e3dcee41aa">HOST_GPIO_MAX</a>]</td></tr>
+<tr class="memdesc:a0b1657fcbc977442c03b0979216e3ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector with pin and pull information of host GPIOs.  <a href="#a0b1657fcbc977442c03b0979216e3ba3">More...</a><br /></td></tr>
+<tr class="separator:a0b1657fcbc977442c03b0979216e3ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a83fd28a375dc9b752acd980a2c1464"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a7a83fd28a375dc9b752acd980a2c1464">acc_board_host_gpio_names</a> [<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021a848b0f18a0b90b743c6fc2e3dcee41aa">HOST_GPIO_MAX</a>] = { &quot;GPIO0&quot;, &quot;GPIO1&quot;, &quot;GPIO2&quot;, &quot;GPIO3&quot;, &quot;RSTn&quot;, &quot;ENABLE&quot;, &quot;PMU_ENABLE&quot;, &quot;GLOREF_EN&quot;, &quot;CE_A&quot;, &quot;CE_B&quot; }</td></tr>
+<tr class="memdesc:a7a83fd28a375dc9b752acd980a2c1464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector with name information of host GPIOs.  <a href="#a7a83fd28a375dc9b752acd980a2c1464">More...</a><br /></td></tr>
+<tr class="separator:a7a83fd28a375dc9b752acd980a2c1464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5122c35d854e0fb8c0b6a9b353189eb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a085fb31f39314038a5dc035bb740c718">sensor_state_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#af5122c35d854e0fb8c0b6a9b353189eb">sensor_state</a> [4]</td></tr>
+<tr class="memdesc:af5122c35d854e0fb8c0b6a9b353189eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sensor state collection that keeps track of each sensor's current state.  <a href="#af5122c35d854e0fb8c0b6a9b353189eb">More...</a><br /></td></tr>
+<tr class="separator:af5122c35d854e0fb8c0b6a9b353189eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bae5dac986d2d69f93a3de02361802b"><td class="memItemLeft" align="right" valign="top">static uint_fast8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a1bae5dac986d2d69f93a3de02361802b">sensor_spi_bus_cs</a> [4][2]</td></tr>
+<tr class="memdesc:a1bae5dac986d2d69f93a3de02361802b"><td class="mdescLeft">&#160;</td><td class="mdescRight">File-local matrix with SPI bus and CS information for all sensors.  <a href="#a1bae5dac986d2d69f93a3de02361802b">More...</a><br /></td></tr>
+<tr class="separator:a1bae5dac986d2d69f93a3de02361802b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93f12fc88b50d1f934c8dd28b554eaba"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a93f12fc88b50d1f934c8dd28b554eaba">acc_board_flags</a></td></tr>
+<tr class="memdesc:a93f12fc88b50d1f934c8dd28b554eaba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of acc_board_flag_t flags currently being set.  <a href="#a93f12fc88b50d1f934c8dd28b554eaba">More...</a><br /></td></tr>
+<tr class="separator:a93f12fc88b50d1f934c8dd28b554eaba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="a7cf0faa449579b6f4e3586708068c3fb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ACC_BOARD_BUS&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The SPI bus all sensors are using. </p>
-
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00085">85</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a5561cb65c5e45a779e66c61b21777829"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ACC_BOARD_CS&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The SPI CS all sensors are using. </p>
-
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00090">90</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a732a5a080b5fa04978f366f66ea483dc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -297,7 +304,7 @@ Variables</h2></td></tr>
 <p>The reference frequency used by this board. </p>
 <p>This assumes 24 MHz on XR111-3 R1C </p>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00075">75</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00083">83</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -313,7 +320,7 @@ Variables</h2></td></tr>
 
 <p>The SPI speed of this board. </p>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00080">80</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00088">88</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -329,7 +336,7 @@ Variables</h2></td></tr>
 
 <p>Host GPIO pin number (BCM) </p>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00066">66</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00074">74</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -345,7 +352,7 @@ Variables</h2></td></tr>
 
 <p>Host GPIO pin number (BCM) </p>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00067">67</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00075">75</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -361,7 +368,7 @@ Variables</h2></td></tr>
 
 <p>Host GPIO pin number (BCM) </p>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00061">61</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00069">69</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -377,7 +384,7 @@ Variables</h2></td></tr>
 
 <p>Host GPIO pin number (BCM) </p>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00064">64</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00072">72</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -394,7 +401,7 @@ Variables</h2></td></tr>
 <p>Host GPIO pin number (BCM) </p>
 <p>This GPIO should be connected to sensor 1 GPIO 5 </p>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00033">33</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00041">41</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -411,7 +418,7 @@ Variables</h2></td></tr>
 <p>Host GPIO pin number (BCM) </p>
 <p>This GPIO should be connected to sensor 2 GPIO 5 </p>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00040">40</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00048">48</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -428,7 +435,7 @@ Variables</h2></td></tr>
 <p>Host GPIO pin number (BCM) </p>
 <p>This GPIO should be connected to sensor 3 GPIO 5 </p>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00047">47</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00055">55</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -445,7 +452,7 @@ Variables</h2></td></tr>
 <p>Host GPIO pin number (BCM) </p>
 <p>This GPIO should be connected to sensor 4 GPIO 5 </p>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00054">54</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00062">62</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -462,7 +469,7 @@ Variables</h2></td></tr>
 <p>The module name. </p>
 <p>Must exist if <a class="el" href="acc__log_8h.html">acc_log.h</a> is used. </p>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00021">21</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00022">22</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -478,7 +485,7 @@ Variables</h2></td></tr>
 
 <p>Host GPIO pin number (BCM) </p>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00063">63</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00071">71</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -494,7 +501,7 @@ Variables</h2></td></tr>
 
 <p>Host GPIO pin number (BCM) </p>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00060">60</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00068">68</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -510,32 +517,72 @@ Variables</h2></td></tr>
 
 <p>The number of sensors available on the board. </p>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00026">26</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00034">34</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="a415be474711d201c349cf6158aacd244"></a>
+<a class="anchor" id="a3ed49208cd1d40833e12e72d756b2021"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a415be474711d201c349cf6158aacd244">acc_board_sensor_state_t</a></td>
+          <td class="memname">enum <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021">acc_board_host_gpio_enum_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Host GPIO indices. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a3ed49208cd1d40833e12e72d756b2021a606265cb42f3f3e7894c0ca4df92dad3"></a>HOST_GPIO_GPIO0&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3ed49208cd1d40833e12e72d756b2021a12dd9d5f22ca0dc2fa2b7e596fa6c823"></a>HOST_GPIO_GPIO1&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3ed49208cd1d40833e12e72d756b2021ad7a5a12bde4618177cdbd8386d59a1e1"></a>HOST_GPIO_GPIO2&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3ed49208cd1d40833e12e72d756b2021adc3bd52c303d4684fa6d548d34dda9ed"></a>HOST_GPIO_GPIO3&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3ed49208cd1d40833e12e72d756b2021a2619518b5060fa317d0103206b092ee7"></a>HOST_GPIO_RSTn&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3ed49208cd1d40833e12e72d756b2021aa8f72e2ad892f6ffc2e38f7a57a5b9dc"></a>HOST_GPIO_ENABLE&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3ed49208cd1d40833e12e72d756b2021a47d0fad81637ed2ec5c5ed392b0ed55b"></a>HOST_GPIO_PMU_ENABLE&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3ed49208cd1d40833e12e72d756b2021a9994094f4bf00ed333d8c41a855b2050"></a>HOST_GPIO_GLOREF_EN&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3ed49208cd1d40833e12e72d756b2021a602c8cacd89857dade9980f66edfa3ee"></a>HOST_GPIO_CE_A&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3ed49208cd1d40833e12e72d756b2021a65663d3af148f363dd4f447dfdb9d32c"></a>HOST_GPIO_CE_B&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3ed49208cd1d40833e12e72d756b2021a848b0f18a0b90b743c6fc2e3dcee41aa"></a>HOST_GPIO_MAX&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00093">93</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a085fb31f39314038a5dc035bb740c718"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a085fb31f39314038a5dc035bb740c718">sensor_state_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Sensor states. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a415be474711d201c349cf6158aacd244ad6a98b26a1cde0c2f1724073d57defe7"></a>SENSOR_STATE_UNKNOWN&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a085fb31f39314038a5dc035bb740c718ad6a98b26a1cde0c2f1724073d57defe7"></a>SENSOR_STATE_UNKNOWN&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a415be474711d201c349cf6158aacd244a5f5f69b690252e4d8b1c5dcd2ddb3be8"></a>SENSOR_STATE_READY&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a085fb31f39314038a5dc035bb740c718a5f5f69b690252e4d8b1c5dcd2ddb3be8"></a>SENSOR_STATE_READY&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a415be474711d201c349cf6158aacd244a3b05a7108790979f80c9b15c5613dda1"></a>SENSOR_STATE_BUSY&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a085fb31f39314038a5dc035bb740c718a3b05a7108790979f80c9b15c5613dda1"></a>SENSOR_STATE_BUSY&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00096">96</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00111">111</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -565,7 +612,7 @@ Variables</h2></td></tr>
 <p>Get the combined status of all sensors. </p>
 <dl class="section return"><dt>Returns</dt><dd>False if any sensor is busy </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00122">122</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00192">192</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -615,18 +662,40 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Status </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00346">346</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00441">441</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_add8b3148bd44ea1091a11a064ca4a770_cgraph.png" border="0" usemap="#acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_add8b3148bd44ea1091a11a064ca4a770_cgraph" alt=""/></div>
 <map name="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_add8b3148bd44ea1091a11a064ca4a770_cgraph" id="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_add8b3148bd44ea1091a11a064ca4a770_cgraph">
-<area shape="rect" id="node2" href="acc__device__gpio_8h.html#a3ce865cd090f6cf3521afa0552d452d1" title="Set GPIO output level. " alt="" coords="208,5,363,32"/>
-<area shape="rect" id="node3" href="acc__log_8h.html#a7caf43616038d0c20c5dcec4e78e0923" title="Return a string describing a status code. " alt="" coords="211,56,360,83"/>
+<area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a02b1f4bfbd94ae227f694f490bda005c" title="Set host GPIO output level. " alt="" coords="208,5,364,32"/>
+<area shape="rect" id="node4" href="acc__log_8h.html#a7caf43616038d0c20c5dcec4e78e0923" title="Return a string describing a status code. " alt="" coords="415,56,564,83"/>
+<area shape="rect" id="node3" href="acc__device__gpio_8h.html#a3ce865cd090f6cf3521afa0552d452d1" title="Set GPIO output level. " alt="" coords="412,5,567,32"/>
 </map>
 </div>
 </p>
+
+</div>
+</div>
+<a class="anchor" id="a565cd1abbcc38eeccfde2fc9c762d10d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint_fast8_t acc_board_get_host_gpio_count </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the number of host GPIOs available on the device. </p>
+<dl class="section return"><dt>Returns</dt><dd>The number of available host GPIOs </dd></dl>
+
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00560">560</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -647,7 +716,7 @@ Here is the call graph for this function:</div>
 <p>Retrieves the reference frequency of the clock supplied from the board. </p>
 <dl class="section return"><dt>Returns</dt><dd>The reference frequency </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00396">396</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00575">575</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -668,7 +737,7 @@ Here is the call graph for this function:</div>
 <p>Retrieves the number of sensors connected to the device. </p>
 <dl class="section return"><dt>Returns</dt><dd>The number of sensors </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00367">367</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00549">549</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -712,7 +781,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00334">334</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00420">420</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -739,16 +808,16 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>SPI speed [Hz] </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00402">402</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00587">587</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8588c603a76621af12df4582c75ddeaa"></a>
+<a class="anchor" id="a4d0948cf86f5f9257e10eeabca939113"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="acc__types_8h.html#a67a273ffcc7c5d78aa80315c00746b01">acc_status_t</a> acc_board_gpio_init </td>
+          <td class="memname">char** acc_board_get_supported_hardware </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -757,27 +826,226 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return a list of supported hardware. </p>
+<dl class="section return"><dt>Returns</dt><dd>List of supported hardware as strings </dd></dl>
+
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00614">614</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0d60562bc0c5a659a131115fde5c1a48"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="acc__types_8h.html#a67a273ffcc7c5d78aa80315c00746b01">acc_status_t</a> acc_board_gpio_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 <p>Initialize the direction and level of host GPIOs. </p>
-<p>Must be called after acc_board_init, otherwise the GPIO initialization will not succeed.</p>
 <dl class="section return"><dt>Returns</dt><dd>Status </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00134">134</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00209">209</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a8588c603a76621af12df4582c75ddeaa_cgraph.png" border="0" usemap="#acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a8588c603a76621af12df4582c75ddeaa_cgraph" alt=""/></div>
-<map name="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a8588c603a76621af12df4582c75ddeaa_cgraph" id="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a8588c603a76621af12df4582c75ddeaa_cgraph">
-<area shape="rect" id="node2" href="acc__os_8h.html#a3be6a90e606e906f8f80e6b2a744cc24" title="Perform any os specific initialization. " alt="" coords="224,5,312,32"/>
-<area shape="rect" id="node4" href="acc__os_8h.html#a23895aa050c3dbe1e07d343b1b8f4be6" title="Initialize a mutex. " alt="" coords="193,56,343,83"/>
-<area shape="rect" id="node6" href="acc__os_8h.html#a84c64d78c357e0856de4b091d9f5ca4d" title="Mutex lock. " alt="" coords="199,107,337,133"/>
-<area shape="rect" id="node7" href="acc__os_8h.html#a679abcf0bc8d3cbb2808dc6fe942ed60" title="Mutex unlock. " alt="" coords="192,157,344,184"/>
-<area shape="rect" id="node8" href="acc__device__gpio_8h.html#ab49daae1bea77fae1ad7032604259cc6" title="Inform the driver of the pull up/down level for a GPIO pin after reset. " alt="" coords="196,209,340,250"/>
-<area shape="rect" id="node9" href="acc__log_8h.html#a7caf43616038d0c20c5dcec4e78e0923" title="Return a string describing a status code. " alt="" coords="193,275,343,301"/>
-<area shape="rect" id="node10" href="acc__device__gpio_8h.html#ae986516864300b064456a7747cc4897f" title="Set GPIO to input. " alt="" coords="191,325,345,352"/>
-<area shape="rect" id="node11" href="acc__device__gpio_8h.html#a3ce865cd090f6cf3521afa0552d452d1" title="Set GPIO output level. " alt="" coords="191,376,345,403"/>
-<area shape="rect" id="node3" href="acc__os__linux_8c.html#a5b2323a65a520e9bf8e82ed8e8b0ad37" title="General signal handler registered by os_init() " alt="" coords="393,5,548,32"/>
-<area shape="rect" id="node5" href="acc__os__linux_8c.html#a4414f44717ed4932433e77001aa11f7d" title="Allocate dynamic memory. " alt="" coords="403,56,538,83"/>
+<div class="center"><img src="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a0d60562bc0c5a659a131115fde5c1a48_cgraph.png" border="0" usemap="#acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a0d60562bc0c5a659a131115fde5c1a48_cgraph" alt=""/></div>
+<map name="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a0d60562bc0c5a659a131115fde5c1a48_cgraph" id="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a0d60562bc0c5a659a131115fde5c1a48_cgraph">
+<area shape="rect" id="node2" href="acc__device__gpio_8h.html#ab49daae1bea77fae1ad7032604259cc6" title="Inform the driver of the pull up/down level for a GPIO pin after reset. " alt="" coords="197,5,341,47"/>
+<area shape="rect" id="node3" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a38480b3965f1d5d5dcc895362dbfb178" title="Set host GPIO to input. " alt="" coords="195,71,343,98"/>
+<area shape="rect" id="node5" href="acc__log_8h.html#a7caf43616038d0c20c5dcec4e78e0923" title="Return a string describing a status code. " alt="" coords="397,122,547,149"/>
+<area shape="rect" id="node6" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a02b1f4bfbd94ae227f694f490bda005c" title="Set host GPIO output level. " alt="" coords="191,173,347,199"/>
+<area shape="rect" id="node4" href="acc__device__gpio_8h.html#ae986516864300b064456a7747cc4897f" title="Set GPIO to input. " alt="" coords="395,71,549,98"/>
+<area shape="rect" id="node7" href="acc__device__gpio_8h.html#a3ce865cd090f6cf3521afa0552d452d1" title="Set GPIO output level. " alt="" coords="395,173,549,199"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a0d60562bc0c5a659a131115fde5c1a48_icgraph.png" border="0" usemap="#acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a0d60562bc0c5a659a131115fde5c1a48_icgraph" alt=""/></div>
+<map name="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a0d60562bc0c5a659a131115fde5c1a48_icgraph" id="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a0d60562bc0c5a659a131115fde5c1a48_icgraph">
+<area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="191,5,297,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a38480b3965f1d5d5dcc895362dbfb178"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="acc__types_8h.html#a67a273ffcc7c5d78aa80315c00746b01">acc_status_t</a> acc_board_gpio_input </td>
+          <td>(</td>
+          <td class="paramtype">uint_fast8_t&#160;</td>
+          <td class="paramname"><em>gpio</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set host GPIO to input. </p>
+<p>This function sets the direction of a host GPIO to input. GPIO parameter is not a pin number but GPIO index (0-X).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">gpio</td><td>Host GPIO to be set to input </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Status </dd></dl>
+
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00471">471</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a38480b3965f1d5d5dcc895362dbfb178_cgraph.png" border="0" usemap="#acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a38480b3965f1d5d5dcc895362dbfb178_cgraph" alt=""/></div>
+<map name="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a38480b3965f1d5d5dcc895362dbfb178_cgraph" id="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a38480b3965f1d5d5dcc895362dbfb178_cgraph">
+<area shape="rect" id="node2" href="acc__device__gpio_8h.html#ae986516864300b064456a7747cc4897f" title="Set GPIO to input. " alt="" coords="201,5,356,32"/>
+<area shape="rect" id="node3" href="acc__log_8h.html#a7caf43616038d0c20c5dcec4e78e0923" title="Return a string describing a status code. " alt="" coords="204,56,353,83"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a38480b3965f1d5d5dcc895362dbfb178_icgraph.png" border="0" usemap="#acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a38480b3965f1d5d5dcc895362dbfb178_icgraph" alt=""/></div>
+<map name="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a38480b3965f1d5d5dcc895362dbfb178_icgraph" id="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a38480b3965f1d5d5dcc895362dbfb178_icgraph">
+<area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a0d60562bc0c5a659a131115fde5c1a48" title="Initialize the direction and level of host GPIOs. " alt="" coords="201,5,339,32"/>
+<area shape="rect" id="node3" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="387,5,493,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a02b1f4bfbd94ae227f694f490bda005c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="acc__types_8h.html#a67a273ffcc7c5d78aa80315c00746b01">acc_status_t</a> acc_board_gpio_output </td>
+          <td>(</td>
+          <td class="paramtype">uint_fast8_t&#160;</td>
+          <td class="paramname"><em>gpio</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint_fast8_t&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set host GPIO output level. </p>
+<p>This function sets a host GPIO to output and the level to low or high. GPIO parameter is not a pin number but GPIO index (0-X).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">gpio</td><td>Host GPIO to be set </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>0 to 1 to set pin low or high </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Status </dd></dl>
+
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00499">499</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a02b1f4bfbd94ae227f694f490bda005c_cgraph.png" border="0" usemap="#acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a02b1f4bfbd94ae227f694f490bda005c_cgraph" alt=""/></div>
+<map name="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a02b1f4bfbd94ae227f694f490bda005c_cgraph" id="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a02b1f4bfbd94ae227f694f490bda005c_cgraph">
+<area shape="rect" id="node2" href="acc__device__gpio_8h.html#a3ce865cd090f6cf3521afa0552d452d1" title="Set GPIO output level. " alt="" coords="209,5,364,32"/>
+<area shape="rect" id="node3" href="acc__log_8h.html#a7caf43616038d0c20c5dcec4e78e0923" title="Return a string describing a status code. " alt="" coords="212,56,361,83"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a02b1f4bfbd94ae227f694f490bda005c_icgraph.png" border="0" usemap="#acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a02b1f4bfbd94ae227f694f490bda005c_icgraph" alt=""/></div>
+<map name="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a02b1f4bfbd94ae227f694f490bda005c_icgraph" id="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a02b1f4bfbd94ae227f694f490bda005c_icgraph">
+<area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a0d60562bc0c5a659a131115fde5c1a48" title="Initialize the direction and level of host GPIOs. " alt="" coords="223,5,360,32"/>
+<area shape="rect" id="node4" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#abe900d9b6d75a11c499164c1bcf888d7" title="Reset sensor. " alt="" coords="209,107,373,133"/>
+<area shape="rect" id="node5" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#afce508cb013952015c94b3725b305187" title="Start sensor. " alt="" coords="421,56,583,83"/>
+<area shape="rect" id="node7" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#add8b3148bd44ea1091a11a064ca4a770" title="Custom chip select for SPI transfer. " alt="" coords="214,157,369,184"/>
+<area shape="rect" id="node3" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="449,5,555,32"/>
+<area shape="rect" id="node6" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a9897b13689fddb6f16cec382b14f844a" title="Stop sensor. " alt="" coords="422,107,582,133"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab57f8a4b7d6fece8f8a5fdc08630920b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="acc__types_8h.html#a67a273ffcc7c5d78aa80315c00746b01">acc_status_t</a> acc_board_gpio_read </td>
+          <td>(</td>
+          <td class="paramtype">uint_fast8_t&#160;</td>
+          <td class="paramname"><em>gpio</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint_fast8_t *&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read from host GPIO. </p>
+<p>GPIO parameter is not a pin number but GPIO index (0-X).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">gpio</td><td>Host GPIO to read from </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">level</td><td>The level is returned here </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Status </dd></dl>
+
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00526">526</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_ab57f8a4b7d6fece8f8a5fdc08630920b_cgraph.png" border="0" usemap="#acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_ab57f8a4b7d6fece8f8a5fdc08630920b_cgraph" alt=""/></div>
+<map name="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_ab57f8a4b7d6fece8f8a5fdc08630920b_cgraph" id="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_ab57f8a4b7d6fece8f8a5fdc08630920b_cgraph">
+<area shape="rect" id="node2" href="acc__device__gpio_8h.html#a4e7a4434d5b59f4fb40004bb46361597" title="Read from GPIO. " alt="" coords="199,5,349,32"/>
+<area shape="rect" id="node3" href="acc__log_8h.html#a7caf43616038d0c20c5dcec4e78e0923" title="Return a string describing a status code. " alt="" coords="199,56,349,83"/>
 </map>
 </div>
 </p>
@@ -799,107 +1067,58 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Initialize board. </p>
-<p>Should only be called from sensor_driver_init.</p>
 <dl class="section return"><dt>Returns</dt><dd>Status </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00192">192</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00248">248</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_ad094f5c3df894d4f5209f0a7edbaf115_cgraph.png" border="0" usemap="#acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_ad094f5c3df894d4f5209f0a7edbaf115_cgraph" alt=""/></div>
 <map name="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_ad094f5c3df894d4f5209f0a7edbaf115_cgraph" id="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_ad094f5c3df894d4f5209f0a7edbaf115_cgraph">
-<area shape="rect" id="node2" href="acc__os_8h.html#a3be6a90e606e906f8f80e6b2a744cc24" title="Perform any os specific initialization. " alt="" coords="642,5,730,32"/>
-<area shape="rect" id="node4" href="acc__os_8h.html#a23895aa050c3dbe1e07d343b1b8f4be6" title="Initialize a mutex. " alt="" coords="611,56,761,83"/>
-<area shape="rect" id="node6" href="acc__os_8h.html#a84c64d78c357e0856de4b091d9f5ca4d" title="Mutex lock. " alt="" coords="617,208,755,235"/>
-<area shape="rect" id="node7" href="acc__os_8h.html#a679abcf0bc8d3cbb2808dc6fe942ed60" title="Mutex unlock. " alt="" coords="610,259,762,285"/>
-<area shape="rect" id="node8" href="acc__driver__gpio__linux__sysfs_8h.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="160,342,307,383"/>
-<area shape="rect" id="node20" href="acc__driver__spi__linux__spidev_8h.html#a7b2c08e1b83d63993b1483926d0ee00c" title="Request driver to register with appropriate device(s) " alt="" coords="163,603,303,645"/>
-<area shape="rect" id="node3" href="acc__os__linux_8c.html#a5b2323a65a520e9bf8e82ed8e8b0ad37" title="General signal handler registered by os_init() " alt="" coords="813,5,967,32"/>
-<area shape="rect" id="node5" href="acc__os__linux_8c.html#a4414f44717ed4932433e77001aa11f7d" title="Allocate dynamic memory. " alt="" coords="823,56,957,83"/>
+<area shape="rect" id="node2" href="acc__os_8h.html#a3be6a90e606e906f8f80e6b2a744cc24" title="Perform any os specific initialization. " alt="" coords="660,5,748,32"/>
+<area shape="rect" id="node4" href="acc__os_8h.html#aefa50c94aaee0c1517279e653affa2e2" title="Initialize a mutex. " alt="" coords="639,56,769,83"/>
+<area shape="rect" id="node6" href="acc__os_8h.html#ae64bc00fbfc26258426fcdb6ccc3fc38" title="Mutex lock. " alt="" coords="635,208,773,235"/>
+<area shape="rect" id="node7" href="acc__os_8h.html#aa6fc45abaf3f67d1593728187c1b669d" title="Mutex unlock. " alt="" coords="628,259,780,285"/>
+<area shape="rect" id="node8" href="acc__driver__gpio__linux__sysfs_8h.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="160,343,307,385"/>
+<area shape="rect" id="node20" href="acc__driver__i2c__linux_8h.html#a24d640bb1cc89739caaf9888765e5370" title="Request driver to register with appropriate device(s) " alt="" coords="163,689,303,730"/>
+<area shape="rect" id="node30" href="acc__driver__spi__linux__spidev_8h.html#a7b2c08e1b83d63993b1483926d0ee00c" title="Request driver to register with appropriate device(s) " alt="" coords="163,969,303,1010"/>
+<area shape="rect" id="node35" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a0d60562bc0c5a659a131115fde5c1a48" title="Initialize the direction and level of host GPIOs. " alt="" coords="165,1199,302,1225"/>
+<area shape="rect" id="node3" href="acc__os__linux_8c.html#a5b2323a65a520e9bf8e82ed8e8b0ad37" title="General signal handler registered by os_init() " alt="" coords="849,5,1003,32"/>
+<area shape="rect" id="node5" href="acc__os__linux_8c.html#a4414f44717ed4932433e77001aa11f7d" title="Allocate dynamic memory. " alt="" coords="859,56,993,83"/>
 <area shape="rect" id="node9" href="acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="385,142,531,183"/>
 <area shape="rect" id="node14" href="acc__driver__gpio__linux__sysfs_8c.html#a4283206e56d929c2c14042f652b9700f" title="Inform the driver of the pull up/down level for a GPIO pin after reset. " alt="" coords="383,441,533,482"/>
 <area shape="rect" id="node17" href="acc__driver__gpio__linux__sysfs_8c.html#a43c98f00f070199659f17594f76f35be" title="Set GPIO to input. " alt="" coords="385,310,531,351"/>
 <area shape="rect" id="node18" href="acc__driver__gpio__linux__sysfs_8c.html#aa934d9bbaf9b81f6c8e806ef4d992d86" title="Read from GPIO. " alt="" coords="385,506,531,547"/>
 <area shape="rect" id="node19" href="acc__driver__gpio__linux__sysfs_8c.html#a59b1c8927eccc35952891939db4f4145" title="Set GPIO output level. " alt="" coords="385,375,531,417"/>
-<area shape="rect" id="node10" href="acc__os_8h.html#a4414f44717ed4932433e77001aa11f7d" title="Allocate dynamic memory. " alt="" coords="619,107,753,133"/>
-<area shape="rect" id="node11" href="acc__driver__gpio__linux__sysfs_8c.html#ad09efb0661dccf088d4359887bf67871" title="Internal GPIO close all gpios. " alt="" coords="609,157,763,184"/>
-<area shape="rect" id="node12" href="acc__driver__gpio__linux__sysfs_8c.html#af893b285a36f81d9d27adc0c5f44cf14" title="Internal GPIO write. " alt="" coords="811,309,969,336"/>
-<area shape="rect" id="node13" href="acc__driver__gpio__linux__sysfs_8c.html#aab65fdf0edfae034d6a9ab023d039966" title="Internal GPIO set direction. " alt="" coords="819,411,961,437"/>
-<area shape="rect" id="node15" href="acc__driver__gpio__linux__sysfs_8c.html#ad7f9b2c1597de2c24626bd20c01da4b8" title="Internal GPIO open. " alt="" coords="621,512,751,539"/>
-<area shape="rect" id="node16" href="acc__os_8h.html#aee0414ff6a2f278076b0f0fddac56e18" title="Sleep for a specified number of microseconds. " alt="" coords="829,512,951,539"/>
-<area shape="rect" id="node21" href="acc__driver__spi__linux__spidev_8c.html#a7f7c6549882fa06eb7f71027e8df2261" title="Initialize SPI driver. " alt="" coords="388,571,528,613"/>
-<area shape="rect" id="node22" href="acc__driver__spi__linux__spidev_8c.html#aac96a3e2f455d199acd6fedaf98b92f9" title="Return maximum allowed size of one SPI transfer. " alt="" coords="355,637,561,678"/>
-<area shape="rect" id="node23" href="acc__driver__spi__linux__spidev_8c.html#aa01dd0ed72cd5bde32daca7ca9590ef0" title="Data transfer (SPI) " alt="" coords="388,702,528,743"/>
-<area shape="rect" id="node24" href="acc__driver__spi__linux__spidev_8c.html#a570494e865f3d3e3266c4390ad9f6458" title="Internal SPI open. " alt="" coords="625,709,747,736"/>
+<area shape="rect" id="node10" href="acc__os_8h.html#a4414f44717ed4932433e77001aa11f7d" title="Allocate dynamic memory. " alt="" coords="637,107,771,133"/>
+<area shape="rect" id="node11" href="acc__driver__gpio__linux__sysfs_8c.html#ad09efb0661dccf088d4359887bf67871" title="Internal GPIO close all gpios. " alt="" coords="627,157,781,184"/>
+<area shape="rect" id="node12" href="acc__driver__gpio__linux__sysfs_8c.html#af893b285a36f81d9d27adc0c5f44cf14" title="Internal GPIO write. " alt="" coords="847,309,1005,336"/>
+<area shape="rect" id="node13" href="acc__driver__gpio__linux__sysfs_8c.html#aab65fdf0edfae034d6a9ab023d039966" title="Internal GPIO set direction. " alt="" coords="855,411,997,437"/>
+<area shape="rect" id="node15" href="acc__driver__gpio__linux__sysfs_8c.html#ad7f9b2c1597de2c24626bd20c01da4b8" title="Internal GPIO open. " alt="" coords="639,512,769,539"/>
+<area shape="rect" id="node16" href="acc__os_8h.html#aee0414ff6a2f278076b0f0fddac56e18" title="Sleep for a specified number of microseconds. " alt="" coords="865,512,987,539"/>
+<area shape="rect" id="node21" href="acc__driver__i2c__linux_8c.html#a4f59faf0cdfd3cd32c8569e53e6c6472" title="Initialize I2C driver. " alt="" coords="376,572,540,599"/>
+<area shape="rect" id="node22" href="acc__driver__i2c__linux_8c.html#ac0c10c84feefd3709a4c366ff6ff1bad" title="I2C write. " alt="" coords="387,623,529,665"/>
+<area shape="rect" id="node24" href="acc__driver__i2c__linux_8c.html#a9555b62f487f066d3e5581f9922bf579" title="I2C write. " alt="" coords="383,689,533,730"/>
+<area shape="rect" id="node25" href="acc__driver__i2c__linux_8c.html#a2105853b5f868f5df46e46e84c99b2f4" title="I2C read from specified 8&#45;bit address. " alt="" coords="381,754,535,795"/>
+<area shape="rect" id="node28" href="acc__driver__i2c__linux_8c.html#a3a1197b93ffaed8035a68b4c558cfb6e" title="I2C read from specified 16&#45;bit address. " alt="" coords="377,819,539,861"/>
+<area shape="rect" id="node29" href="acc__driver__i2c__linux_8c.html#ad9bc547c5b1364d3644ba8552a3b67e0" title="I2C read from last read/written address. " alt="" coords="618,885,790,912"/>
+<area shape="rect" id="node23" href="acc__driver__i2c__linux_8c.html#aa0ad2cbc3a92b9fb0f72d7025e05a798" title="I2C write. " alt="" coords="615,657,793,698"/>
+<area shape="rect" id="node26" href="acc__driver__i2c__linux_8c.html#ae023c20325429fea295e03fb00bc4fed" title="I2C read from specified address. " alt="" coords="609,819,799,861"/>
+<area shape="rect" id="node27" href="acc__driver__i2c__linux_8c.html#adc0396f4b832ff43518aa9d9eb17a72d" title="Internal I2C read. " alt="" coords="878,856,974,883"/>
+<area shape="rect" id="node31" href="acc__driver__spi__linux__spidev_8c.html#a7f7c6549882fa06eb7f71027e8df2261" title="Initialize SPI driver. " alt="" coords="388,937,528,978"/>
+<area shape="rect" id="node32" href="acc__driver__spi__linux__spidev_8c.html#aac96a3e2f455d199acd6fedaf98b92f9" title="Return maximum allowed size of one SPI transfer. " alt="" coords="355,1002,561,1043"/>
+<area shape="rect" id="node33" href="acc__driver__spi__linux__spidev_8c.html#aa01dd0ed72cd5bde32daca7ca9590ef0" title="Data transfer (SPI) " alt="" coords="388,1067,528,1109"/>
+<area shape="rect" id="node34" href="acc__driver__spi__linux__spidev_8c.html#a570494e865f3d3e3266c4390ad9f6458" title="Internal SPI open. " alt="" coords="643,1075,765,1101"/>
+<area shape="rect" id="node36" href="acc__device__gpio_8h.html#ab49daae1bea77fae1ad7032604259cc6" title="Inform the driver of the pull up/down level for a GPIO pin after reset. " alt="" coords="386,1133,530,1174"/>
+<area shape="rect" id="node37" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a38480b3965f1d5d5dcc895362dbfb178" title="Set host GPIO to input. " alt="" coords="384,1199,532,1225"/>
+<area shape="rect" id="node39" href="acc__log_8h.html#a7caf43616038d0c20c5dcec4e78e0923" title="Return a string describing a status code. " alt="" coords="629,1249,779,1276"/>
+<area shape="rect" id="node40" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a02b1f4bfbd94ae227f694f490bda005c" title="Set host GPIO output level. " alt="" coords="380,1300,536,1327"/>
+<area shape="rect" id="node38" href="acc__device__gpio_8h.html#ae986516864300b064456a7747cc4897f" title="Set GPIO to input. " alt="" coords="627,1199,781,1225"/>
+<area shape="rect" id="node41" href="acc__device__gpio_8h.html#a3ce865cd090f6cf3521afa0552d452d1" title="Set GPIO output level. " alt="" coords="627,1300,781,1327"/>
 </map>
 </div>
 </p>
-
-</div>
-</div>
-<a class="anchor" id="a6897a3396c0380bef915af527fc5f16d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool acc_board_is_sensor_interrupt_active </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="acc__types_8h.html#a995299f1098970043d80d9db50ca087a">acc_sensor_t</a>&#160;</td>
-          <td class="paramname"><em>sensor</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the current status of the sensor interrupt. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">sensor</td><td>Sensor to get interrupt information for </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if sensor interrupt is active </dd></dl>
-
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00381">381</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a6897a3396c0380bef915af527fc5f16d_cgraph.png" border="0" usemap="#acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a6897a3396c0380bef915af527fc5f16d_cgraph" alt=""/></div>
-<map name="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a6897a3396c0380bef915af527fc5f16d_cgraph" id="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a6897a3396c0380bef915af527fc5f16d_cgraph">
-<area shape="rect" id="node2" href="acc__device__gpio_8h.html#a4e7a4434d5b59f4fb40004bb46361597" title="Read from GPIO. " alt="" coords="199,5,349,32"/>
-<area shape="rect" id="node3" href="acc__log_8h.html#a7caf43616038d0c20c5dcec4e78e0923" title="Return a string describing a status code. " alt="" coords="199,56,349,83"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a1a95fdfdf812e11d48e50fac2e2e714e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool acc_board_is_sensor_interrupt_connected </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="acc__types_8h.html#a995299f1098970043d80d9db50ca087a">acc_sensor_t</a>&#160;</td>
-          <td class="paramname"><em>sensor</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get information if the sensor interrupt pin is connected for the specified sensor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">sensor</td><td>Sensor to get interrupt information for </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if sensor interrupt is connected </dd></dl>
-
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00373">373</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -929,14 +1148,16 @@ Here is the call graph for this function:</div>
 <p>Default setup when sensor is not active</p>
 <dl class="section return"><dt>Returns</dt><dd>Status </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00231">231</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00294">294</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_abe900d9b6d75a11c499164c1bcf888d7_cgraph.png" border="0" usemap="#acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_abe900d9b6d75a11c499164c1bcf888d7_cgraph" alt=""/></div>
 <map name="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_abe900d9b6d75a11c499164c1bcf888d7_cgraph" id="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_abe900d9b6d75a11c499164c1bcf888d7_cgraph">
-<area shape="rect" id="node2" href="acc__device__gpio_8h.html#a3ce865cd090f6cf3521afa0552d452d1" title="Set GPIO output level. " alt="" coords="217,5,372,32"/>
+<area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a02b1f4bfbd94ae227f694f490bda005c" title="Set host GPIO output level. " alt="" coords="217,31,373,57"/>
+<area shape="rect" id="node3" href="acc__device__gpio_8h.html#a3ce865cd090f6cf3521afa0552d452d1" title="Set GPIO output level. " alt="" coords="421,5,576,32"/>
+<area shape="rect" id="node4" href="acc__log_8h.html#a7caf43616038d0c20c5dcec4e78e0923" title="Return a string describing a status code. " alt="" coords="424,56,573,83"/>
 </map>
 </div>
 </p>
@@ -951,6 +1172,36 @@ Here is the caller graph for this function:</div>
 </map>
 </div>
 </p>
+
+</div>
+</div>
+<a class="anchor" id="a1ec5cb59deb1dfb46e21b43eb563b178"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void acc_board_set_flag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="acc__board_8h.html#a546ab990c183e20ebe94572084da89cd">acc_board_flag_t</a>&#160;</td>
+          <td class="paramname"><em>flag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set special flag, and depending on the flag it must be done before calling any init function. </p>
+<p>Sets a special flag in the board module. The effect of doing it depends on the specific flag. Setting multiple flags is done by calling this function multiple times.</p>
+<p>For special GPIO handling, this function must be called before any call to <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. ">acc_board_init()</a>.</p>
+<p>Applications are allowed to include <a class="el" href="acc__board_8h.html">acc_board.h</a> to call this function. Since most flags are related to debugging behaviours this will only be used for special applications.</p>
+<p>There is no way to unset a flag, so if you don't want it, don't set it.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">flag</td><td>The specific flag to be set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00179">179</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -977,7 +1228,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Status </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00410">410</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00601">601</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -996,7 +1247,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Start sensor. </p>
-<p>Setup in order to communicate with the specified sensor. Must only be used by sensor driver (acc_sensor_driver_start_sensor()) to guarantee thread safety.</p>
+<p>Setup in order to communicate with the specified sensor.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">sensor</td><td>The sensor to be started </td></tr>
@@ -1005,7 +1256,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Status </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00257">257</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00328">328</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1013,9 +1264,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_afce508cb013952015c94b3725b305187_cgraph.png" border="0" usemap="#acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_afce508cb013952015c94b3725b305187_cgraph" alt=""/></div>
 <map name="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_afce508cb013952015c94b3725b305187_cgraph" id="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_afce508cb013952015c94b3725b305187_cgraph">
 <area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ade35682f835c1ea0d4f65fe627b74ead" title="Get the combined status of all sensors. " alt="" coords="219,5,374,47"/>
-<area shape="rect" id="node3" href="acc__device__gpio_8h.html#a3ce865cd090f6cf3521afa0552d452d1" title="Set GPIO output level. " alt="" coords="427,97,581,123"/>
-<area shape="rect" id="node4" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#abe900d9b6d75a11c499164c1bcf888d7" title="Reset sensor. " alt="" coords="215,122,379,149"/>
-<area shape="rect" id="node5" href="acc__os_8h.html#aee0414ff6a2f278076b0f0fddac56e18" title="Sleep for a specified number of microseconds. " alt="" coords="235,173,358,199"/>
+<area shape="rect" id="node3" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a02b1f4bfbd94ae227f694f490bda005c" title="Set host GPIO output level. " alt="" coords="427,97,583,123"/>
+<area shape="rect" id="node6" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#abe900d9b6d75a11c499164c1bcf888d7" title="Reset sensor. " alt="" coords="215,122,379,149"/>
+<area shape="rect" id="node7" href="acc__os_8h.html#aee0414ff6a2f278076b0f0fddac56e18" title="Sleep for a specified number of microseconds. " alt="" coords="235,173,358,199"/>
+<area shape="rect" id="node4" href="acc__device__gpio_8h.html#a3ce865cd090f6cf3521afa0552d452d1" title="Set GPIO output level. " alt="" coords="631,71,785,98"/>
+<area shape="rect" id="node5" href="acc__log_8h.html#a7caf43616038d0c20c5dcec4e78e0923" title="Return a string describing a status code. " alt="" coords="633,122,783,149"/>
 </map>
 </div>
 </p>
@@ -1037,7 +1290,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Stop sensor. </p>
-<p>Setup when not needing to communicate with the specified sensor. Must only be used by sensor driver (acc_sensor_driver_stop_sensor()) to guarantee thread safety.</p>
+<p>Setup when not needing to communicate with the specified sensor.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">sensor</td><td>The sensor to be stopped </td></tr>
@@ -1046,7 +1299,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Status </dd></dl>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00317">317</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00396">396</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1055,7 +1308,9 @@ Here is the call graph for this function:</div>
 <map name="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a9897b13689fddb6f16cec382b14f844a_cgraph" id="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_a9897b13689fddb6f16cec382b14f844a_cgraph">
 <area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ade35682f835c1ea0d4f65fe627b74ead" title="Get the combined status of all sensors. " alt="" coords="218,5,373,47"/>
 <area shape="rect" id="node3" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#abe900d9b6d75a11c499164c1bcf888d7" title="Reset sensor. " alt="" coords="213,71,377,98"/>
-<area shape="rect" id="node4" href="acc__device__gpio_8h.html#a3ce865cd090f6cf3521afa0552d452d1" title="Set GPIO output level. " alt="" coords="425,71,580,98"/>
+<area shape="rect" id="node4" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a02b1f4bfbd94ae227f694f490bda005c" title="Set host GPIO output level. " alt="" coords="425,71,581,98"/>
+<area shape="rect" id="node5" href="acc__device__gpio_8h.html#a3ce865cd090f6cf3521afa0552d452d1" title="Set GPIO output level. " alt="" coords="629,46,784,73"/>
+<area shape="rect" id="node6" href="acc__log_8h.html#a7caf43616038d0c20c5dcec4e78e0923" title="Return a string describing a status code. " alt="" coords="632,97,781,123"/>
 </map>
 </div>
 </p>
@@ -1063,7 +1318,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="aaa7345e74b42f876fc6abfe892c9a8b6"></a>
+<a class="anchor" id="a93f12fc88b50d1f934c8dd28b554eaba"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1071,7 +1326,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const uint_fast8_t sensor_interrupt_pins[4]</td>
+          <td class="memname">uint32_t acc_board_flags</td>
         </tr>
       </table>
   </td>
@@ -1080,12 +1335,47 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">         20 ,</div><div class="line">         21 ,</div><div class="line">         24 ,</div><div class="line">         25 </div><div class="line">}</div></div><!-- fragment -->
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00109">109</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+
+<p>Set of acc_board_flag_t flags currently being set. </p>
+
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00161">161</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4bba27dfa987000e8f32bb6096f87c05"></a>
+<a class="anchor" id="a7a83fd28a375dc9b752acd980a2c1464"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* acc_board_host_gpio_names[<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021a848b0f18a0b90b743c6fc2e3dcee41aa">HOST_GPIO_MAX</a>] = { &quot;GPIO0&quot;, &quot;GPIO1&quot;, &quot;GPIO2&quot;, &quot;GPIO3&quot;, &quot;RSTn&quot;, &quot;ENABLE&quot;, &quot;PMU_ENABLE&quot;, &quot;GLOREF_EN&quot;, &quot;CE_A&quot;, &quot;CE_B&quot; }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vector with name information of host GPIOs. </p>
+
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00138">138</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b1657fcbc977442c03b0979216e3ba3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structacc__board__host__gpio__t.html">acc_board_host_gpio_t</a> acc_board_host_gpios[<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a3ed49208cd1d40833e12e72d756b2021a848b0f18a0b90b743c6fc2e3dcee41aa">HOST_GPIO_MAX</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">                        { .pin =  20 , .pull = 0 },</div><div class="line">                        { .pin =  21 , .pull = 0 },</div><div class="line">                        { .pin =  24 , .pull = 0 },</div><div class="line">                        { .pin =  25 , .pull = 0 },</div><div class="line">                        { .pin =  6 , .pull = 1 },</div><div class="line">                        { .pin =  27 , .pull = 0 },</div><div class="line">                        { .pin =  12 , .pull = 0 },</div><div class="line">                        { .pin =  13 , .pull = 0 },</div><div class="line">                        { .pin =  16 , .pull = 0 },</div><div class="line">                        { .pin =  19 , .pull = 0 }</div><div class="line">}</div></div><!-- fragment -->
+<p>Vector with pin and pull information of host GPIOs. </p>
+<p>Vector with dir, pull and pin information of host GPIOs. </p>
+
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00121">121</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1bae5dac986d2d69f93a3de02361802b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1093,7 +1383,31 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a415be474711d201c349cf6158aacd244">acc_board_sensor_state_t</a> sensor_state[4] = {<a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a415be474711d201c349cf6158aacd244ad6a98b26a1cde0c2f1724073d57defe7">SENSOR_STATE_UNKNOWN</a>}</td>
+          <td class="memname">uint_fast8_t sensor_spi_bus_cs[4][2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">                                                        { 0, 0 },</div><div class="line">                                                        { 0, 0 },</div><div class="line">                                                        { 0, 0 },</div><div class="line">                                                        { 0, 0 }</div><div class="line">                                                         }</div></div><!-- fragment -->
+<p>File-local matrix with SPI bus and CS information for all sensors. </p>
+
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00150">150</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af5122c35d854e0fb8c0b6a9b353189eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a085fb31f39314038a5dc035bb740c718">sensor_state_t</a> sensor_state[4]</td>
         </tr>
       </table>
   </td>
@@ -1105,7 +1419,31 @@ Here is the call graph for this function:</div>
 
 <p>Sensor state collection that keeps track of each sensor's current state. </p>
 
-<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00106">106</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00144">144</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a68a9b556fa7c48551fc7b90f329c9657"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* supported_hardware[] = {&quot;RPI XC111_R4A XR111-3_R1C A111_R2C&quot;, NULL }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of supported hardware. </p>
+
+<p>Definition at line <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html#l00028">28</a> of file <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c_source.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>.</p>
 
 </div>
 </div>
@@ -1115,7 +1453,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a></li>
-    <li class="footer">Generated on Mon Apr 9 2018 13:59:49 for Acconeer API by
+    <li class="footer">Generated on Tue Feb 27 2018 14:02:57 for Acconeer API by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

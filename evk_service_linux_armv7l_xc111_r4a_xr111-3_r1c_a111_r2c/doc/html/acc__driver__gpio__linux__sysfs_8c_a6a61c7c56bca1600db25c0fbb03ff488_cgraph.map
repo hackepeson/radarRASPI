@@ -1,8 +1,8 @@
 <map id="acc_driver_gpio_linux_sysfs_init" name="acc_driver_gpio_linux_sysfs_init">
 <area shape="rect" id="node2" href="$acc__os_8h.html#a3be6a90e606e906f8f80e6b2a744cc24" title="Perform any os specific initialization. " alt="" coords="233,5,321,32"/>
-<area shape="rect" id="node4" href="$acc__os_8h.html#a23895aa050c3dbe1e07d343b1b8f4be6" title="Initialize a mutex. " alt="" coords="201,56,352,83"/>
-<area shape="rect" id="node6" href="$acc__os_8h.html#a84c64d78c357e0856de4b091d9f5ca4d" title="Mutex lock. " alt="" coords="207,107,346,133"/>
-<area shape="rect" id="node7" href="$acc__os_8h.html#a679abcf0bc8d3cbb2808dc6fe942ed60" title="Mutex unlock. " alt="" coords="201,157,353,184"/>
+<area shape="rect" id="node4" href="$acc__os_8h.html#aefa50c94aaee0c1517279e653affa2e2" title="Initialize a mutex. " alt="" coords="211,56,342,83"/>
+<area shape="rect" id="node6" href="$acc__os_8h.html#ae64bc00fbfc26258426fcdb6ccc3fc38" title="Mutex lock. " alt="" coords="207,107,346,133"/>
+<area shape="rect" id="node7" href="$acc__os_8h.html#aa6fc45abaf3f67d1593728187c1b669d" title="Mutex unlock. " alt="" coords="201,157,353,184"/>
 <area shape="rect" id="node8" href="$acc__os_8h.html#a4414f44717ed4932433e77001aa11f7d" title="Allocate dynamic memory. " alt="" coords="209,208,344,235"/>
 <area shape="rect" id="node9" href="$acc__driver__gpio__linux__sysfs_8c.html#ad09efb0661dccf088d4359887bf67871" title="Internal GPIO close all gpios. " alt="" coords="200,259,353,285"/>
 <area shape="rect" id="node3" href="$acc__os__linux_8c.html#a5b2323a65a520e9bf8e82ed8e8b0ad37" title="General signal handler registered by os_init() " alt="" coords="403,5,558,32"/>

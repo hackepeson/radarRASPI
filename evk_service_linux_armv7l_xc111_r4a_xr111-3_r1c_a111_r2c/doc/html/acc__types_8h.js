@@ -1,7 +1,6 @@
 var acc__types_8h =
 [
     [ "ACC_UNUSED", "acc__types_8h.html#af123c964d1c22fb89a429ba9f9333037", null ],
-    [ "PRIsensor", "acc__types_8h.html#a7f0e2acfc5a66bfebd72c4a7344f2ea0", null ],
     [ "acc_node_t", "acc__types_8h.html#a8ca2caff48b760fa351f53ce6a9d55bf", null ],
     [ "acc_request_callback_t", "acc__types_8h.html#a7ea52fbe8d29c25fed23e34475e7ccbd", null ],
     [ "acc_request_id_t", "acc__types_8h.html#a73236364cee28389642d46b8cd52aa6d", null ],

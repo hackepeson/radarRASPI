@@ -90,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_c"><span>c</span></a></li>
       <li><a href="#index_e"><span>e</span></a></li>
       <li><a href="#index_g"><span>g</span></a></li>
+      <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
@@ -133,7 +134,8 @@ $(document).ready(function(){initNavTree('globals_defs.html','');});
 : <a class="el" href="acc__os__linux_8c.html#a369266c24eacffb87046522897a570d5">acc_os_linux.c</a>
 </li>
 <li>_POSIX_C_SOURCE
-: <a class="el" href="acc__os__linux_8c.html#a3024ccd4a9af5109d24e6c57565d74a1">acc_os_linux.c</a>
+: <a class="el" href="acc__driver__memory__linux_8c.html#a3024ccd4a9af5109d24e6c57565d74a1">acc_driver_memory_linux.c</a>
+, <a class="el" href="acc__os__linux_8c.html#a3024ccd4a9af5109d24e6c57565d74a1">acc_os_linux.c</a>
 </li>
 <li>_POSIX_SOURCE
 : <a class="el" href="acc__os__linux_8c.html#ac3d144aa01e765a1fae62ab5491c7cc1">acc_os_linux.c</a>
@@ -142,17 +144,14 @@ $(document).ready(function(){initNavTree('globals_defs.html','');});
 
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
-<li>ACC_BOARD_BUS
-: <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a7cf0faa449579b6f4e3586708068c3fb">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>
-</li>
-<li>ACC_BOARD_CS
-: <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a5561cb65c5e45a779e66c61b21777829">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>
-</li>
 <li>ACC_BOARD_DEFAULT_SPI_SPEED
 : <a class="el" href="acc__board_8h.html#ae6c28eb34ee6bda7fe81fef9900b1ec8">acc_board.h</a>
 </li>
 <li>ACC_BOARD_REF_FREQ
 : <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a732a5a080b5fa04978f366f66ea483dc">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>
+</li>
+<li>ACC_BOARD_SENSOR_GPIO_COUNT
+: <a class="el" href="acc__board_8h.html#af841ed6436df8261cc030931cfefb91f">acc_board.h</a>
 </li>
 <li>ACC_BOARD_SPI_SPEED
 : <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a05f2f8a714569f47d97f8a8dc0de9f34">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>
@@ -185,7 +184,7 @@ $(document).ready(function(){initNavTree('globals_defs.html','');});
 : <a class="el" href="acc__log_8h.html#a67372d5163924d7cc216a8ccbd3e377b">acc_log.h</a>
 </li>
 <li>ACC_OS_INVALID_SOCKET
-: <a class="el" href="acc__os__linux_8c.html#aff8146ba25dadfda8ce88272113fcac7">acc_os_linux.c</a>
+: <a class="el" href="acc__os__linux_8h.html#aff8146ba25dadfda8ce88272113fcac7">acc_os_linux.h</a>
 </li>
 <li>ACC_SPI_TRANSFER_SIZE
 : <a class="el" href="acc__driver__spi__linux__spidev_8c.html#aab8a27abfc4546fd36aab4188e975cfb">acc_driver_spi_linux_spidev.c</a>
@@ -262,12 +261,24 @@ $(document).ready(function(){initNavTree('globals_defs.html','');});
 </ul>
 
 
+<h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
+<li>I2C_PATH
+: <a class="el" href="acc__driver__i2c__linux_8c.html#a249ef80118b42a6738909afdd2be787e">acc_driver_i2c_linux.c</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>MEMORY_FILE_NAME
+: <a class="el" href="acc__driver__memory__linux_8c.html#a86625c55095d4e3ad54a34ae96a1265f">acc_driver_memory_linux.c</a>
+</li>
 <li>MODULE
 : <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>
-, <a class="el" href="acc__os__linux_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">acc_os_linux.c</a>
-, <a class="el" href="acc__driver__spi__linux__spidev_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">acc_driver_spi_linux_spidev.c</a>
 , <a class="el" href="acc__driver__gpio__linux__sysfs_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">acc_driver_gpio_linux_sysfs.c</a>
+, <a class="el" href="acc__driver__i2c__linux_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">acc_driver_i2c_linux.c</a>
+, <a class="el" href="acc__driver__memory__linux_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">acc_driver_memory_linux.c</a>
+, <a class="el" href="acc__driver__spi__linux__spidev_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">acc_driver_spi_linux_spidev.c</a>
+, <a class="el" href="acc__os__linux_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">acc_os_linux.c</a>
 </li>
 </ul>
 
@@ -275,9 +286,6 @@ $(document).ready(function(){initNavTree('globals_defs.html','');});
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
 <li>PMU_ENABLE_PIN
 : <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a87442042ed3a8ce677c1f6f38a86608c">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>
-</li>
-<li>PRIsensor
-: <a class="el" href="acc__types_8h.html#a7f0e2acfc5a66bfebd72c4a7344f2ea0">acc_types.h</a>
 </li>
 </ul>
 
@@ -308,7 +316,7 @@ $(document).ready(function(){initNavTree('globals_defs.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 9 2018 13:59:53 for Acconeer API by
+    <li class="footer">Generated on Tue Feb 27 2018 14:02:59 for Acconeer API by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

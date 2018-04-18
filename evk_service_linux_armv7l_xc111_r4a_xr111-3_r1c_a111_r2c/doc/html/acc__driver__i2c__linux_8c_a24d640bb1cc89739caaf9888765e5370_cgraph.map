@@ -1,0 +1,11 @@
+<map id="acc_driver_i2c_linux_register" name="acc_driver_i2c_linux_register">
+<area shape="rect" id="node2" href="$acc__driver__i2c__linux_8c.html#a4f59faf0cdfd3cd32c8569e53e6c6472" title="Initialize I2C driver. " alt="" coords="193,5,357,32"/>
+<area shape="rect" id="node3" href="$acc__driver__i2c__linux_8c.html#ac0c10c84feefd3709a4c366ff6ff1bad" title="I2C write. " alt="" coords="204,57,347,98"/>
+<area shape="rect" id="node5" href="$acc__driver__i2c__linux_8c.html#a9555b62f487f066d3e5581f9922bf579" title="I2C write. " alt="" coords="201,122,350,163"/>
+<area shape="rect" id="node6" href="$acc__driver__i2c__linux_8c.html#a2105853b5f868f5df46e46e84c99b2f4" title="I2C read from specified 8&#45;bit address. " alt="" coords="198,187,353,229"/>
+<area shape="rect" id="node9" href="$acc__driver__i2c__linux_8c.html#a3a1197b93ffaed8035a68b4c558cfb6e" title="I2C read from specified 16&#45;bit address. " alt="" coords="195,253,356,294"/>
+<area shape="rect" id="node10" href="$acc__driver__i2c__linux_8c.html#ad9bc547c5b1364d3644ba8552a3b67e0" title="I2C read from last read/written address. " alt="" coords="414,319,586,345"/>
+<area shape="rect" id="node4" href="$acc__driver__i2c__linux_8c.html#aa0ad2cbc3a92b9fb0f72d7025e05a798" title="I2C write. " alt="" coords="411,90,589,131"/>
+<area shape="rect" id="node7" href="$acc__driver__i2c__linux_8c.html#ae023c20325429fea295e03fb00bc4fed" title="I2C read from specified address. " alt="" coords="405,253,595,294"/>
+<area shape="rect" id="node8" href="$acc__driver__i2c__linux_8c.html#adc0396f4b832ff43518aa9d9eb17a72d" title="Internal I2C read. " alt="" coords="643,289,739,316"/>
+</map>

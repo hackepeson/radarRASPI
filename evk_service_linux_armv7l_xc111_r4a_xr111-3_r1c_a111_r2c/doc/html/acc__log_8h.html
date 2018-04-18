@@ -127,8 +127,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <map name="include_2acc__log_8hdep" id="include_2acc__log_8hdep">
 <area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html" title="source/acc_board_rpi\l_xc111_r4a_xr111&#45;3_r1c.c" alt="" coords="5,80,180,121"/>
 <area shape="rect" id="node3" href="acc__driver__gpio__linux__sysfs_8c.html" title="source/acc_driver_gpio\l_linux_sysfs.c" alt="" coords="204,80,360,121"/>
-<area shape="rect" id="node4" href="acc__driver__spi__linux__spidev_8c.html" title="source/acc_driver_spi\l_linux_spidev.c" alt="" coords="385,80,534,121"/>
-<area shape="rect" id="node5" href="acc__os__linux_8c.html" title="source/acc_os_linux.c" alt="" coords="558,87,710,114"/>
+<area shape="rect" id="node4" href="acc__driver__i2c__linux_8c.html" title="source/acc_driver_i2c\l_linux.c" alt="" coords="385,80,534,121"/>
+<area shape="rect" id="node5" href="acc__driver__memory__linux_8c.html" title="source/acc_driver_memory\l_linux.c" alt="" coords="558,80,737,121"/>
+<area shape="rect" id="node6" href="acc__driver__spi__linux__spidev_8c.html" title="source/acc_driver_spi\l_linux_spidev.c" alt="" coords="761,80,910,121"/>
+<area shape="rect" id="node7" href="acc__os__linux_8c.html" title="source/acc_os_linux.c" alt="" coords="934,87,1086,114"/>
 </map>
 </div>
 </div>
@@ -450,9 +452,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="acc__log_8h_a7caf43616038d0c20c5dcec4e78e0923_icgraph.png" border="0" usemap="#acc__log_8h_a7caf43616038d0c20c5dcec4e78e0923_icgraph" alt=""/></div>
 <map name="acc__log_8h_a7caf43616038d0c20c5dcec4e78e0923_icgraph" id="acc__log_8h_a7caf43616038d0c20c5dcec4e78e0923_icgraph">
-<area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a8588c603a76621af12df4582c75ddeaa" title="Initialize the direction and level of host GPIOs. " alt="" coords="211,5,349,32"/>
-<area shape="rect" id="node3" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#add8b3148bd44ea1091a11a064ca4a770" title="Custom chip select for SPI transfer. " alt="" coords="203,56,357,83"/>
-<area shape="rect" id="node4" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a6897a3396c0380bef915af527fc5f16d" title="Get the current status of the sensor interrupt. " alt="" coords="207,107,353,149"/>
+<area shape="rect" id="node2" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a0d60562bc0c5a659a131115fde5c1a48" title="Initialize the direction and level of host GPIOs. " alt="" coords="420,56,557,83"/>
+<area shape="rect" id="node4" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#add8b3148bd44ea1091a11a064ca4a770" title="Custom chip select for SPI transfer. " alt="" coords="411,107,566,133"/>
+<area shape="rect" id="node5" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a38480b3965f1d5d5dcc895362dbfb178" title="Set host GPIO to input. " alt="" coords="207,5,355,32"/>
+<area shape="rect" id="node6" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a02b1f4bfbd94ae227f694f490bda005c" title="Set host GPIO output level. " alt="" coords="203,157,359,184"/>
+<area shape="rect" id="node10" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ab57f8a4b7d6fece8f8a5fdc08630920b" title="Read from host GPIO. " alt="" coords="208,208,353,235"/>
+<area shape="rect" id="node3" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="646,56,753,83"/>
+<area shape="rect" id="node7" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#abe900d9b6d75a11c499164c1bcf888d7" title="Reset sensor. " alt="" coords="407,208,571,235"/>
+<area shape="rect" id="node8" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#afce508cb013952015c94b3725b305187" title="Start sensor. " alt="" coords="619,157,780,184"/>
+<area shape="rect" id="node9" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a9897b13689fddb6f16cec382b14f844a" title="Stop sensor. " alt="" coords="619,208,779,235"/>
 </map>
 </div>
 </p>
@@ -465,7 +473,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="acc__log_8h.html">acc_log.h</a></li>
-    <li class="footer">Generated on Mon Apr 9 2018 13:59:47 for Acconeer API by
+    <li class="footer">Generated on Tue Feb 27 2018 14:02:56 for Acconeer API by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

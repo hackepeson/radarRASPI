@@ -1,9 +1,10 @@
 <map id="source/acc_board_rpi_xc111_r4a_xr111&#45;3_r1c.c" name="source/acc_board_rpi_xc111_r4a_xr111&#45;3_r1c.c">
-<area shape="rect" id="node5" href="$acc__board_8h.html" title="acc_board.h" alt="" coords="25,102,118,129"/>
-<area shape="rect" id="node8" href="$acc__device__gpio_8h.html" title="acc_device_gpio.h" alt="" coords="414,102,545,129"/>
-<area shape="rect" id="node9" href="$acc__driver__gpio__linux__sysfs_8h.html" title="acc_driver_gpio_linux\l_sysfs.h" alt="" coords="193,95,339,136"/>
-<area shape="rect" id="node10" href="$acc__driver__spi__linux__spidev_8h.html" title="acc_driver_spi_linux\l_spidev.h" alt="" coords="772,95,912,136"/>
-<area shape="rect" id="node11" href="$acc__log_8h.html" title="acc_log.h" alt="" coords="569,102,648,129"/>
-<area shape="rect" id="node12" href="$acc__os_8h.html" title="acc_os.h" alt="" coords="673,102,747,129"/>
-<area shape="rect" id="node6" href="$acc__types_8h.html" title="acc_types.h" alt="" coords="495,184,589,211"/>
+<area shape="rect" id="node5" href="$acc__board_8h.html" title="acc_board.h" alt="" coords="432,102,525,129"/>
+<area shape="rect" id="node7" href="$acc__device__gpio_8h.html" title="acc_device_gpio.h" alt="" coords="277,102,408,129"/>
+<area shape="rect" id="node8" href="$acc__driver__gpio__linux__sysfs_8h.html" title="acc_driver_gpio_linux\l_sysfs.h" alt="" coords="5,184,152,225"/>
+<area shape="rect" id="node9" href="$acc__driver__i2c__linux_8h.html" title="acc_driver_i2c_linux.h" alt="" coords="753,102,903,129"/>
+<area shape="rect" id="node10" href="$acc__driver__spi__linux__spidev_8h.html" title="acc_driver_spi_linux\l_spidev.h" alt="" coords="927,95,1067,136"/>
+<area shape="rect" id="node11" href="$acc__log_8h.html" title="acc_log.h" alt="" coords="550,102,629,129"/>
+<area shape="rect" id="node12" href="$acc__os_8h.html" title="acc_os.h" alt="" coords="653,102,728,129"/>
+<area shape="rect" id="node6" href="$acc__types_8h.html" title="acc_types.h" alt="" coords="432,191,525,218"/>
 </map>

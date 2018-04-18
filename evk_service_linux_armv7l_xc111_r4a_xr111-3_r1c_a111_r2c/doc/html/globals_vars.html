@@ -83,6 +83,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="globals_defs.html"><span>Macros</span></a></li>
     </ul>
   </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="#index_a"><span>a</span></a></li>
+      <li><a href="#index_f"><span>f</span></a></li>
+      <li><a href="#index_g"><span>g</span></a></li>
+      <li><a href="#index_i"><span>i</span></a></li>
+      <li class="current"><a href="#index_s"><span>s</span></a></li>
+    </ul>
+  </div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -113,7 +122,20 @@ $(document).ready(function(){initNavTree('globals_vars.html','');});
 </div>
 
 <div class="contents">
-&#160;<ul>
+&#160;
+
+<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>acc_board_flags
+: <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a93f12fc88b50d1f934c8dd28b554eaba">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>
+</li>
+<li>acc_board_host_gpio_names
+: <a class="el" href="acc__board_8h.html#a8c12248da910d5d57ece056c6b2d6305">acc_board.h</a>
+, <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a7a83fd28a375dc9b752acd980a2c1464">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>
+</li>
+<li>acc_board_host_gpios
+: <a class="el" href="acc__board_8h.html#a0b30405a25a6bfe90bccb547094f3a31">acc_board.h</a>
+, <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a0b1657fcbc977442c03b0979216e3ba3">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>
+</li>
 <li>acc_device_gpio_init_func
 : <a class="el" href="acc__device__gpio_8h.html#a7c247fcb5152a8f6e8ce0de174d8338b">acc_device_gpio.h</a>
 </li>
@@ -129,6 +151,36 @@ $(document).ready(function(){initNavTree('globals_vars.html','');});
 <li>acc_device_gpio_write_func
 : <a class="el" href="acc__device__gpio_8h.html#a099bd31d3c0f20ac9a574731b186c32a">acc_device_gpio.h</a>
 </li>
+<li>acc_device_i2c_init_func
+: <a class="el" href="acc__device__i2c_8h.html#a2e0901aa25affdb67f4eab46134c2739">acc_device_i2c.h</a>
+</li>
+<li>acc_device_i2c_read_from_address_16_func
+: <a class="el" href="acc__device__i2c_8h.html#aa9da1cd0c2495ba88b1c047cdbc729fa">acc_device_i2c.h</a>
+</li>
+<li>acc_device_i2c_read_from_address_8_func
+: <a class="el" href="acc__device__i2c_8h.html#a6ef5330f6018b11c48f7b6d365b7c529">acc_device_i2c.h</a>
+</li>
+<li>acc_device_i2c_read_func
+: <a class="el" href="acc__device__i2c_8h.html#ab967e8e99d8f60dc9ed22b61a3d0fba6">acc_device_i2c.h</a>
+</li>
+<li>acc_device_i2c_write_to_address_16_func
+: <a class="el" href="acc__device__i2c_8h.html#a92869779cc32a86c072e31db67f019aa">acc_device_i2c.h</a>
+</li>
+<li>acc_device_i2c_write_to_address_8_func
+: <a class="el" href="acc__device__i2c_8h.html#a262fb54b4f65ece7b06eb4ee341b031b">acc_device_i2c.h</a>
+</li>
+<li>acc_device_memory_get_size_func
+: <a class="el" href="acc__device__memory_8h.html#adaacb377658253579c57e7ec0fe23493">acc_device_memory.h</a>
+</li>
+<li>acc_device_memory_init_func
+: <a class="el" href="acc__device__memory_8h.html#a8f41e936514d7a744ae6740ed521c883">acc_device_memory.h</a>
+</li>
+<li>acc_device_memory_read_func
+: <a class="el" href="acc__device__memory_8h.html#ac084be8ad485f67dc9d9cf7ddeb66cfd">acc_device_memory.h</a>
+</li>
+<li>acc_device_memory_write_func
+: <a class="el" href="acc__device__memory_8h.html#a7b870959a5d5873e580a77bb507ffcca">acc_device_memory.h</a>
+</li>
 <li>acc_device_spi_get_max_transfer_size_func
 : <a class="el" href="acc__device__spi_8h.html#ac5dadf2a50032e3469361fd42cedb80a">acc_device_spi.h</a>
 </li>
@@ -138,23 +190,57 @@ $(document).ready(function(){initNavTree('globals_vars.html','');});
 <li>acc_device_spi_transfer_func
 : <a class="el" href="acc__device__spi_8h.html#ac0ff74b3e717c0ea8eca30b8d0c6f2b8">acc_device_spi.h</a>
 </li>
+<li>acc_os_mutex
+: <a class="el" href="acc__os__linux_8c.html#ac369bd9cae28d077e33767bbe8ab7a96">acc_os_linux.c</a>
+</li>
 <li>acc_os_stack_setup_done
 : <a class="el" href="acc__os__linux_8c.html#ae13f60fbf97da2d83e4332a2f41ad469">acc_os_linux.c</a>
 </li>
+</ul>
+
+
+<h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>file
+: <a class="el" href="acc__driver__memory__linux_8c.html#a702945180aa732857b380a007a7e2a21">acc_driver_memory_linux.c</a>
+</li>
+<li>file_desc
+: <a class="el" href="acc__driver__memory__linux_8c.html#ac371785700fb489ecc89fe79cd0b2ddd">acc_driver_memory_linux.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
 <li>gpio_count
 : <a class="el" href="acc__driver__gpio__linux__sysfs_8c.html#af8a0e7895ed10fedc339fdd1e6178919">acc_driver_gpio_linux_sysfs.c</a>
 </li>
 <li>gpios
 : <a class="el" href="acc__driver__gpio__linux__sysfs_8c.html#a94156775a5b31de4d329f0606fa162d4">acc_driver_gpio_linux_sysfs.c</a>
 </li>
-<li>sensor_interrupt_pins
-: <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#aaa7345e74b42f876fc6abfe892c9a8b6">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>
+</ul>
+
+
+<h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
+<li>i2c_fd
+: <a class="el" href="acc__driver__i2c__linux_8c.html#a1dc55ca7ecf42fa8764eef6c8a9ed885">acc_driver_i2c_linux.c</a>
+</li>
+<li>i2c_mutex
+: <a class="el" href="acc__driver__i2c__linux_8c.html#a5d995c62dcdecb8b495098380ee8f849">acc_driver_i2c_linux.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>sensor_spi_bus_cs
+: <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a1bae5dac986d2d69f93a3de02361802b">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>
 </li>
 <li>sensor_state
-: <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a4bba27dfa987000e8f32bb6096f87c05">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>
+: <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#af5122c35d854e0fb8c0b6a9b353189eb">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>
 </li>
 <li>spidev_fd
 : <a class="el" href="acc__driver__spi__linux__spidev_8c.html#a2897932abb6b94b6c6f79d9737314329">acc_driver_spi_linux_spidev.c</a>
+</li>
+<li>supported_hardware
+: <a class="el" href="acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a68a9b556fa7c48551fc7b90f329c9657">acc_board_rpi_xc111_r4a_xr111-3_r1c.c</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -162,7 +248,7 @@ $(document).ready(function(){initNavTree('globals_vars.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 9 2018 13:59:52 for Acconeer API by
+    <li class="footer">Generated on Tue Feb 27 2018 14:02:59 for Acconeer API by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

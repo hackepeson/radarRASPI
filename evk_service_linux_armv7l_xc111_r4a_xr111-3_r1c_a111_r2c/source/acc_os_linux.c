@@ -19,7 +19,6 @@
 #include <fcntl.h>
 #include <netdb.h>
 #include <pthread.h>
-#include <semaphore.h>
 #include <stddef.h>
 #include <signal.h>
 #include <stdbool.h>
@@ -44,29 +43,11 @@
 
 #define MODULE	"os"
 
-#define ACC_OS_INVALID_SOCKET	(-1)
 
-typedef struct acc_os_mutex {
-	uint_fast8_t		is_initialized;
-	pthread_mutex_t		mutex;
-} acc_os_mutex_s;
-
-
-typedef struct acc_os_semaphore {
-	uint_fast8_t	  	is_initialized;
-	sem_t			handle;
-} acc_os_semaphore_s;
-
-
-typedef struct acc_os_socket {
-	int handle;
-} acc_os_socket_s;
-
-
-typedef struct acc_os_thread_handle {
-	pthread_t handle;
-}acc_os_thread_handle_s;
-
+/**
+ * @brief Mutex to protect concurrent init of mutexes
+ */
+static pthread_mutex_t	acc_os_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 /**
  * @brief Flag set if stack has been prepared for usage measurement
@@ -249,27 +230,38 @@ void acc_os_localtime(struct tm *time_tm, uint32_t *time_usec)
 
 
 /**
- * @brief Create a mutex
+ * @brief Initialize a mutex
  *
+ * If a pointer to a mutex type is given, that mutex is initialized. If NULL is given, a new
+ * mutex is dynamically allocated and initialized.
+ *
+ * If the pointer to an already initialized mutex is given, nothing is done and the mutex is
+ * left in its current state. Care must therefore be taken that the mutex variable is zeroed
+ * before being passed to acc_os_mutex_init() so it can be detected to be initialized or not.
+ *
+ * @param mutex Pointer to mutex or NULL
  * @return Newly initialized mutex
  */
-acc_os_mutex_t acc_os_mutex_create(void)
+acc_os_mutex_t *acc_os_mutex_init(acc_os_mutex_t *mutex)
 {
-	acc_os_mutex_t mutex = acc_os_mem_alloc(sizeof(*mutex));
+	pthread_mutex_lock(&acc_os_mutex);
 
-	if (mutex != NULL) {
-		pthread_mutex_init(&mutex->mutex, NULL);
-		mutex->is_initialized = 1;
+	if (mutex && mutex->is_initialized) {
+		pthread_mutex_unlock(&acc_os_mutex);
+		return mutex;
 	}
 
+	if (!mutex && !(mutex = acc_os_mem_alloc(sizeof(*mutex)))) {
+		pthread_mutex_unlock(&acc_os_mutex);
+		return NULL;
+	}
+
+	pthread_mutex_init(&mutex->mutex, NULL);
+	mutex->is_initialized = 1;
+
+	pthread_mutex_unlock(&acc_os_mutex);
+
 	return mutex;
-}
-
-
-void acc_os_mutex_destroy(acc_os_mutex_t mutex)
-{
-	pthread_mutex_destroy(&mutex->mutex);
-	acc_os_mem_free(mutex);
 }
 
 
@@ -278,7 +270,7 @@ void acc_os_mutex_destroy(acc_os_mutex_t mutex)
  *
  * @param mutex Mutex to be locked
  */
-void acc_os_mutex_lock(acc_os_mutex_t mutex)
+void acc_os_mutex_lock(acc_os_mutex_t *mutex)
 {
 	pthread_mutex_lock(&mutex->mutex);
 }
@@ -289,7 +281,7 @@ void acc_os_mutex_lock(acc_os_mutex_t mutex)
  *
  * @param mutex Mutex to be unlocked
  */
-void acc_os_mutex_unlock(acc_os_mutex_t mutex)
+void acc_os_mutex_unlock(acc_os_mutex_t *mutex)
 {
 	pthread_mutex_unlock(&mutex->mutex);
 }
@@ -300,25 +292,22 @@ void acc_os_mutex_unlock(acc_os_mutex_t mutex)
  *
  * @param func	Function implementing the thread code
  * @param param	Parameter to be passed to the thread function
- * @return Newly created thread
+ * @param[out] handle OS specific thread handle
+ * @return status
  */
-acc_os_thread_handle_t acc_os_thread_create(void (*func)(void *param), void *param)
+acc_status_t acc_os_thread_create(void (*func)(void *param), void *param, acc_os_thread_handle_t *handle)
 {
 	int	ret;
 
-	acc_os_thread_handle_t thread = acc_os_mem_alloc(sizeof(*thread));
-
-	if (thread != NULL) {
-		// TODO the function cast should be replaced by something safer
-		ret = pthread_create(&thread->handle, NULL, (void* (*)(void*))func, param);
-		if (ret != 0) {
-			ACC_LOG_ERROR("%s: Error %d, %s", __func__, ret, strerror(ret));
-			return thread;
-		}
+	// TODO the function cast should be replaced by something safer
+	ret = pthread_create((pthread_t *)handle, NULL, (void* (*)(void*))func, param);
+	if (ret != 0) {
+		ACC_LOG_ERROR("%s: Error %d, %s", __func__, ret, strerror(ret));
+		return ACC_STATUS_FAILURE;
 	}
 
-	ACC_LOG_VERBOSE("%s: created thread_handle=%lu", __func__, (unsigned long)thread->handle);
-	return thread;
+	ACC_LOG_VERBOSE("%s: created thread_handle=%lu", __func__, (unsigned long)*handle);
+	return ACC_STATUS_SUCCESS;
 }
 
 
@@ -338,14 +327,13 @@ void acc_os_thread_delete(void)
  *
  * For operating systems that require it, perform any post-thread cleanup operation.
  *
- * @param thread Handle of thread
+ * @param handle Handle of thread
  */
-void acc_os_thread_cleanup(acc_os_thread_handle_t thread)
+void acc_os_thread_cleanup(acc_os_thread_handle_t handle)
 {
-	ACC_LOG_VERBOSE("acc_os_thread_cleanup: removed thread_handle=%lu", (unsigned long)thread->handle);
+	ACC_LOG_VERBOSE("acc_os_thread_cleanup: removed thread_handle=%lu", (unsigned long)handle);
 	// assume thread is already terminated, or just about to terminate
-	pthread_join(thread->handle, NULL);
-	acc_os_mem_free(thread);
+	pthread_join(handle, NULL);
 }
 
 
@@ -488,22 +476,17 @@ void acc_os_net_address_to_string(acc_os_net_address_t address, char *buffer, si
 
 acc_os_socket_t acc_os_net_connect(acc_os_net_address_t address, acc_os_net_port_t port)
 {
-	acc_os_socket_t	sock = acc_os_mem_alloc(sizeof(*sock));
-
-	if (sock == NULL) {
-		return NULL;
-	}
-
+	acc_os_socket_t	sock;
 	int		sock_flags;
 
-	if ((sock->handle = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
+	if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
 		ACC_LOG_ERROR("%s: socket(AF_INET, SOCK_STREAM): (%u) %s", __func__, errno, strerror(errno));
-		return NULL;
+		return ACC_OS_INVALID_SOCKET;
 	}
 
 	// make socket nonblocking to allow timeout handling for connect()
-	sock_flags = fcntl(sock->handle, F_GETFL);
-	fcntl(sock->handle, F_SETFL, sock_flags | O_NONBLOCK);
+	sock_flags = fcntl(sock, F_GETFL);
+	fcntl(sock, F_SETFL, sock_flags | O_NONBLOCK);
 
 	// request connect, but don't block
 	struct sockaddr_in addr;
@@ -513,40 +496,40 @@ acc_os_socket_t acc_os_net_connect(acc_os_net_address_t address, acc_os_net_port
 	addr.sin_addr.s_addr	= address;
 	addr.sin_port		= htons(port);
 
-	if ((connect(sock->handle, (struct sockaddr*)&addr, sizeof(addr)) < 0) && (errno != EINPROGRESS)) {
+	if ((connect(sock, (struct sockaddr*)&addr, sizeof(addr)) < 0) && (errno != EINPROGRESS)) {
 		char name[INET_ADDRSTRLEN];
 		acc_os_net_address_to_string(address, name, sizeof(name));
 		ACC_LOG_WARNING("%s: connect(%s:%u): (%u) %s", __func__, name, port, errno, strerror(errno));
 		acc_os_net_disconnect(sock);
-		return NULL;
+		return ACC_OS_INVALID_SOCKET;
 	}
 
 	// use select() to detect activity on socket, or timeout
 	fd_set fdset;
 	FD_ZERO(&fdset);
-	FD_SET(sock->handle, &fdset);
+	FD_SET(sock, &fdset);
 	struct timeval connect_timeout = { .tv_sec = 0, .tv_usec = 500000 };
-	int ret = select(sock->handle + 1, NULL, &fdset, NULL, &connect_timeout);
+	int ret = select(sock + 1, NULL, &fdset, NULL, &connect_timeout);
 	if (ret < 0) {
 		ACC_LOG_ERROR("%s: select() failed: (%u) %s", __func__, errno, strerror(errno));
 		acc_os_net_disconnect(sock);
-		return NULL;
+		return ACC_OS_INVALID_SOCKET;
 	}
 	if (!ret) {
 		char name[INET_ADDRSTRLEN];
 		acc_os_net_address_to_string(address, name, sizeof(name));
 		ACC_LOG_WARNING("%s: connect() to %s:%u timed out", __func__, name, port);
 		acc_os_net_disconnect(sock);
-		return NULL;
+		return ACC_OS_INVALID_SOCKET;
 	}
 
 	// get any socket level errors
 	int		so_error;
 	socklen_t	len = sizeof(so_error);
-	if (getsockopt(sock->handle, SOL_SOCKET, SO_ERROR, &so_error, &len) < 0) {
+	if (getsockopt(sock, SOL_SOCKET, SO_ERROR, &so_error, &len) < 0) {
 		ACC_LOG_ERROR("%s: getsockopt() failed: (%u) %s", __func__, errno, strerror(errno));
 		acc_os_net_disconnect(sock);
-		return NULL;
+		return ACC_OS_INVALID_SOCKET;
 	}
 
 	// verify that connect() succeeded
@@ -555,51 +538,30 @@ acc_os_socket_t acc_os_net_connect(acc_os_net_address_t address, acc_os_net_port
 		acc_os_net_address_to_string(address, name, sizeof(name));
 		ACC_LOG_ERROR("%s: so_error for %s:%u: (%u) %s", __func__, name, port, so_error, strerror(so_error));
 		acc_os_net_disconnect(sock);
-		return NULL;
+		return ACC_OS_INVALID_SOCKET;
 	}
 
 	// restore socket to blocking mode
-	fcntl(sock->handle, F_SETFL, sock_flags & ~O_NONBLOCK);
+	fcntl(sock, F_SETFL, sock_flags & ~O_NONBLOCK);
 
 	int value = 1;
-	if (setsockopt(sock->handle, IPPROTO_TCP, TCP_NODELAY, (void*)&value, sizeof(value)) < 0) {
+	if (setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, (void*)&value, sizeof(value)) < 0) {
 		ACC_LOG_WARNING("%s: message_driver_tcp: setsockopt(TCP_NODELAY): (%u) %s", __func__, errno, strerror(errno));
 		acc_os_net_disconnect(sock);
-		return NULL;
+		return ACC_OS_INVALID_SOCKET;
 	}
 
 	struct timeval send_timeout = { .tv_sec = 0, .tv_usec = 500000 };
-	if (setsockopt(sock->handle, SOL_SOCKET, SO_SNDTIMEO, (void*)&send_timeout, sizeof(send_timeout)) < 0)
+	if (setsockopt(sock, SOL_SOCKET, SO_SNDTIMEO, (void*)&send_timeout, sizeof(send_timeout)) < 0)
 		ACC_LOG_WARNING("%s: setsockopt(SO_SNDTIMEO) failed: (%u) %s", __func__, errno, strerror(errno));
 
 	return sock;
 }
 
 
-void acc_os_set_socket_invalid(acc_os_socket_t sock)
-{
-	if (sock != NULL) {
-		sock->handle = ACC_OS_INVALID_SOCKET;
-	}
-}
-
-
-bool acc_os_is_socket_valid(acc_os_socket_t sock)
-{
-	bool valid = false;
-
-	if (sock != NULL) {
-		valid = (sock->handle != ACC_OS_INVALID_SOCKET);
-	}
-
-	return valid;
-}
-
 void acc_os_net_disconnect(acc_os_socket_t sock)
 {
-	if (sock != NULL) {
-		close(sock->handle);
-	}
+	close(sock);
 }
 
 
@@ -608,12 +570,8 @@ int acc_os_net_send(acc_os_socket_t sock, void *buffer, size_t size)
 	ssize_t	result;
 	ssize_t	remain = size;
 
-	if (sock == NULL) {
-		return -1;
-	}
-
 	while (remain) {
-		while (((result = send(sock->handle, buffer, remain, MSG_NOSIGNAL)) < 0) && (errno == EINTR)) ;
+		while (((result = send(sock, buffer, remain, MSG_NOSIGNAL)) < 0) && (errno == EINTR)) ;
 		if (result < 0) {
 			ACC_LOG_ERROR("%s(): (%u) %s", __func__, errno, strerror(errno));
 			return -1;
@@ -638,16 +596,12 @@ int acc_os_net_receive(acc_os_socket_t sock, void *buffer, size_t max_size, uint
 	ssize_t	remain	= max_size;
 	size_t	size	= 0;
 
-	if (sock == NULL) {
-		return -1;
-	}
-
 	struct timeval receive_timeout = { .tv_sec = timeout_us / 1000000UL, .tv_usec = timeout_us % 1000000UL };
-	if (setsockopt(sock->handle, SOL_SOCKET, SO_RCVTIMEO, (void*)&receive_timeout, sizeof(receive_timeout)) < 0)
+	if (setsockopt(sock, SOL_SOCKET, SO_RCVTIMEO, (void*)&receive_timeout, sizeof(receive_timeout)) < 0)
 		ACC_LOG_WARNING("%s: setsockopt(SO_RCVTIMEO) failed: (%u) %s", __func__, errno, strerror(errno));
 
 	while (remain) {
-		while (((result = recv(sock->handle, buffer, remain, 0)) < 0) && (errno == EINTR)) ;
+		while (((result = recv(sock, buffer, remain, 0)) < 0) && (errno == EINTR)) ;
 
 		if (result < 0) {
 			ACC_LOG_ERROR("%s: (%u) %s", __func__, errno, strerror(errno));
@@ -666,86 +620,4 @@ int acc_os_net_receive(acc_os_socket_t sock, void *buffer, size_t max_size, uint
 	}
 
 	return size;
-}
-
-
-acc_os_semaphore_t acc_os_semaphore_create(void)
-{
-	acc_os_semaphore_t sem = NULL;
-	
-	sem = acc_os_mem_alloc(sizeof(*sem));
-
-	if (sem != NULL) {
-		if (sem_init(&sem->handle, 0, 0) == -1) {
-			return NULL;
-		}
-		sem->is_initialized	= 1;
-	}
-
-	return sem;
-}
-
-
-int_fast8_t acc_os_semaphore_wait(acc_os_semaphore_t sem, uint_fast16_t timeout_ms)
-{
-	struct timespec ts;
-	struct timeval tv;
-
-	if (sem == NULL || sem->is_initialized != 1) {
-		ACC_LOG_ERROR("Not valid semaphore");
-		return -1;
-	}
-
-	int result = gettimeofday(&tv, NULL);
-	if (result != 0) {
-		ACC_LOG_ERROR("gettimeofday returned %d %d %s", result, errno, strerror(errno));
-		return -1;
-	}
-
-	ts.tv_sec = tv.tv_sec;
-	ts.tv_nsec = tv.tv_usec + (timeout_ms * 1000);
-
-	while (ts.tv_nsec >= 1000000) {
-		ts.tv_sec++;
-		ts.tv_nsec -= 1000000;
-	}
-	ts.tv_nsec *= 1000;
-
-	if (sem_timedwait(&(sem->handle), &ts) == -1) {
-		/* Timeout */
-		if (errno == ETIMEDOUT) {
-			if (timeout_ms != 0) {
-				ACC_LOG_ERROR("Semaphore timeout");
-			}
-			return -1;
-		}
-		ACC_LOG_ERROR("An error has occured: %d", errno);
-		return -1;
-	}
-
-	return 0;
-}
-
-
-void acc_os_semaphore_signal(acc_os_semaphore_t sem)
-{
-	if (sem != NULL && sem->is_initialized) {
-		sem_post(&sem->handle);
-	}
-}
-
-
-void acc_os_semaphore_signal_from_interrupt(acc_os_semaphore_t sem)
-{
-	acc_os_semaphore_signal(sem);
-}
-
-
-void acc_os_semaphore_destroy(acc_os_semaphore_t sem)
-{
-	if (sem != NULL && sem->is_initialized) {
-		sem_destroy(&sem->handle);
-
-		acc_os_mem_free(sem);
-	}
 }

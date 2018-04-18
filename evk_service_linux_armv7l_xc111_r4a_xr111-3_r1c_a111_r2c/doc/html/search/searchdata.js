@@ -4,11 +4,11 @@ var indexSectionsWithContent =
   1: "ags",
   2: "a",
   3: "ai",
-  4: "abcdfghilmprstv",
+  4: "abcdfgilmprstv",
   5: "ag",
-  6: "ag",
-  7: "ags",
-  8: "_acegmprs"
+  6: "ags",
+  7: "aghs",
+  8: "_acegimprs"
 };
 
 var indexSectionNames =

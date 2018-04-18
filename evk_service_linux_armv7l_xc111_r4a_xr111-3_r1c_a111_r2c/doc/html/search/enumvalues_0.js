@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['acc_5fboard_5fflag_5fgpio_5fno_5fgpio',['ACC_BOARD_FLAG_GPIO_NO_GPIO',['../acc__board_8h.html#a546ab990c183e20ebe94572084da89cda2fe4f19b1687d7ef08caba16d91a9656',1,'acc_board.h']]],
+  ['acc_5fboard_5fflag_5fgpio_5fno_5finit',['ACC_BOARD_FLAG_GPIO_NO_INIT',['../acc__board_8h.html#a546ab990c183e20ebe94572084da89cda93070207f633c67223f97202cc4fe4f5',1,'acc_board.h']]],
+  ['acc_5fboard_5fflag_5fmax',['ACC_BOARD_FLAG_MAX',['../acc__board_8h.html#a546ab990c183e20ebe94572084da89cdad03517f3606b1d928347e4dee8317c0c',1,'acc_board.h']]],
   ['acc_5flog_5flevel_5fdebug',['ACC_LOG_LEVEL_DEBUG',['../acc__log_8h.html#a84db876801444732d388f225d0738bb0af804954572982b7789f6d47e9c347b93',1,'acc_log.h']]],
   ['acc_5flog_5flevel_5ferror',['ACC_LOG_LEVEL_ERROR',['../acc__log_8h.html#a84db876801444732d388f225d0738bb0a4d3bfb21ceea033ad27e5713dca4cf38',1,'acc_log.h']]],
   ['acc_5flog_5flevel_5ffatal',['ACC_LOG_LEVEL_FATAL',['../acc__log_8h.html#a84db876801444732d388f225d0738bb0a8f552f2c98ef6f3d58578690f7a432df',1,'acc_log.h']]],
@@ -31,10 +34,5 @@ var searchData=
   ['acc_5fstatus_5fout_5fof_5fmemory',['ACC_STATUS_OUT_OF_MEMORY',['../acc__types_8h.html#aa1d114cb8ee7ace1e9e9822a78fd5d74a7584d5dcd70246228bd06811e13f3cf8',1,'acc_types.h']]],
   ['acc_5fstatus_5fsuccess',['ACC_STATUS_SUCCESS',['../acc__types_8h.html#aa1d114cb8ee7ace1e9e9822a78fd5d74af8a90e1907eebff80287c951b5eb7de5',1,'acc_types.h']]],
   ['acc_5fstatus_5ftimeout',['ACC_STATUS_TIMEOUT',['../acc__types_8h.html#aa1d114cb8ee7ace1e9e9822a78fd5d74a9ef9b4731b301636887bfb9325f354aa',1,'acc_types.h']]],
-  ['acc_5fstatus_5funsupported',['ACC_STATUS_UNSUPPORTED',['../acc__types_8h.html#aa1d114cb8ee7ace1e9e9822a78fd5d74a9cfe8097113b260c94dc5edc9df49821',1,'acc_types.h']]],
-  ['acc_5fsweep_5fconfiguration_5fpower_5fsave_5fmode_5fa',['ACC_SWEEP_CONFIGURATION_POWER_SAVE_MODE_A',['../acc__sweep__configuration_8h.html#a2b17ab37e47e564f1c195fb1f79bcdf5a1cc1e2bb908c6405477e63a9f86c9dff',1,'acc_sweep_configuration.h']]],
-  ['acc_5fsweep_5fconfiguration_5fpower_5fsave_5fmode_5fb',['ACC_SWEEP_CONFIGURATION_POWER_SAVE_MODE_B',['../acc__sweep__configuration_8h.html#a2b17ab37e47e564f1c195fb1f79bcdf5aeedb919d728ad9825294ae13496d453b',1,'acc_sweep_configuration.h']]],
-  ['acc_5fsweep_5fconfiguration_5fpower_5fsave_5fmode_5fc',['ACC_SWEEP_CONFIGURATION_POWER_SAVE_MODE_C',['../acc__sweep__configuration_8h.html#a2b17ab37e47e564f1c195fb1f79bcdf5a18a72291ec5a77849071392c3712fa6e',1,'acc_sweep_configuration.h']]],
-  ['acc_5fsweep_5fconfiguration_5fpower_5fsave_5fmode_5fcount',['ACC_SWEEP_CONFIGURATION_POWER_SAVE_MODE_COUNT',['../acc__sweep__configuration_8h.html#a2b17ab37e47e564f1c195fb1f79bcdf5a71890985299bc7f76357b2b07e2aa9af',1,'acc_sweep_configuration.h']]],
-  ['acc_5fsweep_5fconfiguration_5fpower_5fsave_5fmode_5fd',['ACC_SWEEP_CONFIGURATION_POWER_SAVE_MODE_D',['../acc__sweep__configuration_8h.html#a2b17ab37e47e564f1c195fb1f79bcdf5abf341a912f795a7039e96865d8cfed29',1,'acc_sweep_configuration.h']]]
+  ['acc_5fstatus_5funsupported',['ACC_STATUS_UNSUPPORTED',['../acc__types_8h.html#aa1d114cb8ee7ace1e9e9822a78fd5d74a9cfe8097113b260c94dc5edc9df49821',1,'acc_types.h']]]
 ];

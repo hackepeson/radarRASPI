@@ -1,7 +1,7 @@
 <map id="source/acc_driver_spi_linux_spidev.c" name="source/acc_driver_spi_linux_spidev.c">
-<area shape="rect" id="node13" href="$acc__driver__spi__linux__spidev_8h.html" title="acc_driver_spi_linux\l_spidev.h" alt="" coords="1321,95,1461,136"/>
-<area shape="rect" id="node14" href="$acc__device__spi_8h.html" title="acc_device_spi.h" alt="" coords="426,102,549,129"/>
-<area shape="rect" id="node15" href="$acc__types_8h.html" title="acc_types.h" alt="" coords="539,184,633,211"/>
-<area shape="rect" id="node17" href="$acc__log_8h.html" title="acc_log.h" alt="" coords="624,102,703,129"/>
-<area shape="rect" id="node18" href="$acc__os_8h.html" title="acc_os.h" alt="" coords="226,102,301,129"/>
+<area shape="rect" id="node13" href="$acc__driver__spi__linux__spidev_8h.html" title="acc_driver_spi_linux\l_spidev.h" alt="" coords="1352,95,1492,136"/>
+<area shape="rect" id="node14" href="$acc__device__spi_8h.html" title="acc_device_spi.h" alt="" coords="457,102,579,129"/>
+<area shape="rect" id="node15" href="$acc__types_8h.html" title="acc_types.h" alt="" coords="591,184,685,211"/>
+<area shape="rect" id="node16" href="$acc__log_8h.html" title="acc_log.h" alt="" coords="655,102,733,129"/>
+<area shape="rect" id="node17" href="$acc__os_8h.html" title="acc_os.h" alt="" coords="307,102,382,129"/>
 </map>

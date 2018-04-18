@@ -16,7 +16,7 @@ extern "C" {
 
 /**
  * @brief Predefined profiles allowing fast setup of an envelope configuration
- *
+ * 
  * A profile configures the RX/TX path in the sensor and sets all other configuration
  * parameters to a predefined value
  */
@@ -59,7 +59,7 @@ typedef void (acc_envelope_callback_t)(const acc_service_handle_t service_handle
 
 /**
  * @brief Create a configuration for an envelope service
- *
+ * 
  * @return Service configuration, NULL if creation was not possible
  */
 extern acc_service_configuration_t acc_service_envelope_configuration_create(void);
@@ -67,11 +67,11 @@ extern acc_service_configuration_t acc_service_envelope_configuration_create(voi
 
 /**
  * @brief Destroy an envelope configuration
- *
+ * 
  * Destroy an envelope configuration that is no longer needed, may be done even if a
  * service has been created with the specific configuration and has not yet been destroyed.
  * The service configuration reference is set to NULL after destruction.
- *
+ * 
  * @param[in] service_configuration The configuration to destroy, set to NULL
  */
 extern void acc_service_envelope_configuration_destroy(acc_service_configuration_t *service_configuration);
@@ -79,13 +79,13 @@ extern void acc_service_envelope_configuration_destroy(acc_service_configuration
 
 /**
  * @brief Set a profile of configuration parameters
- *
+ * 
  * A profile consists of a number of settings for the sensor as well as the sweep setup to
  * allow a quick and easy setup of a service.
  * Most parameters may be specifically set using their own set methods while the sensor
  * specific settings of e.g. transmitted energy and receiver gain are matched to the profile
  * used.
- *
+ * 
  * @param[in] service_configuration The configuration to set a profile for
  * @param[in] profile The profile to set
  */
@@ -94,11 +94,11 @@ extern void acc_service_envelope_profile_set(acc_service_configuration_t service
 
 /**
  * @brief Set a callback to receive envelope results
- *
+ * 
  * If a callback is used, envelope results are indicated by calling the function that is set.
  * Within the callback it is only allowed to copy the data to a application memory to allow the best
  * possible service execution. Setting the callback as NULL disables callback operation.
- *
+ * 
  * @param[in] service_configuration The configuration to set a callback for
  * @param[in] envelope_callback The callback function to set
  * @param[in] client_reference A client chosen reference that will be provided when calling the callback
@@ -108,9 +108,9 @@ extern void acc_service_envelope_envelope_callback_set(acc_service_configuration
 
 /**
  * @brief Get service metadata
- *
+ * 
  * May only be called after a service has been created.
- *
+ * 
  * @param[in] handle The service handle for the service to get metadata for
  * @param[out] metadata Metadata results are provided in this parameter
  */
@@ -119,11 +119,11 @@ extern void acc_service_envelope_get_metadata(acc_service_handle_t handle, acc_s
 
 /**
  * @brief Retrieve the next result from the service
- *
- * May only be called after a service has been activated to retrieve the next result, blocks
+ * 
+ * May only be called after a service has been activated to retreive the next result, blocks
  * the application until a result is ready.
  * It is not possible to use this blocking call and callbacks simultaneously.
- *
+ * 
  * @param[in] handle The service handle for the service to get the next result for
  * @param[out] envelope_data Envelope result
  * @param[in] envelope_data_length The length of the buffer provided for the result

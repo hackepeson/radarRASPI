@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['tag',['tag',['../structacc__version__t.html#aff7656db22c1d4ec15419e5869cade84',1,'acc_version_t']]],
-  ['tx',['tx',['../structspidev__transfer__t.html#a6d0bdf9c5dadefcba4e9101a2885a21c',1,'spidev_transfer_t']]]
+  ['value',['value',['../structgpio__t.html#a062463fb0a796ce8f05aa320145f7989',1,'gpio_t']]],
+  ['value_5ffd',['value_fd',['../structgpio__t.html#a07c270686b324f369e5d380bd2a08f6e',1,'gpio_t']]],
+  ['version',['version',['../structacc__version__t.html#a1c961927a415b92db91704fc9f2124f0',1,'acc_version_t']]]
 ];

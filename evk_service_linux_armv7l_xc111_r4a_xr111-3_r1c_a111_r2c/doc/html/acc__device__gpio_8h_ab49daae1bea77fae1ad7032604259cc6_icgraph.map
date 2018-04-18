@@ -1,3 +1,4 @@
 <map id="acc_device_gpio_set_initial_pull" name="acc_device_gpio_set_initial_pull">
-<area shape="rect" id="node2" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a8588c603a76621af12df4582c75ddeaa" title="Initialize the direction and level of host GPIOs. " alt="" coords="197,13,335,39"/>
+<area shape="rect" id="node2" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a0d60562bc0c5a659a131115fde5c1a48" title="Initialize the direction and level of host GPIOs. " alt="" coords="197,13,335,39"/>
+<area shape="rect" id="node3" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="383,13,489,39"/>
 </map>

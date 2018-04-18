@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['length',['length',['../structspidev__transfer__t.html#a6334580678b2299ea45803f5e3235053',1,'spidev_transfer_t']]]
+  ['mutex',['mutex',['../structacc__os__mutex__t.html#ad81b4857c87284a067a17d0c2361b18c',1,'acc_os_mutex_t']]]
 ];

@@ -1,25 +1,42 @@
 <map id="acc_board_init" name="acc_board_init">
-<area shape="rect" id="node2" href="$acc__os_8h.html#a3be6a90e606e906f8f80e6b2a744cc24" title="Perform any os specific initialization. " alt="" coords="642,5,730,32"/>
-<area shape="rect" id="node4" href="$acc__os_8h.html#a23895aa050c3dbe1e07d343b1b8f4be6" title="Initialize a mutex. " alt="" coords="611,56,761,83"/>
-<area shape="rect" id="node6" href="$acc__os_8h.html#a84c64d78c357e0856de4b091d9f5ca4d" title="Mutex lock. " alt="" coords="617,208,755,235"/>
-<area shape="rect" id="node7" href="$acc__os_8h.html#a679abcf0bc8d3cbb2808dc6fe942ed60" title="Mutex unlock. " alt="" coords="610,259,762,285"/>
-<area shape="rect" id="node8" href="$acc__driver__gpio__linux__sysfs_8h.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="160,342,307,383"/>
-<area shape="rect" id="node20" href="$acc__driver__spi__linux__spidev_8h.html#a7b2c08e1b83d63993b1483926d0ee00c" title="Request driver to register with appropriate device(s) " alt="" coords="163,603,303,645"/>
-<area shape="rect" id="node3" href="$acc__os__linux_8c.html#a5b2323a65a520e9bf8e82ed8e8b0ad37" title="General signal handler registered by os_init() " alt="" coords="813,5,967,32"/>
-<area shape="rect" id="node5" href="$acc__os__linux_8c.html#a4414f44717ed4932433e77001aa11f7d" title="Allocate dynamic memory. " alt="" coords="823,56,957,83"/>
+<area shape="rect" id="node2" href="$acc__os_8h.html#a3be6a90e606e906f8f80e6b2a744cc24" title="Perform any os specific initialization. " alt="" coords="660,5,748,32"/>
+<area shape="rect" id="node4" href="$acc__os_8h.html#aefa50c94aaee0c1517279e653affa2e2" title="Initialize a mutex. " alt="" coords="639,56,769,83"/>
+<area shape="rect" id="node6" href="$acc__os_8h.html#ae64bc00fbfc26258426fcdb6ccc3fc38" title="Mutex lock. " alt="" coords="635,208,773,235"/>
+<area shape="rect" id="node7" href="$acc__os_8h.html#aa6fc45abaf3f67d1593728187c1b669d" title="Mutex unlock. " alt="" coords="628,259,780,285"/>
+<area shape="rect" id="node8" href="$acc__driver__gpio__linux__sysfs_8h.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="160,343,307,385"/>
+<area shape="rect" id="node20" href="$acc__driver__i2c__linux_8h.html#a24d640bb1cc89739caaf9888765e5370" title="Request driver to register with appropriate device(s) " alt="" coords="163,689,303,730"/>
+<area shape="rect" id="node30" href="$acc__driver__spi__linux__spidev_8h.html#a7b2c08e1b83d63993b1483926d0ee00c" title="Request driver to register with appropriate device(s) " alt="" coords="163,969,303,1010"/>
+<area shape="rect" id="node35" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a0d60562bc0c5a659a131115fde5c1a48" title="Initialize the direction and level of host GPIOs. " alt="" coords="165,1199,302,1225"/>
+<area shape="rect" id="node3" href="$acc__os__linux_8c.html#a5b2323a65a520e9bf8e82ed8e8b0ad37" title="General signal handler registered by os_init() " alt="" coords="849,5,1003,32"/>
+<area shape="rect" id="node5" href="$acc__os__linux_8c.html#a4414f44717ed4932433e77001aa11f7d" title="Allocate dynamic memory. " alt="" coords="859,56,993,83"/>
 <area shape="rect" id="node9" href="$acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="385,142,531,183"/>
 <area shape="rect" id="node14" href="$acc__driver__gpio__linux__sysfs_8c.html#a4283206e56d929c2c14042f652b9700f" title="Inform the driver of the pull up/down level for a GPIO pin after reset. " alt="" coords="383,441,533,482"/>
 <area shape="rect" id="node17" href="$acc__driver__gpio__linux__sysfs_8c.html#a43c98f00f070199659f17594f76f35be" title="Set GPIO to input. " alt="" coords="385,310,531,351"/>
 <area shape="rect" id="node18" href="$acc__driver__gpio__linux__sysfs_8c.html#aa934d9bbaf9b81f6c8e806ef4d992d86" title="Read from GPIO. " alt="" coords="385,506,531,547"/>
 <area shape="rect" id="node19" href="$acc__driver__gpio__linux__sysfs_8c.html#a59b1c8927eccc35952891939db4f4145" title="Set GPIO output level. " alt="" coords="385,375,531,417"/>
-<area shape="rect" id="node10" href="$acc__os_8h.html#a4414f44717ed4932433e77001aa11f7d" title="Allocate dynamic memory. " alt="" coords="619,107,753,133"/>
-<area shape="rect" id="node11" href="$acc__driver__gpio__linux__sysfs_8c.html#ad09efb0661dccf088d4359887bf67871" title="Internal GPIO close all gpios. " alt="" coords="609,157,763,184"/>
-<area shape="rect" id="node12" href="$acc__driver__gpio__linux__sysfs_8c.html#af893b285a36f81d9d27adc0c5f44cf14" title="Internal GPIO write. " alt="" coords="811,309,969,336"/>
-<area shape="rect" id="node13" href="$acc__driver__gpio__linux__sysfs_8c.html#aab65fdf0edfae034d6a9ab023d039966" title="Internal GPIO set direction. " alt="" coords="819,411,961,437"/>
-<area shape="rect" id="node15" href="$acc__driver__gpio__linux__sysfs_8c.html#ad7f9b2c1597de2c24626bd20c01da4b8" title="Internal GPIO open. " alt="" coords="621,512,751,539"/>
-<area shape="rect" id="node16" href="$acc__os_8h.html#aee0414ff6a2f278076b0f0fddac56e18" title="Sleep for a specified number of microseconds. " alt="" coords="829,512,951,539"/>
-<area shape="rect" id="node21" href="$acc__driver__spi__linux__spidev_8c.html#a7f7c6549882fa06eb7f71027e8df2261" title="Initialize SPI driver. " alt="" coords="388,571,528,613"/>
-<area shape="rect" id="node22" href="$acc__driver__spi__linux__spidev_8c.html#aac96a3e2f455d199acd6fedaf98b92f9" title="Return maximum allowed size of one SPI transfer. " alt="" coords="355,637,561,678"/>
-<area shape="rect" id="node23" href="$acc__driver__spi__linux__spidev_8c.html#aa01dd0ed72cd5bde32daca7ca9590ef0" title="Data transfer (SPI) " alt="" coords="388,702,528,743"/>
-<area shape="rect" id="node24" href="$acc__driver__spi__linux__spidev_8c.html#a570494e865f3d3e3266c4390ad9f6458" title="Internal SPI open. " alt="" coords="625,709,747,736"/>
+<area shape="rect" id="node10" href="$acc__os_8h.html#a4414f44717ed4932433e77001aa11f7d" title="Allocate dynamic memory. " alt="" coords="637,107,771,133"/>
+<area shape="rect" id="node11" href="$acc__driver__gpio__linux__sysfs_8c.html#ad09efb0661dccf088d4359887bf67871" title="Internal GPIO close all gpios. " alt="" coords="627,157,781,184"/>
+<area shape="rect" id="node12" href="$acc__driver__gpio__linux__sysfs_8c.html#af893b285a36f81d9d27adc0c5f44cf14" title="Internal GPIO write. " alt="" coords="847,309,1005,336"/>
+<area shape="rect" id="node13" href="$acc__driver__gpio__linux__sysfs_8c.html#aab65fdf0edfae034d6a9ab023d039966" title="Internal GPIO set direction. " alt="" coords="855,411,997,437"/>
+<area shape="rect" id="node15" href="$acc__driver__gpio__linux__sysfs_8c.html#ad7f9b2c1597de2c24626bd20c01da4b8" title="Internal GPIO open. " alt="" coords="639,512,769,539"/>
+<area shape="rect" id="node16" href="$acc__os_8h.html#aee0414ff6a2f278076b0f0fddac56e18" title="Sleep for a specified number of microseconds. " alt="" coords="865,512,987,539"/>
+<area shape="rect" id="node21" href="$acc__driver__i2c__linux_8c.html#a4f59faf0cdfd3cd32c8569e53e6c6472" title="Initialize I2C driver. " alt="" coords="376,572,540,599"/>
+<area shape="rect" id="node22" href="$acc__driver__i2c__linux_8c.html#ac0c10c84feefd3709a4c366ff6ff1bad" title="I2C write. " alt="" coords="387,623,529,665"/>
+<area shape="rect" id="node24" href="$acc__driver__i2c__linux_8c.html#a9555b62f487f066d3e5581f9922bf579" title="I2C write. " alt="" coords="383,689,533,730"/>
+<area shape="rect" id="node25" href="$acc__driver__i2c__linux_8c.html#a2105853b5f868f5df46e46e84c99b2f4" title="I2C read from specified 8&#45;bit address. " alt="" coords="381,754,535,795"/>
+<area shape="rect" id="node28" href="$acc__driver__i2c__linux_8c.html#a3a1197b93ffaed8035a68b4c558cfb6e" title="I2C read from specified 16&#45;bit address. " alt="" coords="377,819,539,861"/>
+<area shape="rect" id="node29" href="$acc__driver__i2c__linux_8c.html#ad9bc547c5b1364d3644ba8552a3b67e0" title="I2C read from last read/written address. " alt="" coords="618,885,790,912"/>
+<area shape="rect" id="node23" href="$acc__driver__i2c__linux_8c.html#aa0ad2cbc3a92b9fb0f72d7025e05a798" title="I2C write. " alt="" coords="615,657,793,698"/>
+<area shape="rect" id="node26" href="$acc__driver__i2c__linux_8c.html#ae023c20325429fea295e03fb00bc4fed" title="I2C read from specified address. " alt="" coords="609,819,799,861"/>
+<area shape="rect" id="node27" href="$acc__driver__i2c__linux_8c.html#adc0396f4b832ff43518aa9d9eb17a72d" title="Internal I2C read. " alt="" coords="878,856,974,883"/>
+<area shape="rect" id="node31" href="$acc__driver__spi__linux__spidev_8c.html#a7f7c6549882fa06eb7f71027e8df2261" title="Initialize SPI driver. " alt="" coords="388,937,528,978"/>
+<area shape="rect" id="node32" href="$acc__driver__spi__linux__spidev_8c.html#aac96a3e2f455d199acd6fedaf98b92f9" title="Return maximum allowed size of one SPI transfer. " alt="" coords="355,1002,561,1043"/>
+<area shape="rect" id="node33" href="$acc__driver__spi__linux__spidev_8c.html#aa01dd0ed72cd5bde32daca7ca9590ef0" title="Data transfer (SPI) " alt="" coords="388,1067,528,1109"/>
+<area shape="rect" id="node34" href="$acc__driver__spi__linux__spidev_8c.html#a570494e865f3d3e3266c4390ad9f6458" title="Internal SPI open. " alt="" coords="643,1075,765,1101"/>
+<area shape="rect" id="node36" href="$acc__device__gpio_8h.html#ab49daae1bea77fae1ad7032604259cc6" title="Inform the driver of the pull up/down level for a GPIO pin after reset. " alt="" coords="386,1133,530,1174"/>
+<area shape="rect" id="node37" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a38480b3965f1d5d5dcc895362dbfb178" title="Set host GPIO to input. " alt="" coords="384,1199,532,1225"/>
+<area shape="rect" id="node39" href="$acc__log_8h.html#a7caf43616038d0c20c5dcec4e78e0923" title="Return a string describing a status code. " alt="" coords="629,1249,779,1276"/>
+<area shape="rect" id="node40" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a02b1f4bfbd94ae227f694f490bda005c" title="Set host GPIO output level. " alt="" coords="380,1300,536,1327"/>
+<area shape="rect" id="node38" href="$acc__device__gpio_8h.html#ae986516864300b064456a7747cc4897f" title="Set GPIO to input. " alt="" coords="627,1199,781,1225"/>
+<area shape="rect" id="node41" href="$acc__device__gpio_8h.html#a3ce865cd090f6cf3521afa0552d452d1" title="Set GPIO output level. " alt="" coords="627,1300,781,1327"/>
 </map>
