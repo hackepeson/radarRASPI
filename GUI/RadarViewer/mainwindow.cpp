@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -8,23 +9,19 @@ MainWindow::MainWindow(QWidget *parent) :
 #define NO_OF_GRAPHS 10
     ui->setupUi(this);
 
-
-    QVector<double> x(101), y(101); // initialize with entries 0..100
-    for (int i=0; i<101; ++i)
-    {
-      x[i] = i/50.0 - 1; // x goes from -1 to 1
-      y[i] = (x[i]*x[i]); // let's plot a quadratic function
-    }
-
-    for (int i = 0; i < NO_OF_GRAPHS; i++)
-    {
-        ui->customPlot->addGraph();
-        ui->customPlot->graph(i)->setData(x,y);
-    }
+    ui->customPlot->addGraph();
 
     connect(ui->pushButton, SIGNAL(clicked(bool)), SLOT(updateGraph()));
-    ui->customPlot->rescaleAxes();
-    ui->customPlot->replot();
+
+
+    m_pTCPSocket = new QTcpSocket(this);
+
+    m_pTCPSocket->connectToHost("127.0.0.1", 11999);
+
+    connect(m_pTCPSocket, SIGNAL(readyRead()), SLOT(readTCPSocket()));
+
+
+
 
 }
 
@@ -34,6 +31,7 @@ MainWindow::~MainWindow()
 }
 
 
+
 void MainWindow::updateGraph()
 {
     static double scale = 0.1;
@@ -41,17 +39,23 @@ void MainWindow::updateGraph()
     QVector<double> x(101), y(101); // initialize with entries 0..100
     for (int i=0; i<101; ++i)
     {
-      x[i] = i/50.0 - 1; // x goes from -1 to 1
-      y[i] = scale * (x[i]*x[i]); // let's plot a quadratic function
+      x[i] = (i/50.0 - 1);
+      y[i] = scale*(x[i]*x[i]);
+
     }
 
-    for (int i = (ui->customPlot->graphCount()-1); i > 0; i--)
-    {
-        ui->customPlot->graph(i)->setData(ui->customPlot->graph(i-1)->data());
-    }
     ui->customPlot->graph(0)->setData(x,y);
-    scale+= 1.1;
+
+    scale+= 0.3;
 
     ui->customPlot->rescaleAxes();
     ui->customPlot->replot();
+}
+
+
+void MainWindow::readTCPSocket()
+{
+  QByteArray data = m_pTCPSocket->readAll();
+  qDebug() << data.data();
+
 }

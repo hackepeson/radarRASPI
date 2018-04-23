@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTcpSocket>
+
 
 namespace Ui {
 class MainWindow;
@@ -17,9 +19,11 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QTcpSocket* m_pTCPSocket;
 
 private slots:
   void updateGraph();
+  void readTCPSocket();
 
 };
 
