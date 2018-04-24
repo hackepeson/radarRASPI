@@ -1,0 +1,6 @@
+<map id="acc_os_mutex_create" name="acc_os_mutex_create">
+<area shape="rect" id="node2" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a8588c603a76621af12df4582c75ddeaa" title="Initialize the direction and level of host GPIOs. " alt="" coords="209,5,346,32"/>
+<area shape="rect" id="node3" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="593,85,700,112"/>
+<area shape="rect" id="node4" href="$acc__driver__gpio__linux__sysfs_8c.html#a6a61c7c56bca1600db25c0fbb03ff488" title="Initialize GPIO driver. " alt="" coords="204,107,351,149"/>
+<area shape="rect" id="node5" href="$acc__driver__gpio__linux__sysfs_8c.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="399,107,545,149"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="include/acc_types.h" name="include/acc_types.h">
+<area shape="rect" id="node2" href="$acc__board_8h.html" title="include/acc_board.h" alt="" coords="5,87,144,114"/>
+<area shape="rect" id="node4" href="$acc__device__gpio_8h.html" title="include/acc_device\l_gpio.h" alt="" coords="168,80,301,121"/>
+<area shape="rect" id="node5" href="$acc__driver__gpio__linux__sysfs_8c.html" title="source/acc_driver_gpio\l_linux_sysfs.c" alt="" coords="293,169,449,211"/>
+<area shape="rect" id="node6" href="$acc__device__spi_8h.html" title="include/acc_device\l_spi.h" alt="" coords="717,80,851,121"/>
+<area shape="rect" id="node7" href="$acc__driver__spi__linux__spidev_8c.html" title="source/acc_driver_spi\l_linux_spidev.c" alt="" coords="649,169,799,211"/>
+<area shape="rect" id="node8" href="$acc__log_8h.html" title="include/acc_log.h" alt="" coords="376,87,499,114"/>
+<area shape="rect" id="node10" href="$acc__os_8h.html" title="include/acc_os.h" alt="" coords="523,87,643,114"/>
+<area shape="rect" id="node11" href="$acconeer__detector__distance_8h.html" title="include/acconeer_detector\l_distance.h" alt="" coords="875,80,1050,121"/>
+<area shape="rect" id="node3" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html" title="source/acc_board_rpi\l_xc111_r4a_xr111&#45;3_r1c.c" alt="" coords="94,169,269,211"/>
+<area shape="rect" id="node9" href="$acc__os__linux_8c.html" title="source/acc_os_linux.c" alt="" coords="473,177,625,203"/>
+</map>

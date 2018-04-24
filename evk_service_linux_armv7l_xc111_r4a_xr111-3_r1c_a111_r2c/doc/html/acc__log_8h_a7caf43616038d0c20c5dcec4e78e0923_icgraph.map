@@ -1,0 +1,5 @@
+<map id="acc_log_status_name" name="acc_log_status_name">
+<area shape="rect" id="node2" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a8588c603a76621af12df4582c75ddeaa" title="Initialize the direction and level of host GPIOs. " alt="" coords="211,5,349,32"/>
+<area shape="rect" id="node3" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#add8b3148bd44ea1091a11a064ca4a770" title="Custom chip select for SPI transfer. " alt="" coords="203,56,357,83"/>
+<area shape="rect" id="node4" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a6897a3396c0380bef915af527fc5f16d" title="Get the current status of the sensor interrupt. " alt="" coords="207,107,353,149"/>
+</map>

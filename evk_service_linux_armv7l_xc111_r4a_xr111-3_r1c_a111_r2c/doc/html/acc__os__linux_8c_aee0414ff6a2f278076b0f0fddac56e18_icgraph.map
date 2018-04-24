@@ -1,0 +1,10 @@
+<map id="acc_os_sleep_us" name="acc_os_sleep_us">
+<area shape="rect" id="node2" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#afce508cb013952015c94b3725b305187" title="Start sensor. " alt="" coords="176,61,337,87"/>
+<area shape="rect" id="node3" href="$acc__driver__gpio__linux__sysfs_8c.html#ad7f9b2c1597de2c24626bd20c01da4b8" title="Internal GPIO open. " alt="" coords="191,111,322,138"/>
+<area shape="rect" id="node4" href="$acc__driver__gpio__linux__sysfs_8c.html#a4283206e56d929c2c14042f652b9700f" title="Inform the driver of the pull up/down level for a GPIO pin after reset. " alt="" coords="385,5,536,47"/>
+<area shape="rect" id="node7" href="$acc__driver__gpio__linux__sysfs_8c.html#a43c98f00f070199659f17594f76f35be" title="Set GPIO to input. " alt="" coords="387,71,534,112"/>
+<area shape="rect" id="node8" href="$acc__driver__gpio__linux__sysfs_8c.html#aa934d9bbaf9b81f6c8e806ef4d992d86" title="Read from GPIO. " alt="" coords="387,136,534,177"/>
+<area shape="rect" id="node9" href="$acc__driver__gpio__linux__sysfs_8c.html#a59b1c8927eccc35952891939db4f4145" title="Set GPIO output level. " alt="" coords="387,201,534,243"/>
+<area shape="rect" id="node5" href="$acc__driver__gpio__linux__sysfs_8c.html#adb222e159fd759dda61164f8ed81dfee" title="Request driver to register with appropriate device(s) " alt="" coords="584,104,731,145"/>
+<area shape="rect" id="node6" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ad094f5c3df894d4f5209f0a7edbaf115" title="Initialize board. " alt="" coords="779,111,885,138"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="acc_driver_spi_linux_spidev_register" name="acc_driver_spi_linux_spidev_register">
+<area shape="rect" id="node2" href="$acc__driver__spi__linux__spidev_8c.html#a7f7c6549882fa06eb7f71027e8df2261" title="Initialize SPI driver. " alt="" coords="227,5,367,47"/>
+<area shape="rect" id="node3" href="$acc__driver__spi__linux__spidev_8c.html#aac96a3e2f455d199acd6fedaf98b92f9" title="Return maximum allowed size of one SPI transfer. " alt="" coords="193,71,400,112"/>
+<area shape="rect" id="node4" href="$acc__driver__spi__linux__spidev_8c.html#aa01dd0ed72cd5bde32daca7ca9590ef0" title="Data transfer (SPI) " alt="" coords="227,136,367,177"/>
+<area shape="rect" id="node5" href="$acc__driver__spi__linux__spidev_8c.html#a570494e865f3d3e3266c4390ad9f6458" title="Internal SPI open. " alt="" coords="448,143,571,170"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="acc_board_start_sensor" name="acc_board_start_sensor">
+<area shape="rect" id="node2" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#ade35682f835c1ea0d4f65fe627b74ead" title="Get the combined status of all sensors. " alt="" coords="219,5,374,47"/>
+<area shape="rect" id="node3" href="$acc__device__gpio_8h.html#a3ce865cd090f6cf3521afa0552d452d1" title="Set GPIO output level. " alt="" coords="427,97,581,123"/>
+<area shape="rect" id="node4" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#abe900d9b6d75a11c499164c1bcf888d7" title="Reset sensor. " alt="" coords="215,122,379,149"/>
+<area shape="rect" id="node5" href="$acc__os_8h.html#aee0414ff6a2f278076b0f0fddac56e18" title="Sleep for a specified number of microseconds. " alt="" coords="235,173,358,199"/>
+</map>

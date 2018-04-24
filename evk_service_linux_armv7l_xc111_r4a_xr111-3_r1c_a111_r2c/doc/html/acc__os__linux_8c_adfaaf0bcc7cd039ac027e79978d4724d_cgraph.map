@@ -1,0 +1,3 @@
+<map id="acc_os_semaphore_signal_from_interrupt" name="acc_os_semaphore_signal_from_interrupt">
+<area shape="rect" id="node2" href="$acc__os__linux_8c.html#aafa5157ea1eeab60f880d9e68c3d0e8b" title="Signal the semaphore. Not ISR safe. If needed from an ISR use acc_os_semaphore_signal_from_interrupt ..." alt="" coords="229,13,405,39"/>
+</map>

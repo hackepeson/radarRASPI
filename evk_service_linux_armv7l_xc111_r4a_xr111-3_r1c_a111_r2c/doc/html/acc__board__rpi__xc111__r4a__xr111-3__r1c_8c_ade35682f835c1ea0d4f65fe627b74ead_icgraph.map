@@ -1,0 +1,4 @@
+<map id="acc_board_all_sensors_inactive" name="acc_board_all_sensors_inactive">
+<area shape="rect" id="node2" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#afce508cb013952015c94b3725b305187" title="Start sensor. " alt="" coords="208,5,369,32"/>
+<area shape="rect" id="node3" href="$acc__board__rpi__xc111__r4a__xr111-3__r1c_8c.html#a9897b13689fddb6f16cec382b14f844a" title="Stop sensor. " alt="" coords="209,56,369,83"/>
+</map>
