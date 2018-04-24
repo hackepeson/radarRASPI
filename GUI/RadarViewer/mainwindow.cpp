@@ -13,15 +13,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(ui->pushButton, SIGNAL(clicked(bool)), SLOT(updateGraph()));
 
+    m_pUDPSocket = new QUdpSocket(this);
+    //m_pUDPSocket->bind(QHostAddress::LocalHost, 8888);
+    QHostAddress hAddr("192.168.0.108");
+    m_pUDPSocket->bind(hAddr,8888);
+    //m_pUDPSocket->bind(8888);
 
-    m_pTCPSocket = new QTcpSocket(this);
-
-    m_pTCPSocket->connectToHost("127.0.0.1", 11999);
-
-    connect(m_pTCPSocket, SIGNAL(readyRead()), SLOT(readTCPSocket()));
-
-
-
+    connect(m_pUDPSocket, SIGNAL(readyRead()), SLOT(readUDPSocket()));
 
 }
 
@@ -34,28 +32,47 @@ MainWindow::~MainWindow()
 
 void MainWindow::updateGraph()
 {
-    static double scale = 0.1;
+#define VECTOR_LENGTH 2048
+    QVector<double> data;
+    QVector<double> x;
+    data.clear();
+    x.clear();
 
-    QVector<double> x(101), y(101); // initialize with entries 0..100
-    for (int i=0; i<101; ++i)
+
+
+    for (int i = 0; i < VECTOR_LENGTH; i+=2)
     {
-      x[i] = (i/50.0 - 1);
-      y[i] = scale*(x[i]*x[i]);
+        uint8_t low = m_vecData.at(i);
+        uint8_t high = m_vecData.at(i+1);
 
+        double dd =256*high+low;
+
+        data.append(dd);
+        x.append(i);
     }
 
-    ui->customPlot->graph(0)->setData(x,y);
-
-    scale+= 0.3;
-
+    ui->customPlot->graph(0)->setData(x,data);
     ui->customPlot->rescaleAxes();
+    ui->customPlot->yAxis->setRange(0,10000);
     ui->customPlot->replot();
 }
 
 
-void MainWindow::readTCPSocket()
+
+
+void MainWindow::readUDPSocket()
 {
-  QByteArray data = m_pTCPSocket->readAll();
-  qDebug() << data.data();
+  qDebug() << "In readUDP";
+
+
+  m_vecData.resize(m_pUDPSocket->pendingDatagramSize());
+
+  QHostAddress sender;
+  quint16 senderPort;
+
+  m_pUDPSocket->readDatagram(m_vecData.data(), m_vecData.size(), &sender, &senderPort);
+
+  updateGraph();
+  //qCritical() << m_vecData.length();
 
 }

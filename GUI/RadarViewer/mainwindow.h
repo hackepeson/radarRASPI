@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QTcpSocket>
+#include <QUdpSocket>
 
 
 namespace Ui {
@@ -19,11 +19,15 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QTcpSocket* m_pTCPSocket;
+
+    QUdpSocket* m_pUDPSocket;
+    QByteArray m_vecData;
+
 
 private slots:
   void updateGraph();
-  void readTCPSocket();
+
+  void readUDPSocket();
 
 };
 
