@@ -22,6 +22,7 @@ private:
 
     QUdpSocket* m_pUDPSocket;
     QByteArray m_vecData;
+    QString m_ownIPAddr;
 
 
 private slots:
