@@ -26,8 +26,8 @@ private:
 
 private slots:
   void updateGraph();
-
   void readUDPSocket();
+  void enterIPAddr();
 
 };
 

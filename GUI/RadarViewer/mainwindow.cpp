@@ -2,6 +2,15 @@
 #include "ui_mainwindow.h"
 #include <QDebug>
 
+
+void processEventQueueSleep(int msec)
+{
+    QEventLoop loop;
+    QTimer::singleShot(msec,&loop,SLOT(quit()));
+    loop.exec();
+}
+
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -19,6 +28,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(m_pUDPSocket, SIGNAL(readyRead()), SLOT(readUDPSocket()));
     connect(ui->actionExit, SIGNAL(triggered(bool)), SLOT(close()));
+    connect(ui->actionIP, SIGNAL(triggered(bool)), SLOT(enterIPAddr()));
 
 }
 
@@ -73,5 +83,22 @@ void MainWindow::readUDPSocket()
 
   updateGraph();
   //qCritical() << m_vecData.length();
+
+}
+
+
+void MainWindow::enterIPAddr()
+{
+  QLineEdit* ipEdit = new QLineEdit();
+  ipEdit->setInputMask("000.000.000.000;_");
+
+  ipEdit->adjustSize();
+  ipEdit->show();
+  while (ipEdit->isVisible())
+  {
+    processEventQueueSleep(100);
+  }
+
+  qDebug() << ipEdit->text();
 
 }
