@@ -11,15 +11,14 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->customPlot->addGraph();
 
-    connect(ui->pushButton, SIGNAL(clicked(bool)), SLOT(updateGraph()));
-
     m_pUDPSocket = new QUdpSocket(this);
     //m_pUDPSocket->bind(QHostAddress::LocalHost, 8888);
-    QHostAddress hAddr("192.168.0.108");
+    QHostAddress hAddr("192.168.0.105");
     m_pUDPSocket->bind(hAddr,8888);
     //m_pUDPSocket->bind(8888);
 
     connect(m_pUDPSocket, SIGNAL(readyRead()), SLOT(readUDPSocket()));
+    connect(ui->actionExit, SIGNAL(triggered(bool)), SLOT(close()));
 
 }
 
